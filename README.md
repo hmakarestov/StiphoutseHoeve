@@ -1,0 +1,1 @@
+An application for a stable to easily keep track of the schedules
