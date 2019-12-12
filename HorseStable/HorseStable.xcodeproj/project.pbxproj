@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F6F1AD023A23816004904DA /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F1ACF23A23816004904DA /* Users.swift */; };
+		3F6F1AD223A23911004904DA /* InteractionUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F1AD123A23911004904DA /* InteractionUser.swift */; };
+		3F6F1AD423A23E78004904DA /* NotificationSpecificUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F1AD323A23E78004904DA /* NotificationSpecificUser.swift */; };
 		3F858CB7239A5BF700C69B2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F858CB6239A5BF700C69B2B /* AppDelegate.swift */; };
 		3F858CB9239A5BF700C69B2B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F858CB8239A5BF700C69B2B /* ViewController.swift */; };
 		3F858CBC239A5BF700C69B2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F858CBA239A5BF700C69B2B /* Main.storyboard */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F6F1ACF23A23816004904DA /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		3F6F1AD123A23911004904DA /* InteractionUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionUser.swift; sourceTree = "<group>"; };
+		3F6F1AD323A23E78004904DA /* NotificationSpecificUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSpecificUser.swift; sourceTree = "<group>"; };
 		3F858CB3239A5BF700C69B2B /* HorseStable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HorseStable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F858CB6239A5BF700C69B2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F858CB8239A5BF700C69B2B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +68,9 @@
 				3FA3F0FF239A979B00BD70CC /* Register.swift */,
 				3FFE99A9239A7D6E00C5D304 /* Login.swift */,
 				3F858CB8239A5BF700C69B2B /* ViewController.swift */,
+				3F6F1ACF23A23816004904DA /* Users.swift */,
+				3F6F1AD123A23911004904DA /* InteractionUser.swift */,
+				3F6F1AD323A23E78004904DA /* NotificationSpecificUser.swift */,
 				3F858CBA239A5BF700C69B2B /* Main.storyboard */,
 				3F858CBD239A5BF900C69B2B /* Assets.xcassets */,
 				3F858CBF239A5BF900C69B2B /* LaunchScreen.storyboard */,
@@ -141,8 +150,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F6F1AD423A23E78004904DA /* NotificationSpecificUser.swift in Sources */,
 				3FFE99AA239A7D6E00C5D304 /* Login.swift in Sources */,
+				3F6F1AD223A23911004904DA /* InteractionUser.swift in Sources */,
 				3F858CB9239A5BF700C69B2B /* ViewController.swift in Sources */,
+				3F6F1AD023A23816004904DA /* Users.swift in Sources */,
 				3FA3F100239A979B00BD70CC /* Register.swift in Sources */,
 				3F858CB7239A5BF700C69B2B /* AppDelegate.swift in Sources */,
 			);

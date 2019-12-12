@@ -1,21 +1,20 @@
 //
-//  Register.swift
+//  Users.swift
 //  HorseStable
 //
-//  Created by Student on 06/12/2019.
+//  Created by Student on 12/12/2019.
 //  Copyright © 2019 smartmobile. All rights reserved.
 //
 
 import UIKit
 
-class Register: UIViewController {
-
-    @IBOutlet weak var buttonRegister: UIButton!
+class Users: UIViewController {
+    @IBOutlet weak var labelNameUser: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        buttonRegister.layer.cornerRadius = 20
     }
     
 
@@ -28,5 +27,12 @@ class Register: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "GoToUser"{
+            let vc = segue.destination as? InteractionUser
+            vc?.nameUser = labelNameUser.text!
+        }
+    }
 
 }
