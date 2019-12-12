@@ -12,6 +12,9 @@
 		3F858CBC239A5BF700C69B2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F858CBA239A5BF700C69B2B /* Main.storyboard */; };
 		3F858CBE239A5BF900C69B2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F858CBD239A5BF900C69B2B /* Assets.xcassets */; };
 		3F858CC1239A5BF900C69B2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F858CBF239A5BF900C69B2B /* LaunchScreen.storyboard */; };
+		3FE3F59223A233A40061129D /* Want-to-Buy-Horse-Exercising-Training-Equipment.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FE3F59123A233A40061129D /* Want-to-Buy-Horse-Exercising-Training-Equipment.jpg */; };
+		3FE3F59423A23B880061129D /* emoji-heart-33.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FE3F59323A23B880061129D /* emoji-heart-33.png */; };
+		3FE3F59623A23F370061129D /* img_493424.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FE3F59523A23F370061129D /* img_493424.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		3F858CBD239A5BF900C69B2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F858CC0239A5BF900C69B2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F858CC2239A5BF900C69B2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FE3F59123A233A40061129D /* Want-to-Buy-Horse-Exercising-Training-Equipment.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Want-to-Buy-Horse-Exercising-Training-Equipment.jpg"; path = "../../../Want-to-Buy-Horse-Exercising-Training-Equipment.jpg"; sourceTree = "<group>"; };
+		3FE3F59323A23B880061129D /* emoji-heart-33.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "emoji-heart-33.png"; path = "../../../emoji-heart-33.png"; sourceTree = "<group>"; };
+		3FE3F59523A23F370061129D /* img_493424.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = img_493424.png; path = ../../../img_493424.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,9 @@
 		3F858CB5239A5BF700C69B2B /* HorseStable */ = {
 			isa = PBXGroup;
 			children = (
+				3FE3F59523A23F370061129D /* img_493424.png */,
+				3FE3F59323A23B880061129D /* emoji-heart-33.png */,
+				3FE3F59123A233A40061129D /* Want-to-Buy-Horse-Exercising-Training-Equipment.jpg */,
 				3F858CB6239A5BF700C69B2B /* AppDelegate.swift */,
 				3F858CB8239A5BF700C69B2B /* ViewController.swift */,
 				3F858CBA239A5BF700C69B2B /* Main.storyboard */,
@@ -123,8 +132,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F858CC1239A5BF900C69B2B /* LaunchScreen.storyboard in Resources */,
+				3FE3F59623A23F370061129D /* img_493424.png in Resources */,
 				3F858CBE239A5BF900C69B2B /* Assets.xcassets in Resources */,
 				3F858CBC239A5BF700C69B2B /* Main.storyboard in Resources */,
+				3FE3F59223A233A40061129D /* Want-to-Buy-Horse-Exercising-Training-Equipment.jpg in Resources */,
+				3FE3F59423A23B880061129D /* emoji-heart-33.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
