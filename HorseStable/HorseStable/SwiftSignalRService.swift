@@ -19,7 +19,6 @@ public class SignalRService {
     public init(url: URL) {
         connection = HubConnectionBuilder(url: url).withLogging(minLogLevel: .error).build()
 
-
         connection.on(method: "BroadcastMessage", callback: { (data: Message<Horse>) in
             do {
                  self.handleMessage(data)
@@ -27,13 +26,10 @@ public class SignalRService {
                     print(error)
             }
             
-            
         })
          connection.start()
         print(url)
     }
-    
-    
    
     private func handleMessage(_ data : Message<Horse>) {
         // Do something with the message.
@@ -41,6 +37,7 @@ public class SignalRService {
         print("Successful printing \(data.model)")
         self.horses.append(data.model)
         
+        //test fetching of name 
         for h in self.horses {
             print("Hello, \(h.name)!")
         }
