@@ -12,12 +12,12 @@ class Notification{
     // properties
     var Title: String
     var Description: String
-    var Date: Date
+    var theDate: String
     
     // constructor
     init(name: String, description: String){
         self.Title = name
         self.Description = description
-        self.Date = NSDate() as Date
+        self.theDate = ""
     }
 }

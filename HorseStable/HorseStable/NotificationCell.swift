@@ -13,9 +13,10 @@ class NotificationCell: UITableViewCell {
     @IBOutlet weak var imageNotification: UIImageView!
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var labelNotification: UILabel!
-     @IBOutlet weak var labelDate: UILabel!
+    @IBOutlet weak var labelDate: UILabel!
+    @IBOutlet weak var buttonSeeMore: UIButton!
     
-     override func awakeFromNib() {
+    override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         let screenSize = UIScreen.main.bounds
@@ -31,6 +32,9 @@ class NotificationCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    @IBAction func showFullNotification(_ sender: Any) {
+        
+    }
     
     
     
