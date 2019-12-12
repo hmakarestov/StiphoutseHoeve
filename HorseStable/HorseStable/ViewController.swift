@@ -7,14 +7,19 @@
 //
 
 import UIKit
+import SwiftSignalRClient// pod library
+
 
 class ViewController: UIViewController {
 
+    //var connectionService
     override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        guard let url = URL(string:"http://localhost:5000/horseHub") else { return  }
+        let connection = SignalRService(url: url)
+    
+    
     }
-
 
 }
 

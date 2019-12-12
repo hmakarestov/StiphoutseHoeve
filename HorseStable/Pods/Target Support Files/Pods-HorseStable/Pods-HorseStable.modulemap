@@ -1,0 +1,6 @@
+framework module Pods_HorseStable {
+  umbrella header "Pods-HorseStable-umbrella.h"
+
+  export *
+  module * { export * }
+}

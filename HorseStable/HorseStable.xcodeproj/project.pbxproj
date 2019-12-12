@@ -3,18 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23F5E9210D1B724D748E075F /* Pods_HorseStable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C411482D78B22161B801632 /* Pods_HorseStable.framework */; };
+		3F71D22123A062C20020FB27 /* SwiftSignalRService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F71D22023A062C20020FB27 /* SwiftSignalRService.swift */; };
+		3F71D22423A1798F0020FB27 /* SignalRClient in Frameworks */ = {isa = PBXBuildFile; productRef = 3F71D22323A1798F0020FB27 /* SignalRClient */; };
 		3F858CB7239A5BF700C69B2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F858CB6239A5BF700C69B2B /* AppDelegate.swift */; };
 		3F858CB9239A5BF700C69B2B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F858CB8239A5BF700C69B2B /* ViewController.swift */; };
 		3F858CBC239A5BF700C69B2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F858CBA239A5BF700C69B2B /* Main.storyboard */; };
 		3F858CBE239A5BF900C69B2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F858CBD239A5BF900C69B2B /* Assets.xcassets */; };
 		3F858CC1239A5BF900C69B2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F858CBF239A5BF900C69B2B /* LaunchScreen.storyboard */; };
+		3FFFA44023A24B7200648E28 /* Horse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFFA43F23A24B7200648E28 /* Horse.swift */; };
+		3FFFA44223A24C9C00648E28 /* MedicalReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFFA44123A24C9C00648E28 /* MedicalReport.swift */; };
+		3FFFA44423A24E3C00648E28 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFFA44323A24E3C00648E28 /* Message.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		157775120CAC16431CD7699C /* Pods-HorseStable.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HorseStable.release.xcconfig"; path = "Target Support Files/Pods-HorseStable/Pods-HorseStable.release.xcconfig"; sourceTree = "<group>"; };
+		3F71D22023A062C20020FB27 /* SwiftSignalRService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSignalRService.swift; sourceTree = "<group>"; };
 		3F858CB3239A5BF700C69B2B /* HorseStable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HorseStable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F858CB6239A5BF700C69B2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F858CB8239A5BF700C69B2B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +30,11 @@
 		3F858CBD239A5BF900C69B2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F858CC0239A5BF900C69B2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F858CC2239A5BF900C69B2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FFFA43F23A24B7200648E28 /* Horse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Horse.swift; sourceTree = "<group>"; };
+		3FFFA44123A24C9C00648E28 /* MedicalReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalReport.swift; sourceTree = "<group>"; };
+		3FFFA44323A24E3C00648E28 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		69D2F758B4D84229837C171D /* Pods-HorseStable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HorseStable.debug.xcconfig"; path = "Target Support Files/Pods-HorseStable/Pods-HorseStable.debug.xcconfig"; sourceTree = "<group>"; };
+		6C411482D78B22161B801632 /* Pods_HorseStable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HorseStable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +42,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F71D22423A1798F0020FB27 /* SignalRClient in Frameworks */,
+				23F5E9210D1B724D748E075F /* Pods_HorseStable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +55,8 @@
 			children = (
 				3F858CB5239A5BF700C69B2B /* HorseStable */,
 				3F858CB4239A5BF700C69B2B /* Products */,
+				68F5E0ED178890B0D15EECA4 /* Pods */,
+				7AFFE3545EFEF25780B1BC46 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +71,35 @@
 		3F858CB5239A5BF700C69B2B /* HorseStable */ = {
 			isa = PBXGroup;
 			children = (
+				3F71D22023A062C20020FB27 /* SwiftSignalRService.swift */,
 				3F858CB6239A5BF700C69B2B /* AppDelegate.swift */,
 				3F858CB8239A5BF700C69B2B /* ViewController.swift */,
 				3F858CBA239A5BF700C69B2B /* Main.storyboard */,
 				3F858CBD239A5BF900C69B2B /* Assets.xcassets */,
 				3F858CBF239A5BF900C69B2B /* LaunchScreen.storyboard */,
 				3F858CC2239A5BF900C69B2B /* Info.plist */,
+				3FFFA43F23A24B7200648E28 /* Horse.swift */,
+				3FFFA44123A24C9C00648E28 /* MedicalReport.swift */,
+				3FFFA44323A24E3C00648E28 /* Message.swift */,
 			);
 			path = HorseStable;
+			sourceTree = "<group>";
+		};
+		68F5E0ED178890B0D15EECA4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				69D2F758B4D84229837C171D /* Pods-HorseStable.debug.xcconfig */,
+				157775120CAC16431CD7699C /* Pods-HorseStable.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7AFFE3545EFEF25780B1BC46 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6C411482D78B22161B801632 /* Pods_HorseStable.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,15 +109,20 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3F858CC5239A5BF900C69B2B /* Build configuration list for PBXNativeTarget "HorseStable" */;
 			buildPhases = (
+				55B7E9C96215D5D8ABE4ACDC /* [CP] Check Pods Manifest.lock */,
 				3F858CAF239A5BF700C69B2B /* Sources */,
 				3F858CB0239A5BF700C69B2B /* Frameworks */,
 				3F858CB1239A5BF700C69B2B /* Resources */,
+				9A40F008CDC513655A0F896F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = HorseStable;
+			packageProductDependencies = (
+				3F71D22323A1798F0020FB27 /* SignalRClient */,
+			);
 			productName = HorseStable;
 			productReference = 3F858CB3239A5BF700C69B2B /* HorseStable.app */;
 			productType = "com.apple.product-type.application";
@@ -108,6 +151,9 @@
 				Base,
 			);
 			mainGroup = 3F858CAA239A5BF700C69B2B;
+			packageReferences = (
+				3F71D22223A1798F0020FB27 /* XCRemoteSwiftPackageReference "SignalR-Client-Swift" */,
+			);
 			productRefGroup = 3F858CB4239A5BF700C69B2B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -130,13 +176,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		55B7E9C96215D5D8ABE4ACDC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HorseStable-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A40F008CDC513655A0F896F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HorseStable/Pods-HorseStable-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HorseStable/Pods-HorseStable-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HorseStable/Pods-HorseStable-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3F858CAF239A5BF700C69B2B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F71D22123A062C20020FB27 /* SwiftSignalRService.swift in Sources */,
 				3F858CB9239A5BF700C69B2B /* ViewController.swift in Sources */,
 				3F858CB7239A5BF700C69B2B /* AppDelegate.swift in Sources */,
+				3FFFA44423A24E3C00648E28 /* Message.swift in Sources */,
+				3FFFA44023A24B7200648E28 /* Horse.swift in Sources */,
+				3FFFA44223A24C9C00648E28 /* MedicalReport.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +372,7 @@
 		};
 		3F858CC6239A5BF900C69B2B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69D2F758B4D84229837C171D /* Pods-HorseStable.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +391,7 @@
 		};
 		3F858CC7239A5BF900C69B2B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 157775120CAC16431CD7699C /* Pods-HorseStable.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -336,6 +430,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3F71D22223A1798F0020FB27 /* XCRemoteSwiftPackageReference "SignalR-Client-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/moozzyk/SignalR-Client-Swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.6.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3F71D22323A1798F0020FB27 /* SignalRClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3F71D22223A1798F0020FB27 /* XCRemoteSwiftPackageReference "SignalR-Client-Swift" */;
+			productName = SignalRClient;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3F858CAB239A5BF700C69B2B /* Project object */;
 }

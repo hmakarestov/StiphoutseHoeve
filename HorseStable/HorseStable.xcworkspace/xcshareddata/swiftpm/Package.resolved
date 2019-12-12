@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "SignalRClient",
+        "repositoryURL": "https://github.com/moozzyk/SignalR-Client-Swift",
+        "state": {
+          "branch": null,
+          "revision": "9a24b896c711c22eb130c5bf66cd5d85a54bc811",
+          "version": "0.6.2"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
