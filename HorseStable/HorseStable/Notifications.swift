@@ -11,6 +11,9 @@ import UIKit
 class Notifications: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var notificationsTableView: UITableView!
+    var selectedCellIndexPath: IndexPath?
+    let selectedCellHeight: CGFloat = 150.0
+    let unselectedCellHeight: CGFloat = 88.0
     
     var notification : Notification?
     
@@ -20,7 +23,7 @@ class Notifications: UIViewController, UITableViewDelegate, UITableViewDataSourc
         // Do any additional setup after loading the view.
         notificationsTableView.delegate = self
         notificationsTableView.dataSource = self
-        notification = .init(name: "New contest coming up!", description: "Sign up for this new contest and win cool prizes")
+        notification = .init(name: "New contest coming up!", description: "Sign up for this new contest and win cool prizes! Please sign up on the whiteboard at the stable to enter the contest.")
         //assign today's date as the notification date
         let today = Date()
         let formatter = DateFormatter()
@@ -60,5 +63,35 @@ class Notifications: UIViewController, UITableViewDelegate, UITableViewDataSourc
         cell.imageView?.image = UIImage(named: "notification icon")
 
         return cell
+    }
+    
+    //this code is used to expand the notification
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if selectedCellIndexPath == indexPath {
+            return selectedCellHeight
+        }
+        return unselectedCellHeight
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! NotificationCell
+        if selectedCellIndexPath != nil && selectedCellIndexPath == indexPath {
+            selectedCellIndexPath = nil
+        }
+        else{
+            selectedCellIndexPath = indexPath
+        }
+
+        tableView.beginUpdates()
+        tableView.endUpdates()
+
+        if selectedCellIndexPath != nil {
+            // This ensures, that the cell is fully visible once expanded
+            tableView.scrollToRow(at: indexPath, at: .none, animated: true)
+            cell.labelNotification.numberOfLines = 0
+        }
+        else{
+            cell.labelNotification.numberOfLines = 1
+        }
     }
 }
