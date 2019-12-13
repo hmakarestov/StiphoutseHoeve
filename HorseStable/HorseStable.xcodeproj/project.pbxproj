@@ -20,6 +20,8 @@
 		3F858CC1239A5BF900C69B2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F858CBF239A5BF900C69B2B /* LaunchScreen.storyboard */; };
 		3FA3F100239A979B00BD70CC /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA3F0FF239A979B00BD70CC /* Register.swift */; };
 		3FFE99AA239A7D6E00C5D304 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFE99A9239A7D6E00C5D304 /* Login.swift */; };
+		3FFFA44A23A3C5EE00648E28 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFFA44923A3C5EE00648E28 /* DashboardViewController.swift */; };
+		3FFFA44C23A3C9E600648E28 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFFA44B23A3C9E600648E28 /* NavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		3F858CC2239A5BF900C69B2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FA3F0FF239A979B00BD70CC /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		3FFE99A9239A7D6E00C5D304 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		3FFFA44923A3C5EE00648E28 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		3FFFA44B23A3C9E600648E28 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,8 @@
 				3F858CBF239A5BF900C69B2B /* LaunchScreen.storyboard */,
 				3F858CC2239A5BF900C69B2B /* Info.plist */,
 				3F6F1AD723A250B4004904DA /* NotificationCell.swift */,
+				3FFFA44923A3C5EE00648E28 /* DashboardViewController.swift */,
+				3FFFA44B23A3C9E600648E28 /* NavigationController.swift */,
 			);
 			path = HorseStable;
 			sourceTree = "<group>";
@@ -160,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F6F1AD623A24ED6004904DA /* Notifications.swift in Sources */,
+				3FFFA44C23A3C9E600648E28 /* NavigationController.swift in Sources */,
 				3F6F1AD823A250B4004904DA /* NotificationCell.swift in Sources */,
 				3F6F1AD423A23E78004904DA /* NotificationSpecificUser.swift in Sources */,
 				3FFE99AA239A7D6E00C5D304 /* Login.swift in Sources */,
@@ -167,6 +174,7 @@
 				3F858CB9239A5BF700C69B2B /* ViewController.swift in Sources */,
 				3F6F1ADA23A2532F004904DA /* Notification.swift in Sources */,
 				3F6F1AD023A23816004904DA /* Users.swift in Sources */,
+				3FFFA44A23A3C5EE00648E28 /* DashboardViewController.swift in Sources */,
 				3FA3F100239A979B00BD70CC /* Register.swift in Sources */,
 				3F858CB7239A5BF700C69B2B /* AppDelegate.swift in Sources */,
 			);

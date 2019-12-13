@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SXv-Gr-QNd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zzD-Ry-ROy">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -211,21 +211,58 @@
             </objects>
             <point key="canvasLocation" x="3941" y="-64"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="y9p-S2-F41">
+            <objects>
+                <navigationController id="qsw-Is-Qw7" customClass="NavigationController" customModule="HorseStable" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="hka-dJ-WIC"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="T6L-nN-SNB">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="IEa-nl-1bV" kind="relationship" relationship="rootViewController" id="8Le-mn-CGF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tr3-zE-YlN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3025" y="-1531"/>
+        </scene>
         <!--Dashboard-->
         <scene sceneID="DBl-HC-jos">
             <objects>
-                <viewController id="IEa-nl-1bV" sceneMemberID="viewController">
+                <viewController id="IEa-nl-1bV" customClass="DashboardViewController" customModule="HorseStable" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Ec-lP-y65">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cme-GB-5PN">
+                                <rect key="frame" x="59" y="756" width="297" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.64923208951950073" green="0.77394121885299683" blue="0.90590113401412964" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Push Notification">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Leave a notification for all users." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RAG-eL-7J3">
+                                <rect key="frame" x="20" y="461" width="374" height="277"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.81492016818041879" green="0.81675670317721394" blue="0.84478197938899702" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="QWi-vF-kbH"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Dashboard" image="dashboard icon" id="Cv2-lj-PJG"/>
+                    <navigationItem key="navigationItem" title="Dashboard" id="J6d-UY-gtC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rSd-ml-KIc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3904" y="-1531"/>
+            <point key="canvasLocation" x="3902.898550724638" y="-1531.4732142857142"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="8ke-bL-fY8">
@@ -238,9 +275,9 @@
                         <color key="barTintColor" red="0.89467740060000001" green="0.93260520700000005" blue="0.97255605460000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
-                        <segue destination="IEa-nl-1bV" kind="relationship" relationship="viewControllers" id="GiH-pz-Fvu"/>
                         <segue destination="yzb-is-dcI" kind="relationship" relationship="viewControllers" id="Kz6-kI-VcC"/>
                         <segue destination="6dp-0Y-vz6" kind="relationship" relationship="viewControllers" id="QcC-o2-OWA"/>
+                        <segue destination="qsw-Is-Qw7" kind="relationship" relationship="viewControllers" id="wXA-Br-aBr"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ayZ-ir-Hiq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
