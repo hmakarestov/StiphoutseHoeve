@@ -161,9 +161,11 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/SwiftR/SwiftR.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftSignalRClient/SwiftSignalRClient.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/SwiftR/SwiftR.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftSignalRClient/SwiftSignalRClient.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then

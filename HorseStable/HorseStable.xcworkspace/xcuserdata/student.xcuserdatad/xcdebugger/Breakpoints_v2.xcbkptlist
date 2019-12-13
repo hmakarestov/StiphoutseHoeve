@@ -96,8 +96,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "33"
             endingLineNumber = "33"
-            landmarkName = "SignalRService"
-            landmarkType = "3">
+            landmarkName = "init(url:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -119,47 +119,79 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "DC5D8BDC-6449-47EA-8840-C2201C52325F"
+            uuid = "DB460EC9-A4F7-4776-9A91-4CDC0A09B6A8"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HorseStable/SwiftSignalRService.swift"
+            filePath = "HorseStable/SwiftRService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "init(url:)"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "init()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AF410AF3-43D6-4EAF-A799-3173FE66EACE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HorseStable/SwiftRService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "init()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FF6073CA-F91A-4D02-A338-807EEB31A5A5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HorseStable/SwiftRService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "init()"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "DC5D8BDC-6449-47EA-8840-C2201C52325F - 2ff4012fda79cae7"
+                  uuid = "FF6073CA-F91A-4D02-A338-807EEB31A5A5 - 2ab87f508e0e8cc0"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "HorseStable.SignalRService.init(url: Foundation.URL) -&gt; HorseStable.SignalRService"
+                  symbolName = "HorseStable.SwiftRService.__allocating_init() -&gt; HorseStable.SwiftRService"
                   moduleName = "HorseStable"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/student/Desktop/gitHorseApp/horse-app-smart-mobile/HorseStable/HorseStable/SwiftSignalRService.swift"
+                  urlString = "file:///Users/student/Desktop/gitHorseApp/horse-app-smart-mobile/HorseStable/HorseStable/SwiftRService.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "278">
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "14">
                </Location>
                <Location
-                  uuid = "DC5D8BDC-6449-47EA-8840-C2201C52325F - 44c012e373224991"
+                  uuid = "FF6073CA-F91A-4D02-A338-807EEB31A5A5 - 7b4410638e306a98"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.String, Swift.String) -&gt; () in HorseStable.SignalRService.init(url: Foundation.URL) -&gt; HorseStable.SignalRService"
+                  symbolName = "HorseStable.SwiftRService.init() -&gt; HorseStable.SwiftRService"
                   moduleName = "HorseStable"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/student/Desktop/gitHorseApp/horse-app-smart-mobile/HorseStable/HorseStable/SwiftSignalRService.swift"
+                  urlString = "file:///Users/student/Desktop/gitHorseApp/horse-app-smart-mobile/HorseStable/HorseStable/SwiftRService.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23"
-                  offsetFromSymbolStart = "35">
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "29">
                </Location>
             </Locations>
          </BreakpointContent>

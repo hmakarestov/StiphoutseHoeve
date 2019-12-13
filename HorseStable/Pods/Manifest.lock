@@ -1,16 +1,20 @@
 PODS:
+  - SwiftR (0.14.0)
   - SwiftSignalRClient (0.6.2)
 
 DEPENDENCIES:
+  - SwiftR
   - SwiftSignalRClient
 
 SPEC REPOS:
   trunk:
+    - SwiftR
     - SwiftSignalRClient
 
 SPEC CHECKSUMS:
+  SwiftR: 38aa6ed938f1a57ae030ed99e15455d58e008615
   SwiftSignalRClient: c6a7341d28d58d65e820fff2680efb16b711e9be
 
-PODFILE CHECKSUM: a497ae25d878b698eda10dfe842094b98c22cab6
+PODFILE CHECKSUM: a4f72eaa37035567cd2b4ebbeded1caa0054c917
 
 COCOAPODS: 1.8.4

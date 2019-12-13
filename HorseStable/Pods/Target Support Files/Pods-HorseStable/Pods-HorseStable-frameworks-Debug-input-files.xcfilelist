@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-HorseStable/Pods-HorseStable-frameworks.sh
+${BUILT_PRODUCTS_DIR}/SwiftR/SwiftR.framework
 ${BUILT_PRODUCTS_DIR}/SwiftSignalRClient/SwiftSignalRClient.framework

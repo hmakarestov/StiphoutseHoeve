@@ -9,5 +9,6 @@ target 'HorseStable' do
 	use_frameworks!
 	pod 'SwiftSignalRClient'
 	
+	pod 'SwiftR'
 
 end

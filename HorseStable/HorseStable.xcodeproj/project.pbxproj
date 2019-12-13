@@ -18,6 +18,8 @@
 		3FFFA44023A24B7200648E28 /* Horse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFFA43F23A24B7200648E28 /* Horse.swift */; };
 		3FFFA44223A24C9C00648E28 /* MedicalReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFFA44123A24C9C00648E28 /* MedicalReport.swift */; };
 		3FFFA44423A24E3C00648E28 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFFA44323A24E3C00648E28 /* Message.swift */; };
+		3FFFA44623A2857100648E28 /* Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFFA44523A2857100648E28 /* Delegate.swift */; };
+		3FFFA44823A3ADF600648E28 /* SwiftRService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFFA44723A3ADF600648E28 /* SwiftRService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		3FFFA43F23A24B7200648E28 /* Horse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Horse.swift; sourceTree = "<group>"; };
 		3FFFA44123A24C9C00648E28 /* MedicalReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalReport.swift; sourceTree = "<group>"; };
 		3FFFA44323A24E3C00648E28 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		3FFFA44523A2857100648E28 /* Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delegate.swift; sourceTree = "<group>"; };
+		3FFFA44723A3ADF600648E28 /* SwiftRService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftRService.swift; sourceTree = "<group>"; };
 		69D2F758B4D84229837C171D /* Pods-HorseStable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HorseStable.debug.xcconfig"; path = "Target Support Files/Pods-HorseStable/Pods-HorseStable.debug.xcconfig"; sourceTree = "<group>"; };
 		6C411482D78B22161B801632 /* Pods_HorseStable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HorseStable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -81,6 +85,8 @@
 				3FFFA43F23A24B7200648E28 /* Horse.swift */,
 				3FFFA44123A24C9C00648E28 /* MedicalReport.swift */,
 				3FFFA44323A24E3C00648E28 /* Message.swift */,
+				3FFFA44523A2857100648E28 /* Delegate.swift */,
+				3FFFA44723A3ADF600648E28 /* SwiftRService.swift */,
 			);
 			path = HorseStable;
 			sourceTree = "<group>";
@@ -226,8 +232,10 @@
 				3F71D22123A062C20020FB27 /* SwiftSignalRService.swift in Sources */,
 				3F858CB9239A5BF700C69B2B /* ViewController.swift in Sources */,
 				3F858CB7239A5BF700C69B2B /* AppDelegate.swift in Sources */,
+				3FFFA44623A2857100648E28 /* Delegate.swift in Sources */,
 				3FFFA44423A24E3C00648E28 /* Message.swift in Sources */,
 				3FFFA44023A24B7200648E28 /* Horse.swift in Sources */,
+				3FFFA44823A3ADF600648E28 /* SwiftRService.swift in Sources */,
 				3FFFA44223A24C9C00648E28 /* MedicalReport.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
