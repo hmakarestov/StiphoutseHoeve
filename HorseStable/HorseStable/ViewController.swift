@@ -18,6 +18,9 @@ class ViewController: UIViewController {
         }
     
 
-
+    @IBAction func onClickMenu(_ sender: Any) {
+        performSegue(withIdentifier: "menuSegue", sender: nil)
+    }
+    
 }
 

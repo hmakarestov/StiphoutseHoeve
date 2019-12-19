@@ -16,6 +16,9 @@
 		3F858CBC239A5BF700C69B2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F858CBA239A5BF700C69B2B /* Main.storyboard */; };
 		3F858CBE239A5BF900C69B2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F858CBD239A5BF900C69B2B /* Assets.xcassets */; };
 		3F858CC1239A5BF900C69B2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F858CBF239A5BF900C69B2B /* LaunchScreen.storyboard */; };
+		3FE3908523ABA9A50089DD32 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE3908223ABA9A50089DD32 /* HomeViewController.swift */; };
+		3FE3908623ABA9A50089DD32 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE3908323ABA9A50089DD32 /* MenuViewController.swift */; };
+		3FE3908723ABA9A50089DD32 /* SlideInTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE3908423ABA9A50089DD32 /* SlideInTransition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,9 @@
 		3F858CBD239A5BF900C69B2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F858CC0239A5BF900C69B2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F858CC2239A5BF900C69B2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FE3908223ABA9A50089DD32 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = "../../../../hamMenuEX/Slide-In-Transition/SlideInTransition/HomeViewController.swift"; sourceTree = "<group>"; };
+		3FE3908323ABA9A50089DD32 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = "../../../../hamMenuEX/Slide-In-Transition/SlideInTransition/MenuViewController.swift"; sourceTree = "<group>"; };
+		3FE3908423ABA9A50089DD32 /* SlideInTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SlideInTransition.swift; path = "../../../../hamMenuEX/Slide-In-Transition/SlideInTransition/SlideInTransition.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +84,9 @@
 				3F1EFB7523A2720100DCDE00 /* HorseImg */,
 				3F858CB6239A5BF700C69B2B /* AppDelegate.swift */,
 				3F858CB8239A5BF700C69B2B /* ViewController.swift */,
+				3FE3908223ABA9A50089DD32 /* HomeViewController.swift */,
+				3FE3908323ABA9A50089DD32 /* MenuViewController.swift */,
+				3FE3908423ABA9A50089DD32 /* SlideInTransition.swift */,
 				3F858CBA239A5BF700C69B2B /* Main.storyboard */,
 				3F858CBD239A5BF900C69B2B /* Assets.xcassets */,
 				3F858CBF239A5BF900C69B2B /* LaunchScreen.storyboard */,
@@ -161,12 +170,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FE3908723ABA9A50089DD32 /* SlideInTransition.swift in Sources */,
 				3F1EFB8123A2730C00DCDE00 /* ViewControllerMyHorse.swift in Sources */,
 				3F858CB9239A5BF700C69B2B /* ViewController.swift in Sources */,
 				3F1EFB8523A2733300DCDE00 /* ViewControllerAddHorse.swift in Sources */,
 				3F1EFB8323A2732000DCDE00 /* ViewControllerEditHorse.swift in Sources */,
 				3F858CB7239A5BF700C69B2B /* AppDelegate.swift in Sources */,
+				3FE3908523ABA9A50089DD32 /* HomeViewController.swift in Sources */,
 				3F1EFB7F23A272ED00DCDE00 /* ViewControllerHorseList.swift in Sources */,
+				3FE3908623ABA9A50089DD32 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
