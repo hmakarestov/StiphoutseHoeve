@@ -56,7 +56,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="150" id="mEq-0q-JKh">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LabelCell" rowHeight="150" id="mEq-0q-JKh" customClass="CustomCell" customModule="HorseStable" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mEq-0q-JKh" id="XwK-6Z-J9e">
@@ -112,6 +112,11 @@
                                         <constraint firstAttribute="bottomMargin" secondItem="PnC-CP-tCv" secondAttribute="bottom" id="vPI-hZ-WbM"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="decontaminationDateLabel" destination="7U5-K2-7NL" id="UoG-sw-MWk"/>
+                                    <outlet property="fluShotDateLabel" destination="T9n-9Y-L0c" id="r0z-z8-0fl"/>
+                                    <outlet property="horseImage" destination="PnC-CP-tCv" id="oNu-Hs-J6r"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
