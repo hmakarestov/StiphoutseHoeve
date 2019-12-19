@@ -15,7 +15,7 @@ class NavigationController: UINavigationController {
 
         if #available(iOS 13.0, *) {
             let appearance = UINavigationBarAppearance()
-            appearance.backgroundColor = .blue
+            appearance.backgroundColor = #colorLiteral(red: 0.6164805293, green: 0.7786822319, blue: 0.9191916585, alpha: 1)
             appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
             appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
 
@@ -25,7 +25,7 @@ class NavigationController: UINavigationController {
             UINavigationBar.appearance().scrollEdgeAppearance = appearance
         } else {
             UINavigationBar.appearance().tintColor = .white
-            UINavigationBar.appearance().barTintColor = .blue
+            UINavigationBar.appearance().barTintColor = #colorLiteral(red: 0.6164805293, green: 0.7786822319, blue: 0.9191916585, alpha: 1)
             UINavigationBar.appearance().isTranslucent = false
         }
         // Do any additional setup after loading the view.

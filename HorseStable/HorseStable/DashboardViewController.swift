@@ -10,14 +10,20 @@ import UIKit
 
 class DashboardViewController: UIViewController {
 
+    @IBOutlet weak var btnPush: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        pushButtonUpdate()
         // Do any additional setup after loading the view.
+            
         
       
     }
     
+    func pushButtonUpdate() {
+        btnPush.layer.cornerRadius = 13
+        btnPush.clipsToBounds = true    }
 
     /*
     // MARK: - Navigation
