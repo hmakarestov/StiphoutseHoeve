@@ -293,7 +293,7 @@
         <!--My Horse-->
         <scene sceneID="3SE-1P-HFM">
             <objects>
-                <viewController id="8bz-Ki-yu4" sceneMemberID="viewController">
+                <viewController id="8bz-Ki-yu4" customClass="ViewControllerMyHorse" customModule="HorseStable" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V13-4W-uSS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
