@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="b2a-2m-PN5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zzD-Ry-ROy">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -601,6 +601,7 @@
                     <navigationItem key="navigationItem" title="Users" id="ALD-m3-S9g"/>
                     <connections>
                         <outlet property="usersTableView" destination="xvE-Eu-T1x" id="J0g-vm-1XG"/>
+                        <segue destination="iDD-CO-JU9" kind="show" identifier="oneUser" id="XK1-JO-eLH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lly-ur-O3Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -702,21 +703,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xxK-tm-82R">
-                                <rect key="frame" x="20" y="94" width="374" height="41"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default profile image" translatesAutoresizingMaskIntoConstraints="NO" id="l5a-nN-b23">
+                                <rect key="frame" x="107" y="217" width="200" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="374" id="MxW-7y-OU6"/>
-                                    <constraint firstAttribute="height" constant="41" id="imI-bJ-hX0"/>
+                                    <constraint firstAttribute="height" constant="200" id="d7u-zq-bGG"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DAN-Dp-TL1">
-                                <rect key="frame" x="87" y="526" width="241" height="40"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DAN-Dp-TL1">
+                                <rect key="frame" x="87" y="574" width="241" height="40"/>
                                 <color key="backgroundColor" red="0.6492320895" green="0.77394121890000001" blue="0.90590113400000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="Ple-rh-Z3r"/>
+                                    <constraint firstAttribute="height" constant="40" id="5qX-xc-cw8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <state key="normal" title="Write notification">
@@ -726,51 +723,41 @@
                                     <segue destination="IYT-GS-agS" kind="presentation" identifier="WriteNotificationForUser" id="1T2-bT-Q8n"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pb7-rl-mrh">
-                                <rect key="frame" x="87" y="588" width="241" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pb7-rl-mrh">
+                                <rect key="frame" x="87" y="636" width="241" height="40"/>
                                 <color key="backgroundColor" red="0.89575201270000004" green="0.36948406700000003" blue="0.3489983082" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="ZgH-yc-0fi"/>
+                                    <constraint firstAttribute="height" constant="40" id="OWb-gR-M2c"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <state key="normal" title="Delete user">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default profile image" translatesAutoresizingMaskIntoConstraints="NO" id="l5a-nN-b23">
-                                <rect key="frame" x="107" y="176" width="200" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="0Gz-GN-dPp"/>
-                                    <constraint firstAttribute="width" constant="200" id="jlH-1S-N9Z"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Cim-hz-EhR" firstAttribute="trailing" secondItem="l5a-nN-b23" secondAttribute="trailing" constant="107" id="0tW-RN-C2f"/>
-                            <constraint firstItem="l5a-nN-b23" firstAttribute="top" secondItem="xxK-tm-82R" secondAttribute="bottom" constant="41" id="7vl-CB-2c8"/>
-                            <constraint firstItem="Pb7-rl-mrh" firstAttribute="leading" secondItem="Cim-hz-EhR" secondAttribute="leading" constant="87" id="EaG-Pk-Hpu"/>
-                            <constraint firstItem="Cim-hz-EhR" firstAttribute="trailing" secondItem="DAN-Dp-TL1" secondAttribute="trailing" constant="86" id="I22-wM-0wg"/>
-                            <constraint firstItem="Pb7-rl-mrh" firstAttribute="top" secondItem="DAN-Dp-TL1" secondAttribute="bottom" constant="22" id="Nnr-3s-IOe"/>
-                            <constraint firstItem="l5a-nN-b23" firstAttribute="leading" secondItem="Cim-hz-EhR" secondAttribute="leading" constant="107" id="OPo-qv-9xX"/>
-                            <constraint firstItem="xxK-tm-82R" firstAttribute="top" secondItem="Cim-hz-EhR" secondAttribute="top" constant="50" id="U2H-UV-IMp"/>
-                            <constraint firstItem="Cim-hz-EhR" firstAttribute="trailing" secondItem="Pb7-rl-mrh" secondAttribute="trailing" constant="86" id="XaC-jh-pP1"/>
-                            <constraint firstItem="DAN-Dp-TL1" firstAttribute="top" secondItem="l5a-nN-b23" secondAttribute="bottom" constant="150" id="ZLV-Ix-OW7"/>
-                            <constraint firstItem="DAN-Dp-TL1" firstAttribute="leading" secondItem="Cim-hz-EhR" secondAttribute="leading" constant="87" id="b2j-kh-tfU"/>
-                            <constraint firstItem="xxK-tm-82R" firstAttribute="leading" secondItem="Cim-hz-EhR" secondAttribute="leading" constant="20" id="e19-yL-kEU"/>
+                            <constraint firstItem="Pb7-rl-mrh" firstAttribute="top" secondItem="DAN-Dp-TL1" secondAttribute="bottom" constant="22" id="5NY-zM-5Sr"/>
+                            <constraint firstItem="l5a-nN-b23" firstAttribute="centerX" secondItem="DAN-Dp-TL1" secondAttribute="centerX" id="9n2-u2-SyW"/>
+                            <constraint firstItem="Cim-hz-EhR" firstAttribute="bottom" secondItem="Pb7-rl-mrh" secondAttribute="bottom" constant="88" id="CJg-rZ-1wy"/>
+                            <constraint firstItem="l5a-nN-b23" firstAttribute="centerX" secondItem="YSH-Ek-ZDw" secondAttribute="centerX" id="JcU-4G-xCC"/>
+                            <constraint firstItem="l5a-nN-b23" firstAttribute="leading" secondItem="Cim-hz-EhR" secondAttribute="leading" constant="107" id="PD6-bl-1kB"/>
+                            <constraint firstItem="DAN-Dp-TL1" firstAttribute="trailing" secondItem="Pb7-rl-mrh" secondAttribute="trailing" id="aCV-de-x2O"/>
+                            <constraint firstItem="DAN-Dp-TL1" firstAttribute="leading" secondItem="Cim-hz-EhR" secondAttribute="leading" constant="87" id="re7-0I-1tH"/>
+                            <constraint firstItem="l5a-nN-b23" firstAttribute="top" secondItem="Cim-hz-EhR" secondAttribute="top" constant="77" id="vrV-nr-sYb"/>
+                            <constraint firstItem="DAN-Dp-TL1" firstAttribute="leading" secondItem="Pb7-rl-mrh" secondAttribute="leading" id="w7e-Wa-vFg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Cim-hz-EhR"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Pke-6d-A5E"/>
+                    <navigationItem key="navigationItem" title="User" id="Pke-6d-A5E"/>
                     <connections>
                         <outlet property="buttonDeleteUser" destination="Pb7-rl-mrh" id="ehg-IG-8yZ"/>
                         <outlet property="buttonWriteNotification" destination="DAN-Dp-TL1" id="JRA-oV-Mq2"/>
-                        <outlet property="labelUsername" destination="xxK-tm-82R" id="GHP-zT-JAY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lf2-6J-kbW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1653.6231884057972" y="168.75"/>
+            <point key="canvasLocation" x="1696" y="199"/>
         </scene>
         <!--Notifcation Specific User-->
         <scene sceneID="fgA-S9-Ccy">

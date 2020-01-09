@@ -23,7 +23,9 @@ class InteractionUser: UIViewController {
         // Do any additional setup after loading the view.
         buttonWriteNotification.layer.cornerRadius = 20
         buttonDeleteUser.layer.cornerRadius = 20
-        labelUsername.text = nameUser
+       // labelUsername.text = nameUser
+        
+        self.title = nameUser
     }
     
 
@@ -40,7 +42,7 @@ class InteractionUser: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "WriteNotificationForUser"{
             let vc = segue.destination as? NotificationSpecificUser
-            vc?.nameUser = labelUsername.text!
+            vc?.nameUser = nameUser
         }
     }
     

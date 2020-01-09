@@ -13,6 +13,7 @@ class Users: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var usersTableView: UITableView!
     
     var user : User?
+    var userName : String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,14 +54,45 @@ class Users: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! UserCell
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard?.instantiateViewController(withIdentifier: "ProfileVC") as? InteractionUser
-        vc?.nameUser = cell.userName.text!
-        self.present(vc!, animated: true, completion: nil)
+//        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//        let vc = storyboard?.instantiateViewController(withIdentifier: "ProfileVC") as? InteractionUser
+//        vc?.nameUser = cell.userName.text!
+//        self.present(vc!, animated: true, completion: nil)
+        
+        //pass data to next view s
+        userName = cell.userName.text
+//            for medR in self.filteredData[indexPath.row].medicalReports {
+//                selectedDescription = medR.description
+//
+//            }
+        print("index row clicked")
+            self.performSegue(withIdentifier: "oneUser", sender: self)
         //print("user is: " + cell.userName.text!)
        // performSegue(withIdentifier: "GoToUser", sender: indexPath)
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+         if segue.identifier == "oneUser" {
+             let destinationViewController = segue.destination as!   InteractionUser
+            destinationViewController.nameUser = userName!
+           // print(selectedDescription!)
+             //pass image
+             //destinationViewController.newImage = selectedImage!
+            
+            if userName != nil {
+                print("Contains a value!")
+                // destinationViewController.labelDescription.text = selectedDescription
+            } else {
+                print("Doesn’t contain a value.")
+            }
+
+//            for medR in destinationViewController.medicalReports {
+//                medR.description = selectedDescription!
+//                print(medR.description)
+//            }
+        }
+    }
     
 }
