@@ -15,6 +15,7 @@ class Users: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var user : User?
     var userName : String?
     var userImage : UIImage?
+    var users = [User] ()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +23,22 @@ class Users: UIViewController, UITableViewDelegate, UITableViewDataSource {
         // Do any additional setup after loading the view.
         usersTableView.delegate = self
         usersTableView.dataSource = self
-        user = .init(image: "./Assets/anonymous user icon", username: "Stella van Sanden")
+        
+        let numbers = 0...0
+        
+            for _ in numbers{
+                
+                let user = User(image: "test", username: "Stella van Sanden")
+                let user2 = User(image: "test", username: "Holland Kaaskop")
+                let user3 = User(image: "test", username: "Bulgaar Buitenlander")
+                
+                users.append(user);
+                users.append(user2);
+                users.append(user3);
+
+                usersTableView.reloadData()
+                
+        }
     }
     
 
@@ -41,35 +57,24 @@ class Users: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return users.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UserCell", for: indexPath) as! UserCell
         
-        cell.userName?.text = user?.Username
+        cell.userName?.text =  users[indexPath.row].Username
         cell.imageView?.image = UIImage(named: "default profile image")
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! UserCell
-//        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//        let vc = storyboard?.instantiateViewController(withIdentifier: "ProfileVC") as? InteractionUser
-//        vc?.nameUser = cell.userName.text!
-//        self.present(vc!, animated: true, completion: nil)
         
         //pass data to next view s
         userName = cell.userName.text
         userImage = cell.imageView?.image
-//            for medR in self.filteredData[indexPath.row].medicalReports {
-//                selectedDescription = medR.description
-//
-//            }
-        print("index row clicked")
-            self.performSegue(withIdentifier: "oneUser", sender: self)
-        //print("user is: " + cell.userName.text!)
-       // performSegue(withIdentifier: "GoToUser", sender: indexPath)
+        self.performSegue(withIdentifier: "oneUser", sender: self)
         
     }
     
@@ -79,9 +84,6 @@ class Users: UIViewController, UITableViewDelegate, UITableViewDataSource {
              let destinationViewController = segue.destination as!   InteractionUser
             destinationViewController.nameUser = userName!
             destinationViewController.imageUser = userImage!
-           // print(selectedDescription!)
-             //pass image
-             //destinationViewController.newImage = selectedImage!
             
             if userName != nil  || userImage != nil{
                 print("Contains a value!")
@@ -90,10 +92,6 @@ class Users: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 print("Doesn’t contain a value.")
             }
 
-//            for medR in destinationViewController.medicalReports {
-//                medR.description = selectedDescription!
-//                print(medR.description)
-//            }
         }
     }
     

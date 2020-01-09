@@ -12,10 +12,11 @@ class Notifications: UIViewController, UITableViewDelegate, UITableViewDataSourc
 
     @IBOutlet weak var notificationsTableView: UITableView!
     var selectedCellIndexPath: IndexPath?
-    let selectedCellHeight: CGFloat = 150.0
+    let selectedCellHeight: CGFloat = 200.0
     let unselectedCellHeight: CGFloat = 88.0
     
     var notification : Notification?
+    var notifications = [Notification] ()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,12 +24,27 @@ class Notifications: UIViewController, UITableViewDelegate, UITableViewDataSourc
         // Do any additional setup after loading the view.
         notificationsTableView.delegate = self
         notificationsTableView.dataSource = self
-        notification = .init(name: "New contest coming up!", description: "Sign up for this new contest and win cool prizes! Please sign up on the whiteboard at the stable to enter the contest.")
-        //assign today's date as the notification date
+        
         let today = Date()
         let formatter = DateFormatter()
         formatter.dateFormat = "dd-MM-yyy"
-        notification?.theDate = formatter.string(from: today as Date)
+        let date = formatter.string(from: today as Date)
+        
+        let numbers = 0...0
+        
+            for _ in numbers{
+                
+                let notification = Notification(name: "New contest coming up!", description: "Sign up for this new contest and win cool prizes! Please sign up on the whiteboard at the stable to enter the contest.", date: date)
+                let notification2 = Notification(name: "Vet is coming to Stiphoutse Hoeve", description: "Next week on the 5th of December we have scheduled a vetenerian from the Eindhoven vet hospital to come here at 5:00 p.m.", date: date)
+                let notification3 = Notification(name: "Stiphoutse Hoeve closed!", description: "Stiphoutse Hoeve will be closed on the 25th and 26th of December because of Christmas. Please keep that in mind when you want to schedule a lesson.", date: date)
+                
+                notifications.append(notification);
+                notifications.append(notification2);
+                notifications.append(notification3);
+
+                notificationsTableView.reloadData()
+                
+        }
         
     }
     
@@ -50,16 +66,16 @@ class Notifications: UIViewController, UITableViewDelegate, UITableViewDataSourc
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 5
+        return notifications.count
     }
 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NotificationCell", for: indexPath) as! NotificationCell
         
-        cell.labelTitle?.text = notification?.Title
-        cell.labelNotification?.text = notification?.Description
-        cell.labelDate.text = notification?.theDate
+        cell.labelTitle?.text = notifications[indexPath.row].Title
+        cell.labelNotification?.text = notifications[indexPath.row].Description
+        cell.labelDate.text = notifications[indexPath.row].theDate
         cell.imageView?.image = UIImage(named: "notification icon")
 
         return cell
@@ -70,7 +86,7 @@ class Notifications: UIViewController, UITableViewDelegate, UITableViewDataSourc
         if selectedCellIndexPath == indexPath {
             return selectedCellHeight
         }
-        return unselectedCellHeight
+            return unselectedCellHeight
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -85,7 +101,7 @@ class Notifications: UIViewController, UITableViewDelegate, UITableViewDataSourc
         tableView.beginUpdates()
         tableView.endUpdates()
 
-        if selectedCellIndexPath != nil {
+        if selectedCellIndexPath == indexPath {
             // This ensures, that the cell is fully visible once expanded
             tableView.scrollToRow(at: indexPath, at: .none, animated: true)
             cell.labelNotification.numberOfLines = 0
@@ -94,4 +110,5 @@ class Notifications: UIViewController, UITableViewDelegate, UITableViewDataSourc
             cell.labelNotification.numberOfLines = 1
         }
     }
+    
 }
