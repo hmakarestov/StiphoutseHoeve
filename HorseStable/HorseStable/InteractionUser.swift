@@ -19,7 +19,7 @@ class InteractionUser: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //print("user is: " + nameUser)
         // Do any additional setup after loading the view.
         buttonWriteNotification.layer.cornerRadius = 20
         buttonDeleteUser.layer.cornerRadius = 20
