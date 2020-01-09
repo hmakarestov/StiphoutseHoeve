@@ -1258,6 +1258,42 @@
             </objects>
             <point key="canvasLocation" x="534.78260869565224" y="724.55357142857144"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="KCc-Lp-cuC">
+            <objects>
+                <viewController id="gzG-UO-Q1V" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mz9-Ar-9Ja">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="Type something" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="igo-0B-xJr">
+                                <rect key="frame" x="0.0" y="44" width="414" height="718"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GUE-tr-8wN">
+                                <rect key="frame" x="35" y="812" width="136" height="41"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <state key="normal" title="Add a photo"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="GUE-tr-8wN" firstAttribute="top" secondItem="igo-0B-xJr" secondAttribute="bottom" constant="10" id="5ud-77-vis"/>
+                            <constraint firstItem="uE3-3F-BlH" firstAttribute="trailing" secondItem="igo-0B-xJr" secondAttribute="trailing" id="IUX-sP-VTZ"/>
+                            <constraint firstItem="GUE-tr-8wN" firstAttribute="leading" secondItem="uE3-3F-BlH" secondAttribute="leading" constant="35" id="Wgk-5f-E9i"/>
+                            <constraint firstItem="igo-0B-xJr" firstAttribute="leading" secondItem="uE3-3F-BlH" secondAttribute="leading" id="Zs7-hI-eJg"/>
+                            <constraint firstItem="igo-0B-xJr" firstAttribute="top" secondItem="uE3-3F-BlH" secondAttribute="top" id="v8f-rc-z9Y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uE3-3F-BlH"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xr5-Dk-Htg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1408" y="729"/>
+        </scene>
     </scenes>
     <resources>
         <image name="I" width="16" height="16"/>
