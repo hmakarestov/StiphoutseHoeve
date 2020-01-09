@@ -16,6 +16,7 @@ struct CellDataDemo{
 }
 
 class ViewControllerHorseList: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
     @IBOutlet weak var tableViewHorseList: UITableView!
     
     var horseInfo = [
@@ -26,6 +27,18 @@ class ViewControllerHorseList: UIViewController, UITableViewDelegate, UITableVie
         CellDataDemo(horseImage: "horseImg", horseName: "Horsy", fluShot: Date(), decontamination: Date()),
         CellDataDemo(horseImage: "horseImg", horseName: "Horsy", fluShot: Date(), decontamination: Date()),
         ]
+    
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTapAddItemButton))
+    }
+    
+    @objc func didTapAddItemButton(_ sender: UIBarButtonItem)
+    {
+        navigationItem.title = nil
+        self.performSegue(withIdentifier: "addHorseSegue", sender: "self")
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return horseInfo.count

@@ -10,7 +10,15 @@ import UIKit
 
 class ViewControllerMyHorse: UIViewController {
 
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(didTapAddItemButton))
+    }
+    
+    @objc func didTapAddItemButton(_ sender: UIBarButtonItem)
+    {
+        navigationItem.title = nil
+        self.performSegue(withIdentifier: "editHorseSegue", sender: "self")
     }
 }
