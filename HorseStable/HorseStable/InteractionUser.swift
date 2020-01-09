@@ -12,9 +12,11 @@ class InteractionUser: UIViewController {
 
     @IBOutlet weak var buttonWriteNotification: UIButton!
     @IBOutlet weak var buttonDeleteUser: UIButton!
-    @IBOutlet weak var labelUsername: UILabel!
+    @IBOutlet weak var imageviewUser: UIImageView!
     
-     var nameUser : String = ""
+    
+    var nameUser : String = ""
+    var imageUser : UIImage?
     
     
     override func viewDidLoad() {
@@ -26,6 +28,7 @@ class InteractionUser: UIViewController {
        // labelUsername.text = nameUser
         
         self.title = nameUser
+        self.imageviewUser.image = imageUser
     }
     
 

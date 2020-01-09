@@ -14,6 +14,7 @@ class Users: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var user : User?
     var userName : String?
+    var userImage : UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +49,6 @@ class Users: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         cell.userName?.text = user?.Username
         cell.imageView?.image = UIImage(named: "default profile image")
-        
         return cell
     }
     
@@ -61,6 +61,7 @@ class Users: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         //pass data to next view s
         userName = cell.userName.text
+        userImage = cell.imageView?.image
 //            for medR in self.filteredData[indexPath.row].medicalReports {
 //                selectedDescription = medR.description
 //
@@ -77,11 +78,12 @@ class Users: UIViewController, UITableViewDelegate, UITableViewDataSource {
          if segue.identifier == "oneUser" {
              let destinationViewController = segue.destination as!   InteractionUser
             destinationViewController.nameUser = userName!
+            destinationViewController.imageUser = userImage!
            // print(selectedDescription!)
              //pass image
              //destinationViewController.newImage = selectedImage!
             
-            if userName != nil {
+            if userName != nil  || userImage != nil{
                 print("Contains a value!")
                 // destinationViewController.labelDescription.text = selectedDescription
             } else {

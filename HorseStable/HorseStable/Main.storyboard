@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zzD-Ry-ROy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zzD-Ry-ROy">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -703,7 +703,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default profile image" translatesAutoresizingMaskIntoConstraints="NO" id="l5a-nN-b23">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="l5a-nN-b23">
                                 <rect key="frame" x="107" y="217" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="d7u-zq-bGG"/>
@@ -753,6 +753,7 @@
                     <connections>
                         <outlet property="buttonDeleteUser" destination="Pb7-rl-mrh" id="ehg-IG-8yZ"/>
                         <outlet property="buttonWriteNotification" destination="DAN-Dp-TL1" id="JRA-oV-Mq2"/>
+                        <outlet property="imageviewUser" destination="l5a-nN-b23" id="4C0-7W-ufP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lf2-6J-kbW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1174,7 +1175,6 @@
         <image name="background Login" width="375" height="812"/>
         <image name="community icon" width="24" height="24"/>
         <image name="dashboard icon" width="24" height="24"/>
-        <image name="default profile image" width="64" height="64"/>
         <image name="horse" width="512" height="512"/>
         <image name="logo Stiphoutse Hoeve" width="335" height="138"/>
         <image name="mail icon" width="24" height="24"/>
