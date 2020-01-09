@@ -24,6 +24,7 @@
 		3FCB9CFC23C65A5700F2EA2F /* 60782.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FCB9CFB23C65A5700F2EA2F /* 60782.png */; };
 		3FCB9CFE23C6617600F2EA2F /* ViewControllerCommunityHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCB9CFD23C6617600F2EA2F /* ViewControllerCommunityHub.swift */; };
 		3FCB9D0023C6C06B00F2EA2F /* ViewControllerUserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCB9CFF23C6C06B00F2EA2F /* ViewControllerUserProfile.swift */; };
+		3FCB9D0223C6C30700F2EA2F /* ViewControllerPostComments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCB9D0123C6C30700F2EA2F /* ViewControllerPostComments.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		3FCB9CFB23C65A5700F2EA2F /* 60782.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 60782.png; path = ../../../../60782.png; sourceTree = "<group>"; };
 		3FCB9CFD23C6617600F2EA2F /* ViewControllerCommunityHub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerCommunityHub.swift; sourceTree = "<group>"; };
 		3FCB9CFF23C6C06B00F2EA2F /* ViewControllerUserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerUserProfile.swift; sourceTree = "<group>"; };
+		3FCB9D0123C6C30700F2EA2F /* ViewControllerPostComments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPostComments.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				3F1EFB8223A2732000DCDE00 /* ViewControllerEditHorse.swift */,
 				3F1EFB8423A2733300DCDE00 /* ViewControllerAddHorse.swift */,
 				3FCB9CFF23C6C06B00F2EA2F /* ViewControllerUserProfile.swift */,
+				3FCB9D0123C6C30700F2EA2F /* ViewControllerPostComments.swift */,
 			);
 			path = HorseStable;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 				3F1EFB8123A2730C00DCDE00 /* ViewControllerMyHorse.swift in Sources */,
 				3FCB9CFE23C6617600F2EA2F /* ViewControllerCommunityHub.swift in Sources */,
 				3F858CB9239A5BF700C69B2B /* ViewController.swift in Sources */,
+				3FCB9D0223C6C30700F2EA2F /* ViewControllerPostComments.swift in Sources */,
 				3F1EFB8523A2733300DCDE00 /* ViewControllerAddHorse.swift in Sources */,
 				3F1EFB8323A2732000DCDE00 /* ViewControllerEditHorse.swift in Sources */,
 				3FCB9D0023C6C06B00F2EA2F /* ViewControllerUserProfile.swift in Sources */,
