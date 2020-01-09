@@ -85,7 +85,8 @@ class HorsesViewController: UIViewController {
                self.tableView.reloadData()
                 
                 
-               
+               tableView.estimatedRowHeight = 100
+                tableView.rowHeight = UITableView.automaticDimension
 
         // Do any additional setup after loading the view.
     }
@@ -148,7 +149,7 @@ extension HorsesViewController :  UITableViewDelegate, UITableViewDataSource {
                }
            }
            
-
+      
     
     
 }

@@ -1093,7 +1093,7 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="horseCell" textLabel="I3V-TG-2eH" detailTextLabel="fTt-Fg-ais" style="IBUITableViewCellStyleSubtitle" id="YFH-dU-cRP">
                                         <rect key="frame" x="0.0" y="28" width="404" height="55.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YFH-dU-cRP" id="q8h-fj-0Yh">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YFH-dU-cRP" id="q8h-fj-0Yh">
                                             <rect key="frame" x="0.0" y="0.0" width="404" height="55.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
