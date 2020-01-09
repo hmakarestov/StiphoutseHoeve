@@ -1070,7 +1070,6 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="eKR-ET-4fa" id="OVx-8M-2st"/>
                                     <outlet property="delegate" destination="eKR-ET-4fa" id="obn-gt-RMk"/>
                                 </connections>
                             </tableView>
