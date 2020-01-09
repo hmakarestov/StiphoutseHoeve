@@ -15,9 +15,9 @@ class Notification{
     var theDate: String
     
     // constructor
-    init(name: String, description: String){
+    init(name: String, description: String, date: String){
         self.Title = name
         self.Description = description
-        self.theDate = ""
+        self.theDate = date
     }
 }
