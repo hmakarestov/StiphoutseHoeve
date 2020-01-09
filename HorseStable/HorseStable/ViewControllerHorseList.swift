@@ -15,20 +15,23 @@ struct CellDataDemo{
     let decontamination : Date
 }
 
-class ViewControllerHorseList: UITableViewController {
+class ViewControllerHorseList: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    @IBOutlet weak var tableViewHorseList: UITableView!
     
     var horseInfo = [
         CellDataDemo(horseImage: "horseImg", horseName: "Horsy", fluShot: Date(), decontamination: Date()),
         CellDataDemo(horseImage: "horseImg", horseName: "Horsy", fluShot: Date(), decontamination: Date()),
+        CellDataDemo(horseImage: "horseImg", horseName: "Horsy", fluShot: Date(), decontamination: Date()),
+        CellDataDemo(horseImage: "horseImg", horseName: "Horsy", fluShot: Date(), decontamination: Date()),
+        CellDataDemo(horseImage: "horseImg", horseName: "Horsy", fluShot: Date(), decontamination: Date()),
+        CellDataDemo(horseImage: "horseImg", horseName: "Horsy", fluShot: Date(), decontamination: Date()),
         ]
-
-    // MARK: - Table view data source
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return horseInfo.count
     }
-
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LabelCell", for: indexPath) as! CustomCell
 
         let horse = horseInfo[indexPath.row]
@@ -39,7 +42,7 @@ class ViewControllerHorseList: UITableViewController {
 
         return cell
     }
-    
+        
 }
 
 class CustomCell : UITableViewCell{
@@ -47,8 +50,10 @@ class CustomCell : UITableViewCell{
     @IBOutlet weak var decontaminationDateLabel: UILabel!
     @IBOutlet weak var fluShotDateLabel: UILabel!
     @IBOutlet weak var horseImage: UIImageView!
-    
+        
 }
+
+
 
 
 
