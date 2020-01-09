@@ -14,14 +14,14 @@
 		3F7225C023ABBF68005E7BD9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7225BF23ABBF68005E7BD9 /* HomeViewController.swift */; };
 		3F7225C223ABBF7C005E7BD9 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7225C123ABBF7C005E7BD9 /* MenuViewController.swift */; };
 		3F7225C423ABBF90005E7BD9 /* SlideInTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7225C323ABBF90005E7BD9 /* SlideInTransition.swift */; };
+		3F819E5E23C726FC00F3D9A0 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F819E5D23C726FC00F3D9A0 /* CalendarViewController.swift */; };
+		3F819E6023C7465400F3D9A0 /* TimeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F819E5F23C7465400F3D9A0 /* TimeTableViewController.swift */; };
+		3F819E6223C7493900F3D9A0 /* ReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F819E6123C7493900F3D9A0 /* ReservationViewController.swift */; };
 		3F858CB7239A5BF700C69B2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F858CB6239A5BF700C69B2B /* AppDelegate.swift */; };
 		3F858CB9239A5BF700C69B2B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F858CB8239A5BF700C69B2B /* ViewController.swift */; };
 		3F858CBC239A5BF700C69B2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F858CBA239A5BF700C69B2B /* Main.storyboard */; };
 		3F858CBE239A5BF900C69B2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F858CBD239A5BF900C69B2B /* Assets.xcassets */; };
 		3F858CC1239A5BF900C69B2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F858CBF239A5BF900C69B2B /* LaunchScreen.storyboard */; };
-		3FCB9CF823C65A4C00F2EA2F /* profile-icon-png-image-free-download-searchpngcom-profile-icon-png-673_673.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FCB9CF723C65A4C00F2EA2F /* profile-icon-png-image-free-download-searchpngcom-profile-icon-png-673_673.png */; };
-		3FCB9CFA23C65A5200F2EA2F /* youtube-like-button-png-11.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FCB9CF923C65A5200F2EA2F /* youtube-like-button-png-11.png */; };
-		3FCB9CFC23C65A5700F2EA2F /* 60782.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FCB9CFB23C65A5700F2EA2F /* 60782.png */; };
 		3FCB9CFE23C6617600F2EA2F /* ViewControllerCommunityHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCB9CFD23C6617600F2EA2F /* ViewControllerCommunityHub.swift */; };
 		3FCB9D0023C6C06B00F2EA2F /* ViewControllerUserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCB9CFF23C6C06B00F2EA2F /* ViewControllerUserProfile.swift */; };
 		3FCB9D0223C6C30700F2EA2F /* ViewControllerPostComments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCB9D0123C6C30700F2EA2F /* ViewControllerPostComments.swift */; };
@@ -29,9 +29,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3F1EFB7B23A2721100DCDE00 /* emoji-heart-33.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "emoji-heart-33.png"; path = "../../../../emoji-heart-33.png"; sourceTree = "<group>"; };
-		3F1EFB7C23A2721C00DCDE00 /* img_493424.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = img_493424.png; path = ../../../../img_493424.png; sourceTree = "<group>"; };
-		3F1EFB7D23A272A300DCDE00 /* Want-to-Buy-Horse-Exercising-Training-Equipment.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Want-to-Buy-Horse-Exercising-Training-Equipment.jpg"; sourceTree = "<group>"; };
 		3F1EFB7E23A272ED00DCDE00 /* ViewControllerHorseList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerHorseList.swift; sourceTree = "<group>"; };
 		3F1EFB8023A2730C00DCDE00 /* ViewControllerMyHorse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerMyHorse.swift; sourceTree = "<group>"; };
 		3F1EFB8223A2732000DCDE00 /* ViewControllerEditHorse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerEditHorse.swift; sourceTree = "<group>"; };
@@ -39,6 +36,9 @@
 		3F7225BF23ABBF68005E7BD9 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3F7225C123ABBF7C005E7BD9 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		3F7225C323ABBF90005E7BD9 /* SlideInTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInTransition.swift; sourceTree = "<group>"; };
+		3F819E5D23C726FC00F3D9A0 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		3F819E5F23C7465400F3D9A0 /* TimeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableViewController.swift; sourceTree = "<group>"; };
+		3F819E6123C7493900F3D9A0 /* ReservationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationViewController.swift; sourceTree = "<group>"; };
 		3F858CB3239A5BF700C69B2B /* HorseStable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HorseStable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F858CB6239A5BF700C69B2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F858CB8239A5BF700C69B2B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,9 +46,6 @@
 		3F858CBD239A5BF900C69B2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F858CC0239A5BF900C69B2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F858CC2239A5BF900C69B2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3FCB9CF723C65A4C00F2EA2F /* profile-icon-png-image-free-download-searchpngcom-profile-icon-png-673_673.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "profile-icon-png-image-free-download-searchpngcom-profile-icon-png-673_673.png"; path = "../../../../profile-icon-png-image-free-download-searchpngcom-profile-icon-png-673_673.png"; sourceTree = "<group>"; };
-		3FCB9CF923C65A5200F2EA2F /* youtube-like-button-png-11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "youtube-like-button-png-11.png"; path = "../../../../youtube-like-button-png-11.png"; sourceTree = "<group>"; };
-		3FCB9CFB23C65A5700F2EA2F /* 60782.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 60782.png; path = ../../../../60782.png; sourceTree = "<group>"; };
 		3FCB9CFD23C6617600F2EA2F /* ViewControllerCommunityHub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerCommunityHub.swift; sourceTree = "<group>"; };
 		3FCB9CFF23C6C06B00F2EA2F /* ViewControllerUserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerUserProfile.swift; sourceTree = "<group>"; };
 		3FCB9D0123C6C30700F2EA2F /* ViewControllerPostComments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerPostComments.swift; sourceTree = "<group>"; };
@@ -66,19 +63,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3F1EFB7523A2720100DCDE00 /* HorseImg */ = {
-			isa = PBXGroup;
-			children = (
-				3FCB9CFB23C65A5700F2EA2F /* 60782.png */,
-				3FCB9CF923C65A5200F2EA2F /* youtube-like-button-png-11.png */,
-				3FCB9CF723C65A4C00F2EA2F /* profile-icon-png-image-free-download-searchpngcom-profile-icon-png-673_673.png */,
-				3F1EFB7D23A272A300DCDE00 /* Want-to-Buy-Horse-Exercising-Training-Equipment.jpg */,
-				3F1EFB7C23A2721C00DCDE00 /* img_493424.png */,
-				3F1EFB7B23A2721100DCDE00 /* emoji-heart-33.png */,
-			);
-			path = HorseImg;
-			sourceTree = "<group>";
-		};
 		3F858CAA239A5BF700C69B2B = {
 			isa = PBXGroup;
 			children = (
@@ -98,7 +82,6 @@
 		3F858CB5239A5BF700C69B2B /* HorseStable */ = {
 			isa = PBXGroup;
 			children = (
-				3F1EFB7523A2720100DCDE00 /* HorseImg */,
 				3F858CB6239A5BF700C69B2B /* AppDelegate.swift */,
 				3F858CB8239A5BF700C69B2B /* ViewController.swift */,
 				3F7225BF23ABBF68005E7BD9 /* HomeViewController.swift */,
@@ -116,6 +99,9 @@
 				3FCB9CFF23C6C06B00F2EA2F /* ViewControllerUserProfile.swift */,
 				3FCB9D0123C6C30700F2EA2F /* ViewControllerPostComments.swift */,
 				3FCB9D0323C6C48000F2EA2F /* ViewControllerNewPost.swift */,
+				3F819E5D23C726FC00F3D9A0 /* CalendarViewController.swift */,
+				3F819E5F23C7465400F3D9A0 /* TimeTableViewController.swift */,
+				3F819E6123C7493900F3D9A0 /* ReservationViewController.swift */,
 			);
 			path = HorseStable;
 			sourceTree = "<group>";
@@ -179,11 +165,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F858CC1239A5BF900C69B2B /* LaunchScreen.storyboard in Resources */,
-				3FCB9CFA23C65A5200F2EA2F /* youtube-like-button-png-11.png in Resources */,
 				3F858CBE239A5BF900C69B2B /* Assets.xcassets in Resources */,
 				3F858CBC239A5BF700C69B2B /* Main.storyboard in Resources */,
-				3FCB9CF823C65A4C00F2EA2F /* profile-icon-png-image-free-download-searchpngcom-profile-icon-png-673_673.png in Resources */,
-				3FCB9CFC23C65A5700F2EA2F /* 60782.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,8 +188,11 @@
 				3FCB9D0423C6C48000F2EA2F /* ViewControllerNewPost.swift in Sources */,
 				3F7225C023ABBF68005E7BD9 /* HomeViewController.swift in Sources */,
 				3F858CB7239A5BF700C69B2B /* AppDelegate.swift in Sources */,
+				3F819E6223C7493900F3D9A0 /* ReservationViewController.swift in Sources */,
 				3F1EFB7F23A272ED00DCDE00 /* ViewControllerHorseList.swift in Sources */,
+				3F819E5E23C726FC00F3D9A0 /* CalendarViewController.swift in Sources */,
 				3F7225C423ABBF90005E7BD9 /* SlideInTransition.swift in Sources */,
+				3F819E6023C7465400F3D9A0 /* TimeTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,13 +339,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Q4Q4HDKLNB;
+				DEVELOPMENT_TEAM = G37Q43W7A5;
 				INFOPLIST_FILE = HorseStable/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = smartmobile.HorseStable;
+				PRODUCT_BUNDLE_IDENTIFIER = sm.HorseStable;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -371,13 +357,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = Q4Q4HDKLNB;
+				DEVELOPMENT_TEAM = G37Q43W7A5;
 				INFOPLIST_FILE = HorseStable/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = smartmobile.HorseStable;
+				PRODUCT_BUNDLE_IDENTIFIER = sm.HorseStable;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
