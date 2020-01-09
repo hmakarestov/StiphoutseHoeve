@@ -8,11 +8,15 @@
 
 import UIKit
 
-class NavigationController: UINavigationController {
+class NavigationController: UINavigationController,UINavigationBarDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+//        var viewController = NavigationController()
+//        var navBar = UINavigationBar()
+       // navBar.delegate = viewController
+        
         if #available(iOS 13.0, *) {
             let appearance = UINavigationBarAppearance()
             appearance.backgroundColor = #colorLiteral(red: 0.6164805293, green: 0.7786822319, blue: 0.9191916585, alpha: 1)
@@ -28,8 +32,13 @@ class NavigationController: UINavigationController {
             UINavigationBar.appearance().barTintColor = #colorLiteral(red: 0.6164805293, green: 0.7786822319, blue: 0.9191916585, alpha: 1)
             UINavigationBar.appearance().isTranslucent = false
         }
+        
         // Do any additional setup after loading the view.
     }
+    
+//    func navigationBar(_ navigationBar: UINavigationBar, didPop item: UINavigationItem) {
+//        <#code#>
+//    }
     
 
     /*

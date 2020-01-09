@@ -15,10 +15,21 @@
 		3F6F1ADA23A2532F004904DA /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6F1AD923A2532F004904DA /* Notification.swift */; };
 		3F858CB7239A5BF700C69B2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F858CB6239A5BF700C69B2B /* AppDelegate.swift */; };
 		3F858CB9239A5BF700C69B2B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F858CB8239A5BF700C69B2B /* ViewController.swift */; };
-		3F858CBC239A5BF700C69B2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F858CBA239A5BF700C69B2B /* Main.storyboard */; };
 		3F858CBE239A5BF900C69B2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F858CBD239A5BF900C69B2B /* Assets.xcassets */; };
 		3F858CC1239A5BF900C69B2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F858CBF239A5BF900C69B2B /* LaunchScreen.storyboard */; };
+		3F9CE9AC23C16CFD007AA0A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F9CE9AB23C16CFD007AA0A5 /* Main.storyboard */; };
+		3F9CE9AE23C1710B007AA0A5 /* StableInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9CE9AD23C1710B007AA0A5 /* StableInfoTableViewController.swift */; };
+		3F9CE9B023C17BC8007AA0A5 /* OneHorseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9CE9AF23C17BC8007AA0A5 /* OneHorseViewController.swift */; };
 		3FA3F100239A979B00BD70CC /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA3F0FF239A979B00BD70CC /* Register.swift */; };
+		3FAD2B5723B96DA80095F8F1 /* HorsesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAD2B5623B96DA80095F8F1 /* HorsesTableViewController.swift */; };
+		3FAD2B5923B96E760095F8F1 /* Horse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAD2B5823B96E760095F8F1 /* Horse.swift */; };
+		3FAD2B5B23B971910095F8F1 /* MedicalReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAD2B5A23B971910095F8F1 /* MedicalReport.swift */; };
+		3FAD2B5D23B972120095F8F1 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAD2B5C23B972120095F8F1 /* Message.swift */; };
+		3FAD2B5F23B98B110095F8F1 /* HamburgerMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAD2B5E23B98B110095F8F1 /* HamburgerMenu.swift */; };
+		3FAD2B6123B98C680095F8F1 /* HamburgerMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAD2B6023B98C680095F8F1 /* HamburgerMenuViewController.swift */; };
+		3FAD2B6F23BD28110095F8F1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAD2B6E23BD28110095F8F1 /* ProfileViewController.swift */; };
+		3FAD2B7523C1638A0095F8F1 /* SwiftNewsVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAD2B7423C1638A0095F8F1 /* SwiftNewsVideo.swift */; };
+		3FFCC1A223C6ADE700DF395F /* HorsesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFCC1A123C6ADE700DF395F /* HorsesViewController.swift */; };
 		3FFE99AA239A7D6E00C5D304 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFE99A9239A7D6E00C5D304 /* Login.swift */; };
 		3FFFA44A23A3C5EE00648E28 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFFA44923A3C5EE00648E28 /* DashboardViewController.swift */; };
 		3FFFA44C23A3C9E600648E28 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFFA44B23A3C9E600648E28 /* NavigationController.swift */; };
@@ -34,11 +45,22 @@
 		3F858CB3239A5BF700C69B2B /* HorseStable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HorseStable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F858CB6239A5BF700C69B2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F858CB8239A5BF700C69B2B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3F858CBB239A5BF700C69B2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3F858CBD239A5BF900C69B2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F858CC0239A5BF900C69B2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F858CC2239A5BF900C69B2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F9CE9AB23C16CFD007AA0A5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		3F9CE9AD23C1710B007AA0A5 /* StableInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StableInfoTableViewController.swift; sourceTree = "<group>"; };
+		3F9CE9AF23C17BC8007AA0A5 /* OneHorseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneHorseViewController.swift; sourceTree = "<group>"; };
 		3FA3F0FF239A979B00BD70CC /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
+		3FAD2B5623B96DA80095F8F1 /* HorsesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorsesTableViewController.swift; sourceTree = "<group>"; };
+		3FAD2B5823B96E760095F8F1 /* Horse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Horse.swift; sourceTree = "<group>"; };
+		3FAD2B5A23B971910095F8F1 /* MedicalReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalReport.swift; sourceTree = "<group>"; };
+		3FAD2B5C23B972120095F8F1 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		3FAD2B5E23B98B110095F8F1 /* HamburgerMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamburgerMenu.swift; sourceTree = "<group>"; };
+		3FAD2B6023B98C680095F8F1 /* HamburgerMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamburgerMenuViewController.swift; sourceTree = "<group>"; };
+		3FAD2B6E23BD28110095F8F1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		3FAD2B7423C1638A0095F8F1 /* SwiftNewsVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftNewsVideo.swift; sourceTree = "<group>"; };
+		3FFCC1A123C6ADE700DF395F /* HorsesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorsesViewController.swift; sourceTree = "<group>"; };
 		3FFE99A9239A7D6E00C5D304 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		3FFFA44923A3C5EE00648E28 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		3FFFA44B23A3C9E600648E28 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
@@ -60,6 +82,7 @@
 			children = (
 				3F858CB5239A5BF700C69B2B /* HorseStable */,
 				3F858CB4239A5BF700C69B2B /* Products */,
+				BD29F5B924E47F7EFDDAB8FC /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +97,7 @@
 		3F858CB5239A5BF700C69B2B /* HorseStable */ = {
 			isa = PBXGroup;
 			children = (
+				3F9CE9AB23C16CFD007AA0A5 /* Main.storyboard */,
 				3F858CB6239A5BF700C69B2B /* AppDelegate.swift */,
 				3FA3F0FF239A979B00BD70CC /* Register.swift */,
 				3FFE99A9239A7D6E00C5D304 /* Login.swift */,
@@ -83,15 +107,32 @@
 				3F6F1AD523A24ED6004904DA /* Notifications.swift */,
 				3F6F1AD323A23E78004904DA /* NotificationSpecificUser.swift */,
 				3F6F1AD923A2532F004904DA /* Notification.swift */,
-				3F858CBA239A5BF700C69B2B /* Main.storyboard */,
 				3F858CBD239A5BF900C69B2B /* Assets.xcassets */,
 				3F858CBF239A5BF900C69B2B /* LaunchScreen.storyboard */,
 				3F858CC2239A5BF900C69B2B /* Info.plist */,
 				3F6F1AD723A250B4004904DA /* NotificationCell.swift */,
 				3FFFA44923A3C5EE00648E28 /* DashboardViewController.swift */,
 				3FFFA44B23A3C9E600648E28 /* NavigationController.swift */,
+				3FAD2B5623B96DA80095F8F1 /* HorsesTableViewController.swift */,
+				3FAD2B5823B96E760095F8F1 /* Horse.swift */,
+				3FAD2B5A23B971910095F8F1 /* MedicalReport.swift */,
+				3FAD2B5C23B972120095F8F1 /* Message.swift */,
+				3FAD2B5E23B98B110095F8F1 /* HamburgerMenu.swift */,
+				3FAD2B6023B98C680095F8F1 /* HamburgerMenuViewController.swift */,
+				3FAD2B6E23BD28110095F8F1 /* ProfileViewController.swift */,
+				3FAD2B7423C1638A0095F8F1 /* SwiftNewsVideo.swift */,
+				3F9CE9AD23C1710B007AA0A5 /* StableInfoTableViewController.swift */,
+				3F9CE9AF23C17BC8007AA0A5 /* OneHorseViewController.swift */,
+				3FFCC1A123C6ADE700DF395F /* HorsesViewController.swift */,
 			);
 			path = HorseStable;
+			sourceTree = "<group>";
+		};
+		BD29F5B924E47F7EFDDAB8FC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,9 +193,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F9CE9AC23C16CFD007AA0A5 /* Main.storyboard in Resources */,
 				3F858CC1239A5BF900C69B2B /* LaunchScreen.storyboard in Resources */,
 				3F858CBE239A5BF900C69B2B /* Assets.xcassets in Resources */,
-				3F858CBC239A5BF700C69B2B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,32 +206,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FAD2B5723B96DA80095F8F1 /* HorsesTableViewController.swift in Sources */,
+				3FAD2B7523C1638A0095F8F1 /* SwiftNewsVideo.swift in Sources */,
 				3F6F1AD623A24ED6004904DA /* Notifications.swift in Sources */,
 				3FFFA44C23A3C9E600648E28 /* NavigationController.swift in Sources */,
+				3F9CE9AE23C1710B007AA0A5 /* StableInfoTableViewController.swift in Sources */,
+				3FAD2B5D23B972120095F8F1 /* Message.swift in Sources */,
 				3F6F1AD823A250B4004904DA /* NotificationCell.swift in Sources */,
+				3F9CE9B023C17BC8007AA0A5 /* OneHorseViewController.swift in Sources */,
 				3F6F1AD423A23E78004904DA /* NotificationSpecificUser.swift in Sources */,
 				3FFE99AA239A7D6E00C5D304 /* Login.swift in Sources */,
+				3FAD2B5F23B98B110095F8F1 /* HamburgerMenu.swift in Sources */,
 				3F6F1AD223A23911004904DA /* InteractionUser.swift in Sources */,
+				3FFCC1A223C6ADE700DF395F /* HorsesViewController.swift in Sources */,
+				3FAD2B6F23BD28110095F8F1 /* ProfileViewController.swift in Sources */,
 				3F858CB9239A5BF700C69B2B /* ViewController.swift in Sources */,
 				3F6F1ADA23A2532F004904DA /* Notification.swift in Sources */,
 				3F6F1AD023A23816004904DA /* Users.swift in Sources */,
 				3FFFA44A23A3C5EE00648E28 /* DashboardViewController.swift in Sources */,
+				3FAD2B6123B98C680095F8F1 /* HamburgerMenuViewController.swift in Sources */,
+				3FAD2B5923B96E760095F8F1 /* Horse.swift in Sources */,
 				3FA3F100239A979B00BD70CC /* Register.swift in Sources */,
 				3F858CB7239A5BF700C69B2B /* AppDelegate.swift in Sources */,
+				3FAD2B5B23B971910095F8F1 /* MedicalReport.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3F858CBA239A5BF700C69B2B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3F858CBB239A5BF700C69B2B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3F858CBF239A5BF900C69B2B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

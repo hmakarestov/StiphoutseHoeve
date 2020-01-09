@@ -10,10 +10,14 @@ import UIKit
 
 class DashboardViewController: UIViewController {
 
+    
+    let transiton = HamburgerMenu()
+    var topView: UIView?
+    
     @IBOutlet weak var btnPush: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         pushButtonUpdate()
         // Do any additional setup after loading the view.
             
@@ -34,5 +38,66 @@ class DashboardViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
 
-}
+        @IBAction func didTapMenu(_ sender: UIBarButtonItem) {
+            
+            guard let menuViewController = storyboard?.instantiateViewController(withIdentifier: "HamburgerMenuViewController") as? HamburgerMenuViewController else { return }
+            menuViewController.didTapMenuType = { menuType in
+                self.transitionToNew(menuType)
+            }
+            menuViewController.modalPresentationStyle = .overCurrentContext
+            menuViewController.transitioningDelegate = self
+            present(menuViewController, animated: true)
+        }
+
+        func transitionToNew(_ menuType: MenuType) {
+          //  let title = String(describing: menuType).capitalized
+         //   self.title = title
+
+            topView?.removeFromSuperview()
+            switch menuType {
+            case .profile:
+                 performSegue(withIdentifier: "ProfileID", sender: nil)
+             //   let view = UIView()
+              //  view.backgroundColor = .yellow
+               // view.frame = self.view.bounds
+             //   self.view.addSubview(view)
+             //   self.topView = view
+            case .users:
+                performSegue(withIdentifier: "UserID", sender: nil)
+            case .horses:
+                performSegue(withIdentifier: "HorseID", sender: nil)
+            case .notifications:
+                performSegue(withIdentifier: "NotificationsID", sender: nil)
+            case .logout:
+                let alertController = UIAlertController(title: "Log out", message:
+                       "Are you sure you want to log out?", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "Yes", style: .default,  handler: { action in
+                    self.performSegue(withIdentifier: "LogoutID", sender: nil)
+                }))
+                
+                 alertController.addAction(UIAlertAction(title: "No", style: .default))
+
+                self.present(alertController, animated: true, completion: nil)
+                
+               
+            default:
+                break
+            }
+        }
+
+    }
+
+extension DashboardViewController: UIViewControllerTransitioningDelegate {
+      func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+          transiton.isPresenting = true
+          return transiton
+      }
+
+      func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+          transiton.isPresenting = false
+          return transiton
+      }
+  }
+
