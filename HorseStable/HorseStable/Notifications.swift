@@ -90,12 +90,20 @@ class Notifications: UIViewController, UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         let cell = tableView.cellForRow(at: indexPath) as! NotificationCell
+        
         if selectedCellIndexPath != nil && selectedCellIndexPath == indexPath {
             selectedCellIndexPath = nil
         }
         else{
             selectedCellIndexPath = indexPath
+            // to make sure the other notifications only show 1 line when another notification is expanded
+            for row in 0..<tableView.numberOfRows(inSection: 0)
+            {
+                let cell = tableView.cellForRow(at: IndexPath(row: row, section: 0)) as! NotificationCell
+                cell.labelNotification.numberOfLines = 1
+            }
         }
 
         tableView.beginUpdates()
