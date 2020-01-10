@@ -50,4 +50,13 @@ class InteractionUser: UIViewController {
     }
     
     
+    @IBAction func deleteUser(_ sender: Any) {
+        let alertController = UIAlertController(title: "Delete user", message:
+               "Are you sure you want to delete this user?", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .default))
+        
+         alertController.addAction(UIAlertAction(title: "Delete", style: .destructive))
+
+        self.present(alertController, animated: true, completion: nil)
+    }
 }
