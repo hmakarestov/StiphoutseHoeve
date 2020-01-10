@@ -30,6 +30,33 @@ class OneHorseViewController: UIViewController {
         horseAvatar.image = newImage
     //    }
     
+        
+        // Do any additional setup after loading the view.
+        let session = URLSession.shared
+        let url = URL(string: "http://localhost:8082/horse")!
+    
+        
+        let task = session.dataTask(with: url) { data, response, error in
+        
+        
+            if error != nil || data == nil {
+                print("Client error!")
+                return
+            }
+
+
+            do {
+                let json = try JSONSerialization.jsonObject(with: data!, options: [])
+                print(json)
+                
+            } catch {
+                print("JSON error: \(error.localizedDescription)")
+            }
+        }
+
+        task.resume()
+        
+        
     }
     
 
