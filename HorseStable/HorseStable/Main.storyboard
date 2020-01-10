@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zzD-Ry-ROy">
-    <device id="retina3_5" orientation="portrait" appearance="light"/>
-=======
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zzD-Ry-ROy">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
->>>>>>> 83b9e629ea0108ddcf5be26d86b640465821d117
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
@@ -491,15 +486,13 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cme-GB-5PN">
                                 <rect key="frame" x="57" y="318" width="207" height="30"/>
                                 <color key="backgroundColor" red="0.64923208951950073" green="0.77394121885299683" blue="0.90590113401412964" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-<<<<<<< HEAD
                                 <state key="normal" title="Push Notification">
-=======
+                                </state>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="r8t-Gc-CsN"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Push notification">
->>>>>>> 83b9e629ea0108ddcf5be26d86b640465821d117
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                             </button>
@@ -1053,19 +1046,15 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="anonymous user icon" translatesAutoresizingMaskIntoConstraints="NO" id="ybl-I3-GgC">
                                 <rect key="frame" x="16" y="106" width="288" height="158"/>
                             </imageView>
-<<<<<<< HEAD
                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YF4-hd-ZSa">
                                 <rect key="frame" x="50" y="320.5" width="220" height="46"/>
                                 <color key="backgroundColor" red="0.81492016820000002" green="0.81675670320000004" blue="0.84478197939999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <state key="normal" title="Reset Password"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Admin Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7i-Ej-4xM">
-                                <rect key="frame" x="85" y="274" width="150" height="26.5"/>
-=======
+                              
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Admin Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7i-Ej-4xM">
                                 <rect key="frame" x="145.5" y="403" width="123" height="26.5"/>
->>>>>>> 83b9e629ea0108ddcf5be26d86b640465821d117
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1084,7 +1073,6 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-<<<<<<< HEAD
                             <constraint firstItem="YF4-hd-ZSa" firstAttribute="leading" secondItem="c8H-NM-aMw" secondAttribute="leading" constant="50" id="0Wd-Mh-Scg"/>
                             <constraint firstItem="P7i-Ej-4xM" firstAttribute="leading" secondItem="c8H-NM-aMw" secondAttribute="leading" constant="85" id="6bG-DL-Qlo"/>
                             <constraint firstItem="c8H-NM-aMw" firstAttribute="bottom" secondItem="YF4-hd-ZSa" secondAttribute="bottom" constant="290" id="894-m9-rpY"/>
@@ -1095,7 +1083,6 @@
                             <constraint firstItem="c8H-NM-aMw" firstAttribute="trailing" secondItem="ybl-I3-GgC" secondAttribute="trailing" constant="16" id="MQD-CF-BWj"/>
                             <constraint firstItem="ybl-I3-GgC" firstAttribute="top" secondItem="c8H-NM-aMw" secondAttribute="top" constant="10" id="YLV-el-SIE"/>
                             <constraint firstItem="YF4-hd-ZSa" firstAttribute="top" secondItem="P7i-Ej-4xM" secondAttribute="bottom" constant="20" id="yMv-6K-ktY"/>
-=======
                             <constraint firstItem="fap-Pp-GNa" firstAttribute="leading" secondItem="c8H-NM-aMw" secondAttribute="leading" constant="87" id="1sb-Qg-sRX"/>
                             <constraint firstItem="ybl-I3-GgC" firstAttribute="leading" secondItem="doM-Pd-ZZm" secondAttribute="leadingMargin" id="Fmn-Cr-Hep"/>
                             <constraint firstItem="fap-Pp-GNa" firstAttribute="centerX" secondItem="P7i-Ej-4xM" secondAttribute="centerX" id="P50-7J-06D"/>
@@ -1104,7 +1091,6 @@
                             <constraint firstItem="P7i-Ej-4xM" firstAttribute="centerX" secondItem="ybl-I3-GgC" secondAttribute="centerX" id="Z67-si-wqD"/>
                             <constraint firstItem="c8H-NM-aMw" firstAttribute="bottom" secondItem="fap-Pp-GNa" secondAttribute="bottom" constant="165" id="gZ4-am-pLc"/>
                             <constraint firstItem="ybl-I3-GgC" firstAttribute="trailing" secondItem="doM-Pd-ZZm" secondAttribute="trailingMargin" id="wIs-0b-h47"/>
->>>>>>> 83b9e629ea0108ddcf5be26d86b640465821d117
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="c8H-NM-aMw"/>
                     </view>
