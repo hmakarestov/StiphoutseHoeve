@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bucket
+   uuid = "A9E2A712-9E98-49DD-965D-93EA23A873E1"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2CED7CF6-04D7-4F9B-AC56-C1F0B4217344"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HorseStable/TimeTableViewController.swift"
+            timestampString = "600269331.998158"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
