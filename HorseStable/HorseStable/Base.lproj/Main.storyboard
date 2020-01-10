@@ -100,7 +100,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="lEJ-BX-0Ob">
-                            <rect key="frame" x="0.0" y="0.0" width="508" height="44"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <items>
                                 <navigationItem title="Schedule" id="kmm-Ez-A5m"/>
@@ -139,7 +139,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="gwl-mv-Aro">
-                            <rect key="frame" x="0.0" y="0.0" width="508" height="44"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <items>
                                 <navigationItem title="Schedule" id="UAm-06-Fru"/>
@@ -853,7 +853,7 @@
                                     <constraint firstAttribute="height" constant="215" id="dAv-Rq-GMB"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="75" id="onQ-2t-yxu">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LabelCellReservations" rowHeight="75" id="onQ-2t-yxu" customClass="CustomCellReservations" customModule="HorseStable" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="onQ-2t-yxu" id="Etb-Dq-wcG">
@@ -881,13 +881,22 @@
                                                 <constraint firstItem="ggm-A0-VO0" firstAttribute="top" secondItem="Etb-Dq-wcG" secondAttribute="top" constant="36" id="DYX-Sa-6HN"/>
                                                 <constraint firstItem="YZ9-oy-xt5" firstAttribute="leading" secondItem="Etb-Dq-wcG" secondAttribute="leadingMargin" id="N9y-U7-fEu"/>
                                                 <constraint firstAttribute="trailing" secondItem="ggm-A0-VO0" secondAttribute="trailing" constant="12" id="RGQ-NG-Bjo"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="zLK-IT-XJ2" secondAttribute="bottom" constant="2" id="Ylk-Ae-qIh"/>
                                                 <constraint firstItem="zLK-IT-XJ2" firstAttribute="leading" secondItem="Etb-Dq-wcG" secondAttribute="leadingMargin" id="oFd-jJ-Nwe"/>
                                                 <constraint firstItem="zLK-IT-XJ2" firstAttribute="top" secondItem="YZ9-oy-xt5" secondAttribute="bottom" constant="8" id="qxQ-QL-4lZ"/>
                                                 <constraint firstItem="YZ9-oy-xt5" firstAttribute="top" secondItem="Etb-Dq-wcG" secondAttribute="topMargin" id="vtO-vQ-OW3"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabelReservation" destination="YZ9-oy-xt5" id="MMu-EM-e3d"/>
+                                            <outlet property="locationLabelReservation" destination="zLK-IT-XJ2" id="U4K-Sr-7OR"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="LHD-b2-FKY" id="fMS-RH-ucJ"/>
+                                    <outlet property="delegate" destination="LHD-b2-FKY" id="axZ-Jg-zwM"/>
+                                </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upcoming Reservations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sle-R6-Lho">
                                 <rect key="frame" x="10" y="128" width="279" height="30"/>
@@ -908,7 +917,7 @@
                                     <constraint firstAttribute="height" constant="254" id="2YB-4s-L7d"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="hpI-Qa-Nsf">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LabelCellNotifications" rowHeight="100" id="hpI-Qa-Nsf" customClass="CustomCellNotifications" customModule="HorseStable" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hpI-Qa-Nsf" id="y7G-K2-W9i">
@@ -944,13 +953,23 @@
                                                 <constraint firstAttribute="trailing" secondItem="Ze6-og-Fgn" secondAttribute="trailing" constant="9" id="OXj-sr-kTq"/>
                                                 <constraint firstItem="Sii-hX-fKr" firstAttribute="leading" secondItem="y7G-K2-W9i" secondAttribute="leadingMargin" constant="8" id="bbO-48-CRO"/>
                                                 <constraint firstItem="mjc-2w-1ol" firstAttribute="leading" secondItem="y7G-K2-W9i" secondAttribute="leadingMargin" constant="8" id="cVs-zm-5bV"/>
+                                                <constraint firstItem="Rr7-lY-7TK" firstAttribute="bottom" secondItem="y7G-K2-W9i" secondAttribute="bottomMargin" id="d1g-aI-COe"/>
                                                 <constraint firstItem="Sii-hX-fKr" firstAttribute="top" secondItem="mjc-2w-1ol" secondAttribute="bottom" constant="4" id="eLd-Dc-fWc"/>
                                                 <constraint firstItem="mjc-2w-1ol" firstAttribute="top" secondItem="y7G-K2-W9i" secondAttribute="topMargin" id="fJK-Ht-Fba"/>
                                                 <constraint firstItem="Ze6-og-Fgn" firstAttribute="top" secondItem="y7G-K2-W9i" secondAttribute="top" constant="59" id="u2u-3o-ITW"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabelNotification" destination="Rr7-lY-7TK" id="XBE-YA-MZd"/>
+                                            <outlet property="descriptionLabelNotification" destination="Sii-hX-fKr" id="I8b-Pl-3Th"/>
+                                            <outlet property="titleLabelNotification" destination="mjc-2w-1ol" id="5An-E0-KKA"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="LHD-b2-FKY" id="T5L-DR-zLo"/>
+                                    <outlet property="delegate" destination="LHD-b2-FKY" id="jGI-aq-65z"/>
+                                </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="See all" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7vu-AK-yWH">
                                 <rect key="frame" x="10" y="764" width="51" height="21"/>
@@ -994,6 +1013,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="tableNotifications" destination="OXG-kO-VEy" id="YeI-kW-PLx"/>
+                        <outlet property="tableReservations" destination="cGi-Fj-snC" id="D6X-YT-pLL"/>
                         <segue destination="4Lm-3S-Rv5" kind="show" identifier="myHorsesSegue" id="kPa-jN-25a"/>
                         <segue destination="x3Q-QE-IMQ" kind="show" identifier="communityHubSegue" id="15E-1v-bqC"/>
                         <segue destination="5ka-mu-h0y" kind="show" identifier="scheduleSegue" id="Wiv-gR-bMu"/>
