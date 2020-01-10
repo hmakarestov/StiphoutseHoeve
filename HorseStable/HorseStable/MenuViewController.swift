@@ -34,7 +34,4 @@ class MenuViewController: UITableViewController {
             self?.didTapMenuType?(menuType)
         }
     }
-    @IBAction func onclickbtn(_ sender: Any) {
-        performSegue(withIdentifier: "profileSegue", sender: nil)
-    }
 }

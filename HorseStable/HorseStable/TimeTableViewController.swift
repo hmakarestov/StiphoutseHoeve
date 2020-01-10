@@ -66,18 +66,21 @@ class TimeTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
             cell.textLabel?.text = timeRows[indexPath.row]
-            if cell.textLabel?.text == "17:00 - 17:30" || cell.textLabel?.text == "17:30 - 18:00"
-                || cell.textLabel?.text == "18:00 - 18:30" || cell.textLabel?.text == "18:30 - 19:00"
-                || cell.textLabel?.text == "19:00 - 19:30" || cell.textLabel?.text == "19:30 - 20:00"
-            {
-                let attributeString: NSMutableAttributedString =  NSMutableAttributedString(string: timeRows[indexPath.row])
-                attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 2, range: NSMakeRange(0, attributeString.length))
-                cell.textLabel?.attributedText = attributeString;
-            }
+        if dateIndex>1
+        {
+                if cell.textLabel?.text == "17:00 - 17:30" || cell.textLabel?.text == "17:30 - 18:00"
+                    || cell.textLabel?.text == "18:00 - 18:30" || cell.textLabel?.text == "18:30 - 19:00"
+                    || cell.textLabel?.text == "19:00 - 19:30" || cell.textLabel?.text == "19:30 - 20:00"
+                {
+                    let attributeString: NSMutableAttributedString =  NSMutableAttributedString(string: timeRows[indexPath.row])
+                    attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 2, range: NSMakeRange(0, attributeString.length))
+                    cell.textLabel?.attributedText = attributeString;
+                }
+        }
         return cell
     }
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
         timeIndex = indexPath.row
         performSegue(withIdentifier: "timeSegue", sender: self)
     }

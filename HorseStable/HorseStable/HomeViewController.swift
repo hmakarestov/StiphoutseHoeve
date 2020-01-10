@@ -29,10 +29,10 @@ class HomeViewController: UIViewController {
     }
 
     func transitionToNew(_ menuType: MenuType) {
-        let title = String(describing: menuType).capitalized
-        self.title = title
+//        let title = String(describing: menuType).capitalized
+//        self.title = title
 
-        topView?.removeFromSuperview()
+//        topView?.removeFromSuperview()
         switch menuType {
         case .profile:
             let view = UIView()
@@ -41,20 +41,11 @@ class HomeViewController: UIViewController {
             self.topView = view
             
         case .myHorses:
-            let view = UIView()
-            view.frame = self.view.bounds
-            self.view.addSubview(view)
-            self.topView = view
+            performSegue(withIdentifier: "myHorsesSegue", sender: nil)
         case .communityHub:
-            let view = UIView()
-            view.frame = self.view.bounds
-            self.view.addSubview(view)
-            self.topView = view
+            performSegue(withIdentifier: "communityHubSegue", sender: nil)
         case .schedule:
-            let view = UIView()
-            view.frame = self.view.bounds
-            self.view.addSubview(view)
-            self.topView = view
+            performSegue(withIdentifier: "scheduleSegue", sender: nil)
         case .logout:
             let view = UIView()
             view.frame = self.view.bounds
