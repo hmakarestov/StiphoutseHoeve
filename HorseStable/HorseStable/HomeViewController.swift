@@ -50,18 +50,15 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
 //        topView?.removeFromSuperview()
         switch menuType {
-        case .profile:
+        case .dashboard:
             let view = UIView()
             view.frame = self.view.bounds
             self.view.addSubview(view)
             self.topView = view
-            
         case .myHorses:
             performSegue(withIdentifier: "myHorsesSegue", sender: nil)
-        case .communityHub:
-            performSegue(withIdentifier: "communityHubSegue", sender: nil)
-        case .schedule:
-            performSegue(withIdentifier: "scheduleSegue", sender: nil)
+        case .profile:
+            performSegue(withIdentifier: "profileMenuSegue", sender: nil)
         case .logout:
             let view = UIView()
             view.frame = self.view.bounds

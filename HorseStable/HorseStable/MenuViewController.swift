@@ -9,10 +9,9 @@
 import UIKit
 
 enum MenuType: Int {
-    case profile
+    case dashboard
     case myHorses
-    case communityHub
-    case schedule
+    case profile
     case logout
 }
 

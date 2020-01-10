@@ -66,7 +66,7 @@ class TimeTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
             cell.textLabel?.text = timeRows[indexPath.row]
-        if dateIndex>1
+        if dateIndex>1 && launchPad
         {
                 if cell.textLabel?.text == "17:00 - 17:30" || cell.textLabel?.text == "17:30 - 18:00"
                     || cell.textLabel?.text == "18:00 - 18:30" || cell.textLabel?.text == "18:30 - 19:00"
