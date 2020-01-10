@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zzD-Ry-ROy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zzD-Ry-ROy">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -479,7 +479,8 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="r8t-Gc-CsN"/>
                                 </constraints>
-                                <state key="normal" title="Push Notification">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Push notification">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                             </button>
@@ -733,6 +734,9 @@
                                 <state key="normal" title="Delete user">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="deleteUser:" destination="iDD-CO-JU9" eventType="touchUpInside" id="lab-w8-hM1"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1044,31 +1048,33 @@
                                     <constraint firstAttribute="height" constant="207" id="fWF-ku-aOv"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YF4-hd-ZSa">
-                                <rect key="frame" x="64" y="619" width="287" height="30"/>
-                                <color key="backgroundColor" red="0.81492016820000002" green="0.81675670320000004" blue="0.84478197939999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="OEH-Nu-M5d"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <state key="normal" title="Reset Password"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Admin Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7i-Ej-4xM">
                                 <rect key="frame" x="145.5" y="403" width="123" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fap-Pp-GNa">
+                                <rect key="frame" x="87" y="559" width="240" height="40"/>
+                                <color key="backgroundColor" red="0.6492320895" green="0.77394121890000001" blue="0.90590113400000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ToN-4h-g8L"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <state key="normal" title="Reset password">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="fap-Pp-GNa" firstAttribute="leading" secondItem="c8H-NM-aMw" secondAttribute="leading" constant="87" id="1sb-Qg-sRX"/>
                             <constraint firstItem="ybl-I3-GgC" firstAttribute="leading" secondItem="doM-Pd-ZZm" secondAttribute="leadingMargin" id="Fmn-Cr-Hep"/>
-                            <constraint firstItem="YF4-hd-ZSa" firstAttribute="leading" secondItem="c8H-NM-aMw" secondAttribute="leading" constant="64" id="NZo-q8-OYn"/>
+                            <constraint firstItem="fap-Pp-GNa" firstAttribute="centerX" secondItem="P7i-Ej-4xM" secondAttribute="centerX" id="P50-7J-06D"/>
                             <constraint firstItem="P7i-Ej-4xM" firstAttribute="top" secondItem="ybl-I3-GgC" secondAttribute="bottom" constant="16" id="Vbu-bh-p8i"/>
                             <constraint firstItem="ybl-I3-GgC" firstAttribute="top" secondItem="c8H-NM-aMw" secondAttribute="top" constant="40" id="Wcu-Dc-73K"/>
-                            <constraint firstItem="ybl-I3-GgC" firstAttribute="centerX" secondItem="YF4-hd-ZSa" secondAttribute="centerX" id="Yok-hR-gqg"/>
                             <constraint firstItem="P7i-Ej-4xM" firstAttribute="centerX" secondItem="ybl-I3-GgC" secondAttribute="centerX" id="Z67-si-wqD"/>
-                            <constraint firstItem="c8H-NM-aMw" firstAttribute="bottom" secondItem="YF4-hd-ZSa" secondAttribute="bottom" constant="115" id="cch-AJ-dge"/>
+                            <constraint firstItem="c8H-NM-aMw" firstAttribute="bottom" secondItem="fap-Pp-GNa" secondAttribute="bottom" constant="165" id="gZ4-am-pLc"/>
                             <constraint firstItem="ybl-I3-GgC" firstAttribute="trailing" secondItem="doM-Pd-ZZm" secondAttribute="trailingMargin" id="wIs-0b-h47"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="c8H-NM-aMw"/>
