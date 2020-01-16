@@ -1,70 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bucket
-   uuid = "8FFE29E4-12A3-4F82-9395-4154CE92A7B1"
+   uuid = "A9E2A712-9E98-49DD-965D-93EA23A873E1"
    type = "1"
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "19AE7E98-D87C-457E-89A3-D98E809005CB"
-            shouldBeEnabled = "No"
+            uuid = "2CED7CF6-04D7-4F9B-AC56-C1F0B4217344"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HorseStable/HorsesViewController.swift"
+            filePath = "HorseStable/TimeTableViewController.swift"
+            timestampString = "600269331.998158"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "btnVaccined(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "19AE7E98-D87C-457E-89A3-D98E809005CB - b5ad70446881a861"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HorseStable.HorsesViewController.btnVaccined(Any) -&gt; ()"
-                  moduleName = "HorseStable"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/student/Desktop/gitHorseApp/horse-app-smart-mobile/HorseStable/HorseStable/HorsesViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "41"
-                  endingLineNumber = "41"
-                  offsetFromSymbolStart = "43">
-               </Location>
-               <Location
-                  uuid = "19AE7E98-D87C-457E-89A3-D98E809005CB - 55086e14307e79fc"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (HorseStable.Horse) -&gt; Swift.Bool in HorseStable.HorsesViewController.btnVaccined(Any) -&gt; ()"
-                  moduleName = "HorseStable"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/student/Desktop/gitHorseApp/horse-app-smart-mobile/HorseStable/HorseStable/HorsesViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "41"
-                  endingLineNumber = "41"
-                  offsetFromSymbolStart = "19">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8338480F-8959-4CAB-A880-E6FA149A8CE0"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HorseStable/HorsesViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "btnVaccined(_:)"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
