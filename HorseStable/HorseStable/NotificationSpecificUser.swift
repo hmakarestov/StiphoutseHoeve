@@ -19,6 +19,9 @@ class NotificationSpecificUser: UIViewController, UITextViewDelegate {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
+        view.addGestureRecognizer(tap)
+        
         buttonSendNotification.layer.cornerRadius = 20
         textviewNotification.layer.cornerRadius = 10
         textviewNotification.delegate = self

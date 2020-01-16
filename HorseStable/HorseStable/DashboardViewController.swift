@@ -20,6 +20,9 @@ class DashboardViewController: UIViewController, UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
     
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
+        view.addGestureRecognizer(tap)
+        
         textViewNotification.delegate = self
         textViewNotification.text = "Leave a notification for all users."
         textViewNotification.textColor = UIColor.lightGray
