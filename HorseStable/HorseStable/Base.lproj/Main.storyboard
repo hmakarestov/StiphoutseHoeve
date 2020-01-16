@@ -582,7 +582,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.79765576120000004" green="0.89236420390000004" blue="0.96864014860000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="cGZ-bS-zMJ" firstAttribute="top" secondItem="jGG-Xr-BlJ" secondAttribute="bottom" constant="20" id="1L7-im-PWk"/>
                             <constraint firstItem="ni1-cA-rMS" firstAttribute="top" secondItem="zvN-xp-kBV" secondAttribute="bottom" constant="20" id="3ZO-It-hr4"/>
@@ -693,7 +693,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.79765576120000004" green="0.89236420390000004" blue="0.96864014860000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="1A4-E6-r2G" firstAttribute="top" secondItem="aXg-HQ-uZp" secondAttribute="bottom" constant="20" id="3YK-cV-0fI"/>
                             <constraint firstItem="eXY-6e-nG1" firstAttribute="top" secondItem="sdC-CO-fno" secondAttribute="bottom" constant="10" id="6JB-x0-sf9"/>
@@ -796,7 +796,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.79765576120000004" green="0.89236420390000004" blue="0.96864014860000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="rBs-y0-3hn" firstAttribute="top" secondItem="VOb-Fs-n34" secondAttribute="bottom" constant="10" id="0uO-Or-9Pn"/>
                             <constraint firstItem="VOb-Fs-n34" firstAttribute="top" secondItem="sUu-cF-Bop" secondAttribute="bottom" constant="15" id="389-n2-qoc"/>
@@ -974,7 +974,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.62352941176470589" green="0.74117647058823533" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="OXG-kO-VEy" firstAttribute="top" secondItem="oJW-F1-PeN" secondAttribute="bottom" constant="8" id="7Bm-Sq-giJ"/>
                             <constraint firstItem="7vu-AK-yWH" firstAttribute="top" secondItem="OXG-kO-VEy" secondAttribute="bottom" constant="8" id="92x-y9-dvv"/>
@@ -1297,7 +1297,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.79765504600000003" green="0.88032060860000005" blue="0.96864134069999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="ReL-eJ-tul" secondAttribute="centerX" id="1Ka-z2-tKH"/>
                             <constraint firstItem="52g-0p-jyv" firstAttribute="leading" secondItem="IcR-Ei-atN" secondAttribute="leading" id="2Q6-VD-9hU"/>
@@ -1412,7 +1412,7 @@
                                 <state key="normal" title="Comment"/>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.79765504600000003" green="0.88032060860000005" blue="0.96864134069999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="IiS-WP-d9Z" firstAttribute="top" secondItem="g15-U3-dAE" secondAttribute="bottom" constant="15" id="3d7-Dc-3Lc"/>
                             <constraint firstItem="g15-U3-dAE" firstAttribute="trailing" secondItem="auy-w2-IKb" secondAttribute="trailing" id="6u0-qa-n1F"/>
@@ -1462,7 +1462,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.7976552844" green="0.88433569670000001" blue="0.96864098310000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="uE3-3F-BlH" firstAttribute="trailing" secondItem="GUE-tr-8wN" secondAttribute="trailing" constant="243" id="22P-Fx-84a"/>
                             <constraint firstItem="uE3-3F-BlH" firstAttribute="trailing" secondItem="igo-0B-xJr" secondAttribute="trailing" id="IUX-sP-VTZ"/>
@@ -1509,7 +1509,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="aMR-sX-sSv">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.62559813261032104" green="0.73864173889160156" blue="0.87060672044754028" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.77817386389999998" green="0.88035303350000005" blue="0.97648507360000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="tintColor" red="0.0" green="0.47843137254901957" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1530,7 +1530,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="kye-Do-lWl">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.77817386389999998" green="0.88035303350000005" blue="0.97648507360000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1550,7 +1550,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="9D1-hm-F31">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.085498370229999995" green="0.47495418789999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.77817386389999998" green="0.88035303350000005" blue="0.97648507360000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
