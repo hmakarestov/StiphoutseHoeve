@@ -29,6 +29,10 @@
 		3FAD2B6123B98C680095F8F1 /* HamburgerMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAD2B6023B98C680095F8F1 /* HamburgerMenuViewController.swift */; };
 		3FAD2B6F23BD28110095F8F1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAD2B6E23BD28110095F8F1 /* ProfileViewController.swift */; };
 		3FAD2B7523C1638A0095F8F1 /* SwiftNewsVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAD2B7423C1638A0095F8F1 /* SwiftNewsVideo.swift */; };
+		3FBD455D23D0748B00B8605F /* Facility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBD455C23D0748B00B8605F /* Facility.swift */; };
+		3FBD455F23D075D500B8605F /* Reservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBD455E23D075D500B8605F /* Reservation.swift */; };
+		3FBD456123D076EB00B8605F /* DateTimeRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBD456023D076EB00B8605F /* DateTimeRange.swift */; };
+		3FBD456323D077AB00B8605F /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBD456223D077AB00B8605F /* Credentials.swift */; };
 		3FD2A1C923C71F4900A57AF4 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD2A1C823C71F4900A57AF4 /* UserCell.swift */; };
 		3FD2A1CB23C7214500A57AF4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD2A1CA23C7214500A57AF4 /* User.swift */; };
 		3FFCC1A223C6ADE700DF395F /* HorsesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFCC1A123C6ADE700DF395F /* HorsesViewController.swift */; };
@@ -62,6 +66,10 @@
 		3FAD2B6023B98C680095F8F1 /* HamburgerMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamburgerMenuViewController.swift; sourceTree = "<group>"; };
 		3FAD2B6E23BD28110095F8F1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		3FAD2B7423C1638A0095F8F1 /* SwiftNewsVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftNewsVideo.swift; sourceTree = "<group>"; };
+		3FBD455C23D0748B00B8605F /* Facility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Facility.swift; sourceTree = "<group>"; };
+		3FBD455E23D075D500B8605F /* Reservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reservation.swift; sourceTree = "<group>"; };
+		3FBD456023D076EB00B8605F /* DateTimeRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTimeRange.swift; sourceTree = "<group>"; };
+		3FBD456223D077AB00B8605F /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		3FD2A1C823C71F4900A57AF4 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		3FD2A1CA23C7214500A57AF4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		3FFCC1A123C6ADE700DF395F /* HorsesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorsesViewController.swift; sourceTree = "<group>"; };
@@ -119,9 +127,13 @@
 				3FAD2B5C23B972120095F8F1 /* Message.swift */,
 				3FAD2B5E23B98B110095F8F1 /* HamburgerMenu.swift */,
 				3FAD2B6023B98C680095F8F1 /* HamburgerMenuViewController.swift */,
+				3FBD455C23D0748B00B8605F /* Facility.swift */,
+				3FBD456023D076EB00B8605F /* DateTimeRange.swift */,
 				3FAD2B6E23BD28110095F8F1 /* ProfileViewController.swift */,
+				3FBD455E23D075D500B8605F /* Reservation.swift */,
 				3FAD2B7423C1638A0095F8F1 /* SwiftNewsVideo.swift */,
 				3F9CE9AD23C1710B007AA0A5 /* StableInfoTableViewController.swift */,
+				3FBD456223D077AB00B8605F /* Credentials.swift */,
 				3F9CE9AF23C17BC8007AA0A5 /* OneHorseViewController.swift */,
 				3FFCC1A123C6ADE700DF395F /* HorsesViewController.swift */,
 				3F6F1AD523A24ED6004904DA /* Notifications.swift */,
@@ -214,10 +226,13 @@
 			files = (
 				3FAD2B5723B96DA80095F8F1 /* HorsesTableViewController.swift in Sources */,
 				3FAD2B7523C1638A0095F8F1 /* SwiftNewsVideo.swift in Sources */,
+				3FBD455F23D075D500B8605F /* Reservation.swift in Sources */,
+				3FBD456323D077AB00B8605F /* Credentials.swift in Sources */,
 				3F6F1AD623A24ED6004904DA /* Notifications.swift in Sources */,
 				3FD2A1CB23C7214500A57AF4 /* User.swift in Sources */,
 				3FFFA44C23A3C9E600648E28 /* NavigationController.swift in Sources */,
 				3F9CE9AE23C1710B007AA0A5 /* StableInfoTableViewController.swift in Sources */,
+				3FBD455D23D0748B00B8605F /* Facility.swift in Sources */,
 				3FAD2B5D23B972120095F8F1 /* Message.swift in Sources */,
 				3F6F1AD823A250B4004904DA /* NotificationCell.swift in Sources */,
 				3F9CE9B023C17BC8007AA0A5 /* OneHorseViewController.swift in Sources */,
@@ -226,6 +241,7 @@
 				3FFE99AA239A7D6E00C5D304 /* Login.swift in Sources */,
 				3FAD2B5F23B98B110095F8F1 /* HamburgerMenu.swift in Sources */,
 				3F6F1AD223A23911004904DA /* InteractionUser.swift in Sources */,
+				3FBD456123D076EB00B8605F /* DateTimeRange.swift in Sources */,
 				3FFCC1A223C6ADE700DF395F /* HorsesViewController.swift in Sources */,
 				3FAD2B6F23BD28110095F8F1 /* ProfileViewController.swift in Sources */,
 				3F858CB9239A5BF700C69B2B /* ViewController.swift in Sources */,

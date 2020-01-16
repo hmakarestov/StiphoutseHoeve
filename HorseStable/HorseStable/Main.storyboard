@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CwQ-uk-eYp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zzD-Ry-ROy">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -513,7 +513,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ybV-Zm-MaE">
-                                                    <rect key="frame" x="160" y="60.000000000000007" width="120" height="30.333333333333336"/>
+                                                    <rect key="frame" x="130" y="60.000000000000007" width="120" height="30.333333333333336"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -530,7 +530,7 @@
                                                 <constraint firstItem="DKV-vd-K4Y" firstAttribute="leading" secondItem="Q2g-Ep-bsU" secondAttribute="leading" constant="20" id="BAj-cM-WSi"/>
                                                 <constraint firstItem="ybV-Zm-MaE" firstAttribute="top" secondItem="Q2g-Ep-bsU" secondAttribute="top" constant="60" id="YjP-47-cnd"/>
                                                 <constraint firstAttribute="bottom" secondItem="ybV-Zm-MaE" secondAttribute="bottom" constant="60" id="fOn-3O-5Uw"/>
-                                                <constraint firstItem="ybV-Zm-MaE" firstAttribute="leading" secondItem="DKV-vd-K4Y" secondAttribute="trailing" constant="40" id="ijq-xA-AfC"/>
+                                                <constraint firstItem="ybV-Zm-MaE" firstAttribute="leading" secondItem="DKV-vd-K4Y" secondAttribute="trailing" constant="10" id="ijq-xA-AfC"/>
                                                 <constraint firstItem="DKV-vd-K4Y" firstAttribute="top" secondItem="Q2g-Ep-bsU" secondAttribute="top" constant="25" id="yE1-sK-2WJ"/>
                                             </constraints>
                                         </tableViewCellContentView>

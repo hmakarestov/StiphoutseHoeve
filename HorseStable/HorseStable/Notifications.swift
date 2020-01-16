@@ -26,17 +26,20 @@ class Notifications: UIViewController, UITableViewDelegate, UITableViewDataSourc
         notificationsTableView.dataSource = self
         
         let today = Date()
-        let formatter = DateFormatter()
-        formatter.dateFormat = "dd-MM-yyy"
-        let date = formatter.string(from: today as Date)
+        
+        //test user for notification constructor
+        let user = User(id: 1, username: "Stella van Sanden", firstName: "Stella", middleName: "", lastName: "van Sanden", email: "stellavs@gmail.com", password: "***", role: Role.USER, gender: Gender.FEMALE, birthdate: today, image: "test")
+        //test facility for notification constructor
+        let facility = Facility(id: 1, name: "Stable", reservable: false, reservations: [], unavailableTimeSlots: [])
+        
         
         let numbers = 0...0
         
             for _ in numbers{
                 
-                let notification = Notification(name: "New contest coming up!", description: "Sign up for this new contest and win cool prizes! Please sign up on the whiteboard at the stable to enter the contest.", date: date)
-                let notification2 = Notification(name: "Vet is coming to Stiphoutse Hoeve", description: "Next week on the 5th of December we have scheduled a vetenerian from the Eindhoven vet hospital to come here at 5:00 p.m.", date: date)
-                let notification3 = Notification(name: "Stiphoutse Hoeve closed!", description: "Stiphoutse Hoeve will be closed on the 25th and 26th of December because of Christmas. Please keep that in mind when you want to schedule a lesson.", date: date)
+                let notification = Notification(id: 1, title: "New contest coming up!", description: "Sign up for this new contest and win cool prizes! Please sign up on the whiteboard at the stable to enter the contest.", date: today, facility: facility, user: user)
+                let notification2 = Notification(id: 2, title: "Vet is coming to Stiphoutse Hoeve", description: "Next week on the 5th of December we have scheduled a vetenerian from the Eindhoven vet hospital to come here at 5:00 p.m.", date: today, facility: facility, user: user)
+                let notification3 = Notification(id: 3, title: "Stiphoutse Hoeve closed!", description: "Stiphoutse Hoeve will be closed on the 25th and 26th of December because of Christmas. Please keep that in mind when you want to schedule a lesson.", date: today, facility: facility, user: user)
                 
                 notifications.append(notification);
                 notifications.append(notification2);
@@ -73,9 +76,13 @@ class Notifications: UIViewController, UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NotificationCell", for: indexPath) as! NotificationCell
         
-        cell.labelTitle?.text = notifications[indexPath.row].Title
-        cell.labelNotification?.text = notifications[indexPath.row].Description
-        cell.labelDate.text = notifications[indexPath.row].theDate
+        cell.labelTitle?.text = notifications[indexPath.row].title
+        cell.labelNotification?.text = notifications[indexPath.row].description
+            let today = notifications[indexPath.row].date
+            let formatter = DateFormatter()
+            formatter.dateFormat = "dd-MM-yyy"
+            let date = formatter.string(from: today as Date)
+        cell.labelDate.text = date
         cell.imageView?.image = UIImage(named: "notification icon")
 
         return cell

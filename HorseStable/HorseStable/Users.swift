@@ -24,13 +24,18 @@ class Users: UIViewController, UITableViewDelegate, UITableViewDataSource {
         usersTableView.delegate = self
         usersTableView.dataSource = self
         
+        let dob = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd-MM-yyy"
+        let date = formatter.string(for: 20-09-1997)
+        
         let numbers = 0...0
         
             for _ in numbers{
                 
-                let user = User(image: "test", username: "Stella van Sanden")
-                let user2 = User(image: "test", username: "Holland Kaaskop")
-                let user3 = User(image: "test", username: "Bulgaar Buitenlander")
+                let user = User(id: 1, username: "Stella van Sanden", firstName: "Stella", middleName: "", lastName: "van Sanden", email: "stellavs@gmail.com", password: "***", role: Role.USER, gender: Gender.FEMALE, birthdate: dob, image: "test")
+                let user2 = User(id: 2, username: "Holland Kaaskop", firstName: "Holland", middleName: "", lastName: "Kaaskop", email: "hollandk@gmail.com", password: "***", role: Role.USER, gender: Gender.FEMALE, birthdate: dob, image: "test")
+                let user3 = User(id: 3, username: "Bulgaar Buitenlander", firstName: "Bulgaar", middleName: "", lastName: "Buitenlander", email: "bulgaarb@gmail.com", password: "***", role: Role.USER, gender: Gender.MALE, birthdate: dob, image: "test")
                 
                 users.append(user);
                 users.append(user2);
@@ -63,7 +68,7 @@ class Users: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UserCell", for: indexPath) as! UserCell
         
-        cell.userName?.text =  users[indexPath.row].Username
+        cell.userName?.text =  users[indexPath.row].username
         cell.imageView?.image = UIImage(named: "default profile image")
         return cell
     }

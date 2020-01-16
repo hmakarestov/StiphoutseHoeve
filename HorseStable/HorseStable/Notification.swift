@@ -10,14 +10,20 @@ import Foundation
 
 class Notification{
     // properties
-    var Title: String
-    var Description: String
-    var theDate: String
+    var id: Int
+    var title: String
+    var description: String
+    var date: Date
+    var facility: Facility
+    var user: User
     
     // constructor
-    init(name: String, description: String, date: String){
-        self.Title = name
-        self.Description = description
-        self.theDate = date
+    init(id: Int, title: String, description: String, date: Date, facility: Facility, user: User){
+        self.id = id
+        self.title = title
+        self.description = description
+        self.date = date
+        self.facility = facility
+        self.user = user
     }
 }
