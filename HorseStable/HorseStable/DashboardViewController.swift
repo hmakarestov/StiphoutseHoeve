@@ -8,16 +8,21 @@
 
 import UIKit
 
-class DashboardViewController: UIViewController {
+class DashboardViewController: UIViewController, UITextViewDelegate {
 
     
     let transiton = HamburgerMenu()
     var topView: UIView?
     
     @IBOutlet weak var btnPush: UIButton!
+    @IBOutlet weak var textViewNotification: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     
+        textViewNotification.delegate = self
+        textViewNotification.text = "Leave a notification for all users."
+        textViewNotification.textColor = UIColor.lightGray
         pushButtonUpdate()
         // Do any additional setup after loading the view.
             
@@ -29,6 +34,12 @@ class DashboardViewController: UIViewController {
         btnPush.layer.cornerRadius = 13
         btnPush.clipsToBounds = true    }
 
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textViewNotification.textColor == UIColor.lightGray {
+            textViewNotification.text = nil
+            textViewNotification.textColor = UIColor.black
+        }
+    }
     /*
     // MARK: - Navigation
 
