@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController,UINavigationBarDelegate {
+class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +18,9 @@ class ViewController: UIViewController,UINavigationBarDelegate {
         }
     
 
-    
+    @IBAction func onClickMenu(_ sender: Any) {
+        performSegue(withIdentifier: "menuSegue", sender: nil)
+    }
     
 }
 
