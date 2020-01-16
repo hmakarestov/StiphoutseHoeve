@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Facility{
+class Facility : Decodable{
     // properties
     var id: Int
     var name: String

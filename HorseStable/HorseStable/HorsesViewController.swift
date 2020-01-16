@@ -28,7 +28,7 @@ class HorsesViewController: UIViewController {
     
     
     @IBAction func btnNotVaccined(_ sender: Any) {
-        self.filteredData = horses.filter { !$0.vaccinated } // or !$0.vaccinated for the second option
+      //  self.filteredData = horses.filter { !$0.vaccinated } // or !$0.vaccinated for the second option
         self.tableView.reloadData()
         print(horses.count)
         print(filteredData.count)
@@ -38,7 +38,7 @@ class HorsesViewController: UIViewController {
     }
     
     @IBAction func btnVaccined(_ sender: Any) {
-        filteredData = horses.filter { $0.vaccinated } // or !$0.vaccinated for the second option
+       //filteredData = horses.filter { $0.vaccinated } // or !$0.vaccinated for the second option
         self.tableView.reloadData()
         print(horses.count)
         print(filteredData.count)
@@ -72,15 +72,15 @@ class HorsesViewController: UIViewController {
         
             for _ in numbers{
                 
-                let horse = Horse(id: 1,name: "Angel",race: "White",gender: Gender.MALE ,medicalReports: medicalReports, vaccinated : false)
-                let horse2 = Horse(id: 2,name: "Rambo",race: "White",gender: Gender.MALE ,medicalReports: medicalReports, vaccinated : true)
-                let horse3 = Horse(id: 3,name: "Toro",race: "White",gender: Gender.MALE ,medicalReports: medicalReports, vaccinated : true)
+           //     let horse = Horse(id: 1,name: "Angel",race: "White",gender: Gender.MALE ,medicalReports: medicalReports, vaccinated : false)
+             //   let horse2 = Horse(id: 2,name: "Rambo",race: "White",gender: Gender.MALE ,medicalReports: medicalReports, vaccinated : true)
+            //    let horse3 = Horse(id: 3,name: "Toro",race: "White",gender: Gender.MALE ,medicalReports: medicalReports, vaccinated : true)
                 
                // print(medRep.description)
                 
-                horses.append(horse);
-                horses.append(horse2);
-                horses.append(horse3);
+              //  horses.append(horse);
+              //  horses.append(horse2);
+              //  horses.append(horse3);
                 filteredData = horses
                self.tableView.reloadData()
                 

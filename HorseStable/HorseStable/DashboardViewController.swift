@@ -9,6 +9,7 @@
 import UIKit
 
 class DashboardViewController: UIViewController, UITextViewDelegate {
+    let url = URL(string: "http://localhost:8083/horse/1")!
 
     
     let transiton = HamburgerMenu()
@@ -19,7 +20,9 @@ class DashboardViewController: UIViewController, UITextViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+       
+        var backendHelper = BackendHelper(url: url)
+        
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         view.addGestureRecognizer(tap)
         

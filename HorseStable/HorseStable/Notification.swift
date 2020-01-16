@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Notification{
+class Notification : Decodable{
     // properties
     var id: Int
     var title: String

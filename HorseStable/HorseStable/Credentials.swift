@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Credentials{
+class Credentials : Decodable{
     // properties
     var userId: Int
     var username: String

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class DateTimeRange{
+class DateTimeRange : Decodable{
     // properties
     var id: Int
     var startDateTime: Date

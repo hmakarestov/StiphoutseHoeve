@@ -45,13 +45,13 @@ class HorsesTableViewController: UITableViewController {
     
         for _ in numbers{
             
-            let horse = Horse(id: 1,name: "Angel",race: "White",gender: Gender.MALE ,medicalReports: medicalReports, vaccinated : false)
-            let horse2 = Horse(id: 1,name: "Rambo",race: "White",gender: Gender.MALE ,medicalReports: medicalReports, vaccinated : true)
+           // let horse = Horse(id: 1,name: "Angel",race: "White",gender: Gender.MALE ,medicalReports: medicalReports, vaccinated : false)
+          //  let horse2 = Horse(id: 1,name: "Rambo",race: "White",gender: Gender.MALE ,medicalReports: medicalReports, vaccinated : true)
             
            // print(medRep.description)
             
-            horses.append(horse);
-            horses.append(horse2);
+          //  horses.append(horse);
+          //  horses.append(horse2);
             self.tableView.reloadData()
 
         }
@@ -166,7 +166,7 @@ class HorsesTableViewController: UITableViewController {
     @objc func showVaccined(sender:UIButton)
     {
         
-        filteredData = horses.filter { $0.vaccinated } // or !$0.vaccinated for the second option
+       // filteredData = horses.filter { $0.vaccinated } // or !$0.vaccinated for the second option
         self.tableView.reloadData()
        
         print("Vaccined")
@@ -174,7 +174,7 @@ class HorsesTableViewController: UITableViewController {
     
     @objc func showNotVaccined(sender:UIButton)
     {
-        filteredData = horses.filter { !$0.vaccinated } // or !$0.vaccinated for the second option
+       // filteredData = horses.filter { !$0.vaccinated } // or !$0.vaccinated for the second option
         self.tableView.reloadData()
 
         print("Not Vaccined")

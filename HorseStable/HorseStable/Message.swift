@@ -14,10 +14,10 @@ enum MessageType : Int,Decodable {
 }
 public class Message<T: Decodable> : Decodable {
     
-    var messageType: MessageType
+    var type: MessageType
     var model : T
-    init(messageType:MessageType,model:T) {
-        self.messageType = messageType
+    init(type:MessageType,model:T) {
+        self.type = type
         self.model = model
     }
     

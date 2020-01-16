@@ -14,7 +14,7 @@ enum Role : String, Decodable {
     case ADMIN
 }
 
-class User{
+class User : Decodable{
     // properties
     var id: Int
     var username: String

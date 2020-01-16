@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Reservation{
+class Reservation : Decodable{
     // properties
     var id: Int
     var dateTimeRange: DateTimeRange
