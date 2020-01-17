@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum MessageType : Int,Decodable {
+enum MessageType : String,Decodable {
          case CREATE_HORSE
           case GET_HORSE
           case UPDATE_HORSE

@@ -28,10 +28,10 @@ public class BackendHelper {
                    do {
                     let decoder = JSONDecoder()
                     
-                    if let json = try? decoder.decode(Message<Horse>.self, from: data!) {
-                        print(json)
+                     let json = try? decoder.decode(Message<Horse>.self, from: data!)
+                    print(json?.type ?? "Is nil")
                         
-                    }
+                    
                     
                    } catch {
                        print("JSON error: \(error.localizedDescription)")
@@ -43,7 +43,7 @@ public class BackendHelper {
     }
     
     func getJSON (completion: @escaping (Message<Horse>)->()) {
-            let url = "http://localhost:8083/horse/1"
+            let url = "http://localhost:8083/horse/2"
         if let url = URL(string: url)
         {
             let task = session.dataTask(with: url) { data, response, error in
@@ -59,17 +59,19 @@ public class BackendHelper {
                        print("nothing")
                         
                         let json = try JSONDecoder().decode(Message<Horse>.self, from: data!)
-                      
+                        
+                        print(json.model?.name)
                        // print(json.model as Horse)
                       //  print(json.self.model)
                       //  print(json.model)
-                        print(json.model)
+                      
+                        print(json.model as Any)
                         print("something")
                         
                        
                        
                       } catch {
-                          print("JSON error: \(error.localizedDescription)")
+                          print("JSON error: \(error)")
                         print("erroooorrrrrr")
                       }
                   }
@@ -82,12 +84,12 @@ public class BackendHelper {
     private func handleMessage(_ data : Message<Horse>) {
         // Do something with the message.
 
-        print("Successful printing \(data.model)")
+        print("Successful printing \(String(describing: data.model))")
         self.horses.append(data.model!)
 
         //test fetching of name
         for h in self.horses {
-            print("Hello, \(h.name)!")
+            print("Hello, \(String(describing: h.name))!")
         }
 
     }
