@@ -60,10 +60,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         case .profile:
             performSegue(withIdentifier: "profileMenuSegue", sender: nil)
         case .logout:
-            let view = UIView()
-            view.frame = self.view.bounds
-            self.view.addSubview(view)
-            self.topView = view
+            performSegue(withIdentifier: "logoutMenuSegue", sender: nil)
         default:
             break
         }
