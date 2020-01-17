@@ -68,7 +68,7 @@ class DashboardViewController: UIViewController, UITextViewDelegate {
             present(menuViewController, animated: true)
         }
 
-        func transitionToNew(_ menuType: MenuType) {
+        func transitionToNew(_ menuType: MenuTypeAdmin) {
           //  let title = String(describing: menuType).capitalized
          //   self.title = title
 

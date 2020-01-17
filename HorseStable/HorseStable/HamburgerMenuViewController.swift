@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum MenuType: Int {
+enum MenuTypeAdmin: Int {
     case profile
     case users
     case horses
@@ -19,7 +19,7 @@ enum MenuType: Int {
 
 class HamburgerMenuViewController: UITableViewController {
 
-    var didTapMenuType: ((MenuType) -> Void)?
+    var didTapMenuType: ((MenuTypeAdmin) -> Void)?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +29,7 @@ class HamburgerMenuViewController: UITableViewController {
     
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let menuType = MenuType(rawValue: indexPath.row) else { return }
+        guard let menuType = MenuTypeAdmin(rawValue: indexPath.row) else { return }
         dismiss(animated: true) { [weak self] in
             print("Dismissing: \(menuType)")
             self?.didTapMenuType?(menuType)

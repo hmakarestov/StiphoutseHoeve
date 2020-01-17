@@ -17,6 +17,20 @@
 		3F858CB9239A5BF700C69B2B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F858CB8239A5BF700C69B2B /* ViewController.swift */; };
 		3F858CBE239A5BF900C69B2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F858CBD239A5BF900C69B2B /* Assets.xcassets */; };
 		3F858CC1239A5BF900C69B2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F858CBF239A5BF900C69B2B /* LaunchScreen.storyboard */; };
+		3F9A51B723D1A6F800B496CE /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A51AC23D1A6F700B496CE /* CalendarViewController.swift */; };
+		3F9A51B823D1A6F800B496CE /* ViewControllerNewPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A51AD23D1A6F700B496CE /* ViewControllerNewPost.swift */; };
+		3F9A51B923D1A6F800B496CE /* ViewControllerMyHorse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A51AE23D1A6F700B496CE /* ViewControllerMyHorse.swift */; };
+		3F9A51BA23D1A6F800B496CE /* ViewControllerCommunityHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A51AF23D1A6F800B496CE /* ViewControllerCommunityHub.swift */; };
+		3F9A51BB23D1A6F800B496CE /* TimeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A51B023D1A6F800B496CE /* TimeTableViewController.swift */; };
+		3F9A51BC23D1A6F800B496CE /* ViewControllerHorseList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A51B123D1A6F800B496CE /* ViewControllerHorseList.swift */; };
+		3F9A51BD23D1A6F800B496CE /* ViewControllerUserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A51B223D1A6F800B496CE /* ViewControllerUserProfile.swift */; };
+		3F9A51BE23D1A6F800B496CE /* ViewControllerPostComments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A51B323D1A6F800B496CE /* ViewControllerPostComments.swift */; };
+		3F9A51BF23D1A6F800B496CE /* ViewControllerAddHorse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A51B423D1A6F800B496CE /* ViewControllerAddHorse.swift */; };
+		3F9A51C023D1A6F800B496CE /* ViewControllerEditHorse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A51B523D1A6F800B496CE /* ViewControllerEditHorse.swift */; };
+		3F9A51C123D1A6F800B496CE /* ReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A51B623D1A6F800B496CE /* ReservationViewController.swift */; };
+		3F9A51C323D1A71300B496CE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A51C223D1A71300B496CE /* HomeViewController.swift */; };
+		3F9A51C523D1A71E00B496CE /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A51C423D1A71E00B496CE /* MenuViewController.swift */; };
+		3F9A51C723D1A73000B496CE /* SlideInTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A51C623D1A73000B496CE /* SlideInTransition.swift */; };
 		3F9CE9AC23C16CFD007AA0A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F9CE9AB23C16CFD007AA0A5 /* Main.storyboard */; };
 		3F9CE9AE23C1710B007AA0A5 /* StableInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9CE9AD23C1710B007AA0A5 /* StableInfoTableViewController.swift */; };
 		3F9CE9B023C17BC8007AA0A5 /* OneHorseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9CE9AF23C17BC8007AA0A5 /* OneHorseViewController.swift */; };
@@ -55,6 +69,20 @@
 		3F858CBD239A5BF900C69B2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F858CC0239A5BF900C69B2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F858CC2239A5BF900C69B2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F9A51AC23D1A6F700B496CE /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalendarViewController.swift; path = "../../../userBranch/horse-app-smart-mobile/HorseStable/HorseStable/CalendarViewController.swift"; sourceTree = "<group>"; };
+		3F9A51AD23D1A6F700B496CE /* ViewControllerNewPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewControllerNewPost.swift; path = "../../../userBranch/horse-app-smart-mobile/HorseStable/HorseStable/ViewControllerNewPost.swift"; sourceTree = "<group>"; };
+		3F9A51AE23D1A6F700B496CE /* ViewControllerMyHorse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewControllerMyHorse.swift; path = "../../../userBranch/horse-app-smart-mobile/HorseStable/HorseStable/ViewControllerMyHorse.swift"; sourceTree = "<group>"; };
+		3F9A51AF23D1A6F800B496CE /* ViewControllerCommunityHub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewControllerCommunityHub.swift; path = "../../../userBranch/horse-app-smart-mobile/HorseStable/HorseStable/ViewControllerCommunityHub.swift"; sourceTree = "<group>"; };
+		3F9A51B023D1A6F800B496CE /* TimeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimeTableViewController.swift; path = "../../../userBranch/horse-app-smart-mobile/HorseStable/HorseStable/TimeTableViewController.swift"; sourceTree = "<group>"; };
+		3F9A51B123D1A6F800B496CE /* ViewControllerHorseList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewControllerHorseList.swift; path = "../../../userBranch/horse-app-smart-mobile/HorseStable/HorseStable/ViewControllerHorseList.swift"; sourceTree = "<group>"; };
+		3F9A51B223D1A6F800B496CE /* ViewControllerUserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewControllerUserProfile.swift; path = "../../../userBranch/horse-app-smart-mobile/HorseStable/HorseStable/ViewControllerUserProfile.swift"; sourceTree = "<group>"; };
+		3F9A51B323D1A6F800B496CE /* ViewControllerPostComments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewControllerPostComments.swift; path = "../../../userBranch/horse-app-smart-mobile/HorseStable/HorseStable/ViewControllerPostComments.swift"; sourceTree = "<group>"; };
+		3F9A51B423D1A6F800B496CE /* ViewControllerAddHorse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewControllerAddHorse.swift; path = "../../../userBranch/horse-app-smart-mobile/HorseStable/HorseStable/ViewControllerAddHorse.swift"; sourceTree = "<group>"; };
+		3F9A51B523D1A6F800B496CE /* ViewControllerEditHorse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewControllerEditHorse.swift; path = "../../../userBranch/horse-app-smart-mobile/HorseStable/HorseStable/ViewControllerEditHorse.swift"; sourceTree = "<group>"; };
+		3F9A51B623D1A6F800B496CE /* ReservationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReservationViewController.swift; path = "../../../userBranch/horse-app-smart-mobile/HorseStable/HorseStable/ReservationViewController.swift"; sourceTree = "<group>"; };
+		3F9A51C223D1A71300B496CE /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = "../../../userBranch/horse-app-smart-mobile/HorseStable/HorseStable/HomeViewController.swift"; sourceTree = "<group>"; };
+		3F9A51C423D1A71E00B496CE /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = "../../../userBranch/horse-app-smart-mobile/HorseStable/HorseStable/MenuViewController.swift"; sourceTree = "<group>"; };
+		3F9A51C623D1A73000B496CE /* SlideInTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SlideInTransition.swift; path = "../../../userBranch/horse-app-smart-mobile/HorseStable/HorseStable/SlideInTransition.swift"; sourceTree = "<group>"; };
 		3F9CE9AB23C16CFD007AA0A5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3F9CE9AD23C1710B007AA0A5 /* StableInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StableInfoTableViewController.swift; sourceTree = "<group>"; };
 		3F9CE9AF23C17BC8007AA0A5 /* OneHorseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneHorseViewController.swift; sourceTree = "<group>"; };
@@ -115,7 +143,6 @@
 				3F858CB6239A5BF700C69B2B /* AppDelegate.swift */,
 				3FA3F0FF239A979B00BD70CC /* Register.swift */,
 				3FFE99A9239A7D6E00C5D304 /* Login.swift */,
-				3F858CB8239A5BF700C69B2B /* ViewController.swift */,
 				3F6F1AD123A23911004904DA /* InteractionUser.swift */,
 				3F6F1AD323A23E78004904DA /* NotificationSpecificUser.swift */,
 				3F858CBD239A5BF900C69B2B /* Assets.xcassets */,
@@ -145,6 +172,21 @@
 				3FD2A1CA23C7214500A57AF4 /* User.swift */,
 				3FD2A1C823C71F4900A57AF4 /* UserCell.swift */,
 				3F9CE9B323D0A152007AA0A5 /* BackendHelper.swift */,
+				3F9A51C423D1A71E00B496CE /* MenuViewController.swift */,
+				3F9A51C223D1A71300B496CE /* HomeViewController.swift */,
+				3F858CB8239A5BF700C69B2B /* ViewController.swift */,
+				3F9A51C623D1A73000B496CE /* SlideInTransition.swift */,
+				3F9A51AC23D1A6F700B496CE /* CalendarViewController.swift */,
+				3F9A51B623D1A6F800B496CE /* ReservationViewController.swift */,
+				3F9A51B023D1A6F800B496CE /* TimeTableViewController.swift */,
+				3F9A51B423D1A6F800B496CE /* ViewControllerAddHorse.swift */,
+				3F9A51AF23D1A6F800B496CE /* ViewControllerCommunityHub.swift */,
+				3F9A51B523D1A6F800B496CE /* ViewControllerEditHorse.swift */,
+				3F9A51B123D1A6F800B496CE /* ViewControllerHorseList.swift */,
+				3F9A51AE23D1A6F700B496CE /* ViewControllerMyHorse.swift */,
+				3F9A51AD23D1A6F700B496CE /* ViewControllerNewPost.swift */,
+				3F9A51B323D1A6F800B496CE /* ViewControllerPostComments.swift */,
+				3F9A51B223D1A6F800B496CE /* ViewControllerUserProfile.swift */,
 			);
 			path = HorseStable;
 			sourceTree = "<group>";
@@ -230,30 +272,44 @@
 				3FAD2B5723B96DA80095F8F1 /* HorsesTableViewController.swift in Sources */,
 				3FAD2B7523C1638A0095F8F1 /* SwiftNewsVideo.swift in Sources */,
 				3FBD455F23D075D500B8605F /* Reservation.swift in Sources */,
+				3F9A51B923D1A6F800B496CE /* ViewControllerMyHorse.swift in Sources */,
 				3FBD456323D077AB00B8605F /* Credentials.swift in Sources */,
+				3F9A51C323D1A71300B496CE /* HomeViewController.swift in Sources */,
 				3F6F1AD623A24ED6004904DA /* Notifications.swift in Sources */,
+				3F9A51BA23D1A6F800B496CE /* ViewControllerCommunityHub.swift in Sources */,
+				3F9A51B823D1A6F800B496CE /* ViewControllerNewPost.swift in Sources */,
 				3FD2A1CB23C7214500A57AF4 /* User.swift in Sources */,
 				3FFFA44C23A3C9E600648E28 /* NavigationController.swift in Sources */,
 				3F9CE9AE23C1710B007AA0A5 /* StableInfoTableViewController.swift in Sources */,
 				3FBD455D23D0748B00B8605F /* Facility.swift in Sources */,
 				3FAD2B5D23B972120095F8F1 /* Message.swift in Sources */,
 				3F6F1AD823A250B4004904DA /* NotificationCell.swift in Sources */,
+				3F9A51BF23D1A6F800B496CE /* ViewControllerAddHorse.swift in Sources */,
+				3F9A51C123D1A6F800B496CE /* ReservationViewController.swift in Sources */,
+				3F9A51C723D1A73000B496CE /* SlideInTransition.swift in Sources */,
+				3F9A51BB23D1A6F800B496CE /* TimeTableViewController.swift in Sources */,
 				3F9CE9B023C17BC8007AA0A5 /* OneHorseViewController.swift in Sources */,
+				3F9A51BE23D1A6F800B496CE /* ViewControllerPostComments.swift in Sources */,
+				3F9A51B723D1A6F800B496CE /* CalendarViewController.swift in Sources */,
 				3FD2A1C923C71F4900A57AF4 /* UserCell.swift in Sources */,
 				3F6F1AD423A23E78004904DA /* NotificationSpecificUser.swift in Sources */,
 				3FFE99AA239A7D6E00C5D304 /* Login.swift in Sources */,
+				3F9A51C023D1A6F800B496CE /* ViewControllerEditHorse.swift in Sources */,
 				3FAD2B5F23B98B110095F8F1 /* HamburgerMenu.swift in Sources */,
 				3F6F1AD223A23911004904DA /* InteractionUser.swift in Sources */,
 				3FBD456123D076EB00B8605F /* DateTimeRange.swift in Sources */,
 				3FFCC1A223C6ADE700DF395F /* HorsesViewController.swift in Sources */,
+				3F9A51C523D1A71E00B496CE /* MenuViewController.swift in Sources */,
 				3FAD2B6F23BD28110095F8F1 /* ProfileViewController.swift in Sources */,
 				3F858CB9239A5BF700C69B2B /* ViewController.swift in Sources */,
 				3F6F1ADA23A2532F004904DA /* Notification.swift in Sources */,
 				3F9CE9B423D0A152007AA0A5 /* BackendHelper.swift in Sources */,
 				3F6F1AD023A23816004904DA /* Users.swift in Sources */,
+				3F9A51BD23D1A6F800B496CE /* ViewControllerUserProfile.swift in Sources */,
 				3FFFA44A23A3C5EE00648E28 /* DashboardViewController.swift in Sources */,
 				3FAD2B6123B98C680095F8F1 /* HamburgerMenuViewController.swift in Sources */,
 				3FAD2B5923B96E760095F8F1 /* Horse.swift in Sources */,
+				3F9A51BC23D1A6F800B496CE /* ViewControllerHorseList.swift in Sources */,
 				3FA3F100239A979B00BD70CC /* Register.swift in Sources */,
 				3F858CB7239A5BF700C69B2B /* AppDelegate.swift in Sources */,
 				3FAD2B5B23B971910095F8F1 /* MedicalReport.swift in Sources */,
