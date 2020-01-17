@@ -10,9 +10,13 @@ import UIKit
 
 class Login: UIViewController {
 
+    var username : String = ""
+    var password : String = ""
     
     @IBOutlet weak var labelRegister: UILabel!
+    @IBOutlet weak var passwordField: UITextField!
     
+    @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var buttonLogin: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +28,17 @@ class Login: UIViewController {
         buttonLogin.layer.cornerRadius = 20
     }
     
-
+    @IBAction func logIn(_ sender: Any) {
+        username = usernameField.text!
+        if (usernameField.text=="admin") {
+            performSegue(withIdentifier: "adminSegue", sender: self)
+        }
+        else {
+            performSegue(withIdentifier: "userSegue", sender: self)
+            
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -36,10 +50,22 @@ class Login: UIViewController {
     */
     
     @IBAction func goToRegister(sender: UITapGestureRecognizer) {
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let registerViewController = storyBoard.instantiateViewController(withIdentifier: "Register")
-        registerViewController.modalPresentationStyle = .fullScreen
-        self.present(registerViewController, animated: true, completion: nil)
+        //let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+      //  let registerViewController = storyBoard.instantiateViewController(withIdentifier: "Register")
+      //  registerViewController.modalPresentationStyle = .fullScreen
+      //  self.present(registerViewController, animated: true, completion: nil)
+        
+        username = usernameField.text!
+        if (usernameField.text=="admin") {
+          let vc = DashboardViewController() //your view controller
+           self.present(vc, animated: true, completion: nil)
+        }
+        else {
+            
+            
+            let vc = HomeViewController() //your view controller
+            self.present(vc, animated: true, completion: nil)
+        }
     }
 }
 

@@ -59,8 +59,16 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             performSegue(withIdentifier: "myHorsesSegue", sender: nil)
         case .profile:
             performSegue(withIdentifier: "profileMenuSegue", sender: nil)
-        case .logout:
-            performSegue(withIdentifier: "logoutMenuSegue", sender: nil)
+       case .logout:
+        let alertController = UIAlertController(title: "Log out", message:
+               "Are you sure you want to log out?", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Yes", style: .default,  handler: { action in
+            self.performSegue(withIdentifier: "LogoutUser", sender: nil)
+        }))
+        
+         alertController.addAction(UIAlertAction(title: "No", style: .default))
+
+        self.present(alertController, animated: true, completion: nil)
         default:
             break
         }
