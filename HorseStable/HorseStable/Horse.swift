@@ -20,15 +20,15 @@ enum Gender :Int, Decodable {
 
 public class Horse : Decodable {
     
-     let id: Int
-     let name: String
-     let race: String
-     let lifeNumber : String
-     let chipNumber : String
-     let birthDate : Date
-     let gender : Gender
-     let medicalReports : [MedicalReport]
-     let owners : [User]
+     let id: Int?
+     let name: String?
+     let race: String?
+     let lifeNumber : String?
+     let chipNumber : String?
+     let birthDate : Date?
+     let gender : Gender?
+     let medicalReports : [MedicalReport]?
+     let owners : [User]?
       
       
      init (id:Int, name:String,race:String,lifeNumber: String, chipNumber:String, birthDate : Date, gender:Gender, medicalReports: [MedicalReport] , owners : [User]) {

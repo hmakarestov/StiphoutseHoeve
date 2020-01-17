@@ -17,7 +17,7 @@ class HorsesViewController: UIViewController {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "horseCell", for: indexPath)
         cell.textLabel?.text =  "Name: \(self.filteredData[indexPath.row].name) "
-        cell.detailTextLabel?.text = String(self.filteredData[indexPath.row].medicalReports[0].description )
+        cell.detailTextLabel?.text = String(self.filteredData[indexPath.row].medicalReports![0].description )
         cell.imageView?.image = selectedImage//UIImage(named: "horse")
         
         return cell
@@ -118,7 +118,7 @@ extension HorsesViewController :  UITableViewDelegate, UITableViewDataSource {
                
                //pass data to next view s
                selectedName = self.filteredData[indexPath.row].name
-               for medR in self.filteredData[indexPath.row].medicalReports {
+        for medR in self.filteredData[indexPath.row].medicalReports! {
                    selectedDescription = medR.description
                    
                }

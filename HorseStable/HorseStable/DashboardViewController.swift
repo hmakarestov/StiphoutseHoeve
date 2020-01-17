@@ -20,9 +20,18 @@ class DashboardViewController: UIViewController, UITextViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        var backendHelper = BackendHelper(url: url)
-        
+        var result : String = ""
+        let backendHelper = BackendHelper(url: url)
+        backendHelper.getJSON { (result) in
+            print("miracle")
+            print(result)
+        }
+//        backendHelper.getJSON(completion: args in
+//        let m: Message<Horse> = args![0] as! Message<Horse>
+//        print(args!)
+//        print("Connecting")
+//       // print(m.model)
+//        )
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         view.addGestureRecognizer(tap)
         

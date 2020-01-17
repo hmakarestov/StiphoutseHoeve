@@ -33,9 +33,9 @@ class Users: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
             for _ in numbers{
                 
-                let user = User(id: 1, username: "Stella van Sanden", firstName: "Stella", middleName: "", lastName: "van Sanden", email: "stellavs@gmail.com", password: "***", role: Role.USER, gender: Gender.FEMALE, birthdate: dob, image: "test")
-                let user2 = User(id: 2, username: "Holland Kaaskop", firstName: "Holland", middleName: "", lastName: "Kaaskop", email: "hollandk@gmail.com", password: "***", role: Role.USER, gender: Gender.FEMALE, birthdate: dob, image: "test")
-                let user3 = User(id: 3, username: "Bulgaar Buitenlander", firstName: "Bulgaar", middleName: "", lastName: "Buitenlander", email: "bulgaarb@gmail.com", password: "***", role: Role.USER, gender: Gender.MALE, birthdate: dob, image: "test")
+                let user = User(id: 1,  firstName: "Stella", middleName: "", lastName: "van Sanden", email: "stellavs@gmail.com",role: Role.USER, gender: Gender.FEMALE, birthdate: dob)
+                let user2 = User(id: 2,  firstName: "Holland", middleName: "", lastName: "Kaaskop", email: "hollandk@gmail.com", role: Role.USER, gender: Gender.FEMALE, birthdate: dob)
+                let user3 = User(id: 3,  firstName: "Bulgaar", middleName: "", lastName: "Buitenlander", email: "bulgaarb@gmail.com",  role: Role.USER, gender: Gender.MALE, birthdate: dob)
                 
                 users.append(user);
                 users.append(user2);
@@ -68,7 +68,7 @@ class Users: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UserCell", for: indexPath) as! UserCell
         
-        cell.userName?.text =  users[indexPath.row].username
+        cell.userName?.text =  users[indexPath.row].firstName
         cell.imageView?.image = UIImage(named: "default profile image")
         return cell
     }

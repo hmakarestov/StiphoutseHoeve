@@ -84,7 +84,7 @@ class HorsesTableViewController: UITableViewController {
             
         cell.textLabel?.text =  "Name: \(self.horses[indexPath.row].name) "
          //Name:  \(self.horses[indexPath.row].name), \(self.horses[indexPath.row].name)"
-        cell.detailTextLabel?.text = String(self.horses[indexPath.row].medicalReports[0].description )
+        cell.detailTextLabel?.text = String(self.horses[indexPath.row].medicalReports![0].description )
         
         cell.imageView?.image = UIImage(named: "horse")
         
@@ -98,7 +98,7 @@ class HorsesTableViewController: UITableViewController {
         
         //pass data to next view s
         selectedName = self.horses[indexPath.row].name
-        for medR in self.horses[indexPath.row].medicalReports {
+        for medR in self.horses[indexPath.row].medicalReports! {
             selectedDescription = medR.description
             
         }

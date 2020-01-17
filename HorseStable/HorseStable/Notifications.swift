@@ -28,7 +28,7 @@ class Notifications: UIViewController, UITableViewDelegate, UITableViewDataSourc
         let today = Date()
         
         //test user for notification constructor
-        let user = User(id: 1, username: "Stella van Sanden", firstName: "Stella", middleName: "", lastName: "van Sanden", email: "stellavs@gmail.com", password: "***", role: Role.USER, gender: Gender.FEMALE, birthdate: today, image: "test")
+        let user = User(id: 1,  firstName: "Stella", middleName: "", lastName: "van Sanden", email: "stellavs@gmail.com", role: Role.USER, gender: Gender.FEMALE, birthdate: today)
         //test facility for notification constructor
         let facility = Facility(id: 1, name: "Stable", reservable: false, reservations: [], unavailableTimeSlots: [])
         

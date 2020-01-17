@@ -10,6 +10,7 @@ import Foundation
 
 public class BackendHelper {
     let session = URLSession.shared
+    var horses : [Horse] = []
     //let url = URL(string: "http://localhost:8083/horse/1")!
     
     init(url: URL) {
@@ -25,13 +26,70 @@ public class BackendHelper {
 
 
                    do {
-                       let json = try JSONSerialization.jsonObject(with: data!, options: [])
-                       print(json)
+                    let decoder = JSONDecoder()
+                    
+                    if let json = try? decoder.decode(Message<Horse>.self, from: data!) {
+                        print(json)
+                        
+                    }
+                    
                    } catch {
                        print("JSON error: \(error.localizedDescription)")
                    }
                }
 
                task.resume()
+         print("finished")
     }
+    
+    func getJSON (completion: @escaping (Message<Horse>)->()) {
+            let url = "http://localhost:8083/horse/1"
+        if let url = URL(string: url)
+        {
+            let task = session.dataTask(with: url) { data, response, error in
+
+                      if error != nil || data == nil {
+                          print("Client error!")
+                          return
+                      }
+                let str = String(decoding: data!, as: UTF8.self)
+                print(str)
+                      do {
+                       let decoder = JSONDecoder()
+                       print("nothing")
+                        
+                        let json = try JSONDecoder().decode(Message<Horse>.self, from: data!)
+                      
+                       // print(json.model as Horse)
+                      //  print(json.self.model)
+                      //  print(json.model)
+                        print(json.model)
+                        print("something")
+                        
+                       
+                       
+                      } catch {
+                          print("JSON error: \(error.localizedDescription)")
+                        print("erroooorrrrrr")
+                      }
+                  }
+
+                  task.resume()
+            print("finished")
+        }
+    }
+    
+    private func handleMessage(_ data : Message<Horse>) {
+        // Do something with the message.
+
+        print("Successful printing \(data.model)")
+        self.horses.append(data.model!)
+
+        //test fetching of name
+        for h in self.horses {
+            print("Hello, \(h.name)!")
+        }
+
+    }
+
 }
