@@ -12,11 +12,21 @@ class ViewControllerUserProfile: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet weak var tableViewUser: UITableView!    
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var userName: UILabel!
-    
+    var backendHelper = BackendHelper ()
+    var posts = [Post] ()
     override func viewDidLoad()
     {
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "New Post", style: .plain, target: self, action: #selector(didTapAddItemButton))
+        print("POST is being posted")
+        backendHelper.getJSONPost(  completion: { (result) in
+            print("miracle")
+            print(result.model?.id as Any )
+                  // self.title = result.model?.chipNumber
+            self.posts.append(result.model!)
+            print("Post is posted")
+               })
+        print("Posts : \(posts.count)")
     }
     
     @objc func didTapAddItemButton(_ sender: UIBarButtonItem)
@@ -32,17 +42,22 @@ class ViewControllerUserProfile: UIViewController, UITableViewDelegate, UITableV
         ]
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return userPosts.count
+        // return userPosts.count
+        return posts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCellUserProfiles", for: indexPath) as! CustomCellUser
 
-        let post = userPosts[indexPath.row]
-        userName?.text = post.userName
-        userImage?.image = UIImage(named: post.userAvatar)
-        cell.postImage?.image = UIImage(named: post.postImage)
-        cell.postDescription?.text = post.postDescription
+       let post = posts[indexPath.row]// userPosts[indexPath.row]
+        cell.textLabel?.text = String(self.posts[indexPath.row].id!)
+        cell.detailTextLabel!.text = self.posts[indexPath.row].description
+    
+        cell.imageView?.image = UIImage(named: self.posts[indexPath.row].imageUrl!)//UIImage(named: "horse")
+        userName?.text = post.user?.firstName
+     //   userImage?.image = UIImage(named: "profile")
+      //  cell.postImage?.image = UIImage(named: post.imageUrl!)
+      //  cell.postDescription?.text = post.description
 
         return cell
     }

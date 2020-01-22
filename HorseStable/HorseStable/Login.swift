@@ -9,7 +9,7 @@
 import UIKit
 
 class Login: UIViewController {
-
+    var backend = BackendHelper ()
     var username : String = ""
     var password : String = ""
     
@@ -35,6 +35,13 @@ class Login: UIViewController {
         }
         else {
             performSegue(withIdentifier: "userSegue", sender: self)
+            
+        }
+        //!!!!!!!!!!!!!
+        //make this work, this is the log in
+        backend.authenticate(username: usernameField.text!, passowrd: passwordField.text!) { (result) in
+            print("Successful log in")
+            //how to get the TOKEN and store it? then verify it????
             
         }
     }

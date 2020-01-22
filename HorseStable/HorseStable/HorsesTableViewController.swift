@@ -16,7 +16,7 @@ class HorsesTableViewController: UITableViewController {
     //list of all horses vaccined/not vaccined
     var horses = [Horse] ()
     var filteredData = [Horse]()
-    
+    var backEnd = BackendHelper () // backend API
     override func viewDidLoad() {
         super.viewDidLoad()
         

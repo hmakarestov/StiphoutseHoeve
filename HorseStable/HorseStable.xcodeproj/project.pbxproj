@@ -36,6 +36,9 @@
 		3F9CE9AE23C1710B007AA0A5 /* StableInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9CE9AD23C1710B007AA0A5 /* StableInfoTableViewController.swift */; };
 		3F9CE9B023C17BC8007AA0A5 /* OneHorseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9CE9AF23C17BC8007AA0A5 /* OneHorseViewController.swift */; };
 		3F9CE9B423D0A152007AA0A5 /* BackendHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9CE9B323D0A152007AA0A5 /* BackendHelper.swift */; };
+		3F9F39DC23D7AB2000FBD057 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9F39DB23D7AB2000FBD057 /* Post.swift */; };
+		3F9F39DE23D7ABA200FBD057 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9F39DD23D7ABA200FBD057 /* Comment.swift */; };
+		3F9F39E023D7C79F00FBD057 /* Stall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9F39DF23D7C79F00FBD057 /* Stall.swift */; };
 		3FA3F100239A979B00BD70CC /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA3F0FF239A979B00BD70CC /* Register.swift */; };
 		3FAD2B5723B96DA80095F8F1 /* HorsesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAD2B5623B96DA80095F8F1 /* HorsesTableViewController.swift */; };
 		3FAD2B5923B96E760095F8F1 /* Horse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAD2B5823B96E760095F8F1 /* Horse.swift */; };
@@ -89,6 +92,9 @@
 		3F9CE9AD23C1710B007AA0A5 /* StableInfoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StableInfoTableViewController.swift; sourceTree = "<group>"; };
 		3F9CE9AF23C17BC8007AA0A5 /* OneHorseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneHorseViewController.swift; sourceTree = "<group>"; };
 		3F9CE9B323D0A152007AA0A5 /* BackendHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendHelper.swift; sourceTree = "<group>"; };
+		3F9F39DB23D7AB2000FBD057 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		3F9F39DD23D7ABA200FBD057 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		3F9F39DF23D7C79F00FBD057 /* Stall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stall.swift; sourceTree = "<group>"; };
 		3FA3F0FF239A979B00BD70CC /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		3FAD2B5623B96DA80095F8F1 /* HorsesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorsesTableViewController.swift; sourceTree = "<group>"; };
 		3FAD2B5823B96E760095F8F1 /* Horse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Horse.swift; sourceTree = "<group>"; };
@@ -190,6 +196,9 @@
 				3F200A5823D1ADAE007EF6AB /* ViewControllerNewPost.swift */,
 				3F200A5023D1ADAE007EF6AB /* ViewControllerPostComments.swift */,
 				3F200A5B23D1ADAE007EF6AB /* ViewControllerUserProfile.swift */,
+				3F9F39DB23D7AB2000FBD057 /* Post.swift */,
+				3F9F39DD23D7ABA200FBD057 /* Comment.swift */,
+				3F9F39DF23D7C79F00FBD057 /* Stall.swift */,
 			);
 			path = HorseStable;
 			sourceTree = "<group>";
@@ -274,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FAD2B5723B96DA80095F8F1 /* HorsesTableViewController.swift in Sources */,
+				3F9F39DE23D7ABA200FBD057 /* Comment.swift in Sources */,
 				3FAD2B7523C1638A0095F8F1 /* SwiftNewsVideo.swift in Sources */,
 				3F200A6A23D1ADAE007EF6AB /* HomeViewController.swift in Sources */,
 				3FBD455F23D075D500B8605F /* Reservation.swift in Sources */,
@@ -293,10 +303,12 @@
 				3F6F1AD823A250B4004904DA /* NotificationCell.swift in Sources */,
 				3F200A6623D1ADAE007EF6AB /* ScheduleChoiceViewController.swift in Sources */,
 				3F200A6723D1ADAE007EF6AB /* CalendarViewController.swift in Sources */,
+				3F9F39E023D7C79F00FBD057 /* Stall.swift in Sources */,
 				3F200A6323D1ADAE007EF6AB /* ViewControllerHorseList.swift in Sources */,
 				3F200A6123D1ADAE007EF6AB /* SlideInTransition.swift in Sources */,
 				3F9CE9B023C17BC8007AA0A5 /* OneHorseViewController.swift in Sources */,
 				3FD2A1C923C71F4900A57AF4 /* UserCell.swift in Sources */,
+				3F9F39DC23D7AB2000FBD057 /* Post.swift in Sources */,
 				3F6F1AD423A23E78004904DA /* NotificationSpecificUser.swift in Sources */,
 				3FFE99AA239A7D6E00C5D304 /* Login.swift in Sources */,
 				3F200A6023D1ADAE007EF6AB /* ViewControllerPostComments.swift in Sources */,

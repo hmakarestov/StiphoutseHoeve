@@ -10,7 +10,7 @@ import UIKit
 
 class DashboardViewController: UIViewController, UITextViewDelegate {
     let url = URL(string: "http://localhost:8083/horse/1")!
-
+    let backendHelper = BackendHelper()
     
     let transiton = HamburgerMenu()
     var topView: UIView?
@@ -20,22 +20,30 @@ class DashboardViewController: UIViewController, UITextViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var result : String = ""
-        let backendHelper = BackendHelper(url: url)
         backendHelper.getJSON { (result) in
             print("miracle")
-            print(result)
+            print(result.model?.chipNumber as Any)
+            self.title = result.model?.chipNumber
         }
-//        backendHelper.getJSON(completion: args in
-//        let m: Message<Horse> = args![0] as! Message<Horse>
-//        print(args!)
-//        print("Connecting")
-//       // print(m.model)
-//        )
+        
+        backendHelper.postJSON { (status) in
+            print("miracle, horse is created")
+            print(status)
+            
+        }
+        
+        backendHelper.putJSON{ (status) in
+            print("miracle, horse is updated")
+            print(status)
+            
+        }
+        
+        backendHelper.deleteJSON()
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         view.addGestureRecognizer(tap)
         
         textViewNotification.delegate = self
+        // it has something to do with this text here
         textViewNotification.text = "Leave a notification for all users."
         textViewNotification.textColor = UIColor.lightGray
         pushButtonUpdate()
@@ -47,7 +55,15 @@ class DashboardViewController: UIViewController, UITextViewDelegate {
     
     func pushButtonUpdate() {
         btnPush.layer.cornerRadius = 13
-        btnPush.clipsToBounds = true    }
+        btnPush.clipsToBounds = true
+        //push notification to all users...ask Ramon to get implement code to get all notificationss in the dashboard of users
+        
+        //text of description is not updated!!!!check that
+        backendHelper.postJSONPost(description: textViewNotification.text, image: "", completion: {(result) in
+            print("success push notificaiton")
+            
+        })
+    }
 
     func textViewDidBeginEditing(_ textView: UITextView) {
         if textViewNotification.textColor == UIColor.lightGray {

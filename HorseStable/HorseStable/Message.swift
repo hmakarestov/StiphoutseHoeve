@@ -28,6 +28,9 @@ enum MessageType : String,Decodable {
           case GET_FACILITY
           case UPDATE_FACILITY
           case DELETE_FACILITY
+          case GET_FACILITIES
+          case ADD_RESERVATION
+          case REMOVE_RESERVATION
 
           /* STALLS */
           case CREATE_STALL
@@ -41,10 +44,19 @@ enum MessageType : String,Decodable {
           case UPDATE_POST
           case DELETE_POST
 
-          case ADD_RESERVATION
-          case REMOVE_RESERVATION
+          /* NOTICES */
+          case CREATE_NOTICE
+          case GET_NOTICE
+          case UPDATE_NOTICE
+          case  DELETE_NOTICE
+          case GET_ALL_NOTICES
+          case GET_NOTICES_FROM_USER
 
+
+          case CREATE_CREDENTIALS
+          case DELETE_CREDENTIALS
           case AUTHENTICATE
+          case VERIFY_TOKEN
 }
 
 
@@ -52,9 +64,11 @@ public class Message<T: Decodable> : Decodable {
     
     var type: MessageType?
     var model : T?
-    init(type:MessageType,model:T) {
+    var feedback : String?;
+    init(type:MessageType,model:T,feedback : String) {
         self.type = type
         self.model = model
+        self.feedback = feedback
     }
     
 }

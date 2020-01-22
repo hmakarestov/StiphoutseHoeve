@@ -9,7 +9,10 @@
 import UIKit
 
 class ViewControllerNewPost: UIViewController {
-
+    @IBOutlet weak var lbDescription: UITextView!
+    let url = URL(string: "http://localhost:8083/horse/1")!
+    let image = UIImage(named: "horse")
+    var backEnd = BackendHelper ()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,6 +20,13 @@ class ViewControllerNewPost: UIViewController {
     }
     
 
+    @IBAction func publishPost(_ sender: Any) {
+        var description : String
+        description = lbDescription.text
+        backEnd.postJSONPost(description: description,image: "horse", completion: {status in print("post posted")})
+        dismiss(animated: true, completion: nil)
+        
+    }
     /*
     // MARK: - Navigation
 
