@@ -15,7 +15,7 @@ public class BackendHelper {
     var model : String = ""
     var feedback : String = ""
     var type : String = ""
-    
+    var number : Int = 0
     init() {
         // Do any additional setup after loading the view.
                
@@ -100,35 +100,32 @@ public class BackendHelper {
            task.resume()
        }
        
-    func verifyToken (to:String, completion: @escaping (Message<Int>)->()) {
+    func verifyToken (to:String, completion: @escaping (Int?)->()) {
            
-       // this should be different
-           let json: [String: Any] = ["token":to]
+        
 
-           let jsonData = try? JSONSerialization.data(withJSONObject: json)
-           
-           // create post request
-           let url = URL(string: "http://localhost:8083/verifyToken")!
-           var request = URLRequest(url: url)
-           request.httpMethod = "POST"
+        // get the payload part of it
+        var payload64 = to.components(separatedBy: ".")[1]
 
-           // insert json data to the request
-           request.httpBody = jsonData
-           request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-           let task = URLSession.shared.dataTask(with: request) { data, response, error in
-               guard let data = data, error == nil else {
-                   print(error ?? "No data")
-                   return
-               }
-               let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
-               if let responseJSON = responseJSON as? [String: Any] {
-                   print(responseJSON)
-                   
-               }
-           }
+        // need to pad the string with = to make it divisible by 4,
+        // otherwise Data won't be able to decode it
+        while payload64.count % 4 != 0 {
+            payload64 += "="
+        }
 
-           task.resume()
-       }
+        print("base64 encoded payload: \(payload64)")
+        let payloadData = Data(base64Encoded: payload64,
+                               options:.ignoreUnknownCharacters)!
+        let payload = String(data: payloadData, encoding: .utf8)!
+        print(payload)
+        
+        let json = try! JSONSerialization.jsonObject(with: payloadData, options: []) as! [String:Any]
+        
+        let exp = json["exp"] as! Int
+        let authority = json["authorities"]
+        let expDate = Date(timeIntervalSince1970: TimeInterval(exp))
+        completion(exp)
+    }
        
     
     //HORSES

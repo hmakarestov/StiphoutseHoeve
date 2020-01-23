@@ -55,6 +55,7 @@ class Login: UIViewController {
                 print("Successful log in")
                 
                 
+                
 //                if() {
 //                    self.performSegue(withIdentifier: "adminSegue", sender: self)
 //                }
@@ -62,17 +63,23 @@ class Login: UIViewController {
 //                    self.performSegue(withIdentifier: "userSegue", sender: self)
 //                }
             }
+            //self.performSegue(withIdentifier: "adminSegue", sender: self)
             print("TOKEN:",self.token)
             
             //on every view this should be called so it verifies if the user is still loged in
             self.backend.verifyToken(to: self.token,completion: {
                 (tok) in
-                if (tok.model == nil) {
-                    print("Token not verified",tok)
+                if (tok == nil) {
+                    print("Token not verified",tok as Any)
                     // redirect back to log in
                 }
                 else {
                     print("Success")
+                    print(tok as Any)
+                   // print(authority as Any)
+//                    if(authority == "USER") {
+//
+//                    }
                    
                     
                 }
