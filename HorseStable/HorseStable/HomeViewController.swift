@@ -25,6 +25,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var tableReservations: UITableView!
     @IBOutlet weak var tableNotifications: UITableView!
     
+    var selectedCellIndexPath: IndexPath?
+    let selectedCellHeight: CGFloat = 150.0
+    let unselectedCellHeight: CGFloat = 88.0
+    
     var notifications = [Post] ()
     var backend = BackendHelper()
     
@@ -135,6 +139,44 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             return cell
         }
     }
+    
+    //to expand notification
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if selectedCellIndexPath == indexPath {
+            return selectedCellHeight
+        }
+            return unselectedCellHeight
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let cell = tableView.cellForRow(at: indexPath) as! CustomCellNotifications
+        
+        if selectedCellIndexPath != nil && selectedCellIndexPath == indexPath {
+            selectedCellIndexPath = nil
+        }
+        else{
+            selectedCellIndexPath = indexPath
+            // to make sure the other notifications only show 1 line when another notification is expanded
+            for row in 0..<tableView.numberOfRows(inSection: 0)
+            {
+                let cell = tableView.cellForRow(at: IndexPath(row: row, section: 0)) as! CustomCellNotifications
+                cell.descriptionLabelNotification.numberOfLines = 1
+            }
+        }
+
+        tableView.beginUpdates()
+        tableView.endUpdates()
+
+        if selectedCellIndexPath == indexPath {
+            // This ensures, that the cell is fully visible once expanded
+            tableView.scrollToRow(at: indexPath, at: .none, animated: true)
+            cell.descriptionLabelNotification.numberOfLines = 0
+        }
+        else{
+            cell.descriptionLabelNotification.numberOfLines = 1
+        }
+    }
 
 }
 
@@ -156,8 +198,6 @@ class CustomCellReservations : UITableViewCell{
     @IBOutlet weak var locationLabelReservation: UILabel!
     
 }
-
-
 
 
 

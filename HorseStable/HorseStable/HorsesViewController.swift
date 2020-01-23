@@ -116,10 +116,10 @@ extension HorsesViewController :  UITableViewDelegate, UITableViewDataSource {
         
       
         
-        horseDescription = "Life Number: \(self.horses[indexPath.row].lifeNumber!)" +
-            " Chip Number:  \(self.horses[indexPath.row].chipNumber!)" +
-            " Gender:  \(self.horses[indexPath.row].gender!)" +
-        "Owners: \(self.horses[indexPath.row].owners!)"
+        horseDescription = "Life Number: \(self.horses[indexPath.row].lifeNumber!)\n" +
+            "Chip Number:  \(self.horses[indexPath.row].chipNumber!)\n" +
+            "Gender:  \(self.horses[indexPath.row].gender!)\n" +
+        "Owners: \(self.horses[indexPath.row].owners!)\n"
         
         print("index row clicked")
         self.performSegue(withIdentifier: "aHorse", sender: self)

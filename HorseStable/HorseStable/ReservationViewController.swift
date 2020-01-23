@@ -26,9 +26,22 @@ class ReservationViewController: UIViewController {
         {
             facilityLabel.text = "Indoor track"
         }
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(didTapAddItemButton))
     }
     
-
+    @objc func didTapAddItemButton(_ sender: UIBarButtonItem)
+          {
+              //SAVE RESERVATION HERE
+            let alertController = UIAlertController(title: "Reservation completed successfully.", message: "You can view your reservation details in the dashboard section. ", preferredStyle: .actionSheet)
+            
+            let actionOk = UIAlertAction(title: "OK",
+                                         style: .default,
+                                         handler: {(alert: UIAlertAction!) in self.performSegue(withIdentifier: "reserveSegue", sender: self)})//You can use a block here to handle a press on this button
+            
+            alertController.addAction(actionOk)
+            self.present(alertController, animated: true, completion: nil)
+          }
     /*
     // MARK: - Navigation
 
@@ -38,14 +51,4 @@ class ReservationViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    @IBAction func onClickReserve(_ sender: Any) {
-        let alertController = UIAlertController(title: "Reservation completed successfully.", message: "You can view your reservation details in the dashboard section. ", preferredStyle: .actionSheet)
-        
-        let actionOk = UIAlertAction(title: "OK",
-                                     style: .default,
-                                     handler: {(alert: UIAlertAction!) in self.performSegue(withIdentifier: "reserveSegue", sender: self)})//You can use a block here to handle a press on this button
-        
-        alertController.addAction(actionOk)
-        self.present(alertController, animated: true, completion: nil)
-    }
 }

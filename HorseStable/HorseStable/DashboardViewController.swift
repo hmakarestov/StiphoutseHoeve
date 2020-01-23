@@ -40,17 +40,19 @@ class DashboardViewController: UIViewController, UITextViewDelegate {
         //push notification to all users...ask Ramon to get implement code to get all notificationss in the dashboard of users
         backendHelper.postJSONPost(type:"ADMIN_NOTICE",description: textViewNotification.text, image: "",completion: {(err) in
             if let err = err {
-                print("Failed to delete",err)
+                print("Failed to notice",err)
                 return
             }
-            print("Successfully deleted user")
-           
+            print("Successfully sent notice")
         })
         //text of description is not updated!!!!check that
 //        backendHelper.postJSONPost(description: textViewNotification.text, image: "", completion: {(result) in
 //            print("success push notificaiton")
 //            
 //        })
+        self.textViewNotification.text = nil
+        self.textViewNotification.text = "Leave a notification for all users."
+        self.textViewNotification.textColor = UIColor.lightGray
     }
 
     @IBAction func pushAdminNotification(_ sender: Any) {

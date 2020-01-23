@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewControllerNewPost: UIViewController {
+class ViewControllerNewPost: UIViewController, UITextViewDelegate {
     @IBOutlet weak var lbDescription: UITextView!
     let url = URL(string: "http://localhost:8083/horse/1")!
     let image = UIImage(named: "horse")
@@ -17,6 +17,11 @@ class ViewControllerNewPost: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        lbDescription.text = "Leave a notification for all users."
+        lbDescription.textColor = UIColor.lightGray
+        lbDescription.delegate = self
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
+        view.addGestureRecognizer(tap)
     }
     
 
@@ -30,7 +35,12 @@ class ViewControllerNewPost: UIViewController {
         
     }
     
-    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if lbDescription.textColor == UIColor.lightGray {
+            lbDescription.text = nil
+            lbDescription.textColor = UIColor.black
+        }
+    }
     /*
     // MARK: - Navigation
 
