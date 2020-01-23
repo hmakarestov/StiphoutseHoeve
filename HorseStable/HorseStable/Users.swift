@@ -38,7 +38,7 @@ class Users: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     }
   override func viewWillAppear(_ animated: Bool){
-        
+    super.viewWillAppear(animated)
         usersTableView.reloadData()
     }
 

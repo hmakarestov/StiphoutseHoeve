@@ -24,9 +24,13 @@ class ViewControllerNewPost: UIViewController {
         var description : String
         description = lbDescription.text
         backEnd.postJSONPost(type: "POST",description: description,image: "horse", completion: {status in print("post posted")})
-        dismiss(animated: true, completion: nil)
+        
+       // dismiss(animated: true, completion: nil)
+         self.navigationController?.popViewController(animated: true)
         
     }
+    
+    
     /*
     // MARK: - Navigation
 
