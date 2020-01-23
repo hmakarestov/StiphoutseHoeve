@@ -28,7 +28,7 @@ class Notifications: UIViewController, UITableViewDelegate, UITableViewDataSourc
         
        // let today = Date()
         backEnd.getJSONPosts(completion:{ arrayPosts in
-                  print("Horses before assign: \(self.notifications.count)")
+                  print("Posts before assign: \(self.notifications.count)")
             for p in arrayPosts{
                 if (p.type==PostType.ADMIN_NOTICE) {
                     self.notifications.append(p)

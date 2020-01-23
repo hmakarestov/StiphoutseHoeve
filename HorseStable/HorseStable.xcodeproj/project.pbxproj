@@ -39,6 +39,7 @@
 		3F9F39DC23D7AB2000FBD057 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9F39DB23D7AB2000FBD057 /* Post.swift */; };
 		3F9F39DE23D7ABA200FBD057 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9F39DD23D7ABA200FBD057 /* Comment.swift */; };
 		3F9F39E023D7C79F00FBD057 /* Stall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9F39DF23D7C79F00FBD057 /* Stall.swift */; };
+		3F9F39E223D948ED00FBD057 /* ViewControllerAddHorse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9F39E123D948EC00FBD057 /* ViewControllerAddHorse.swift */; };
 		3FA3F100239A979B00BD70CC /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA3F0FF239A979B00BD70CC /* Register.swift */; };
 		3FAD2B5723B96DA80095F8F1 /* HorsesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAD2B5623B96DA80095F8F1 /* HorsesTableViewController.swift */; };
 		3FAD2B5923B96E760095F8F1 /* Horse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAD2B5823B96E760095F8F1 /* Horse.swift */; };
@@ -95,6 +96,7 @@
 		3F9F39DB23D7AB2000FBD057 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		3F9F39DD23D7ABA200FBD057 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		3F9F39DF23D7C79F00FBD057 /* Stall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stall.swift; sourceTree = "<group>"; };
+		3F9F39E123D948EC00FBD057 /* ViewControllerAddHorse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerAddHorse.swift; sourceTree = "<group>"; };
 		3FA3F0FF239A979B00BD70CC /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		3FAD2B5623B96DA80095F8F1 /* HorsesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorsesTableViewController.swift; sourceTree = "<group>"; };
 		3FAD2B5823B96E760095F8F1 /* Horse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Horse.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 		3F858CB5239A5BF700C69B2B /* HorseStable */ = {
 			isa = PBXGroup;
 			children = (
+				3F9F39E123D948EC00FBD057 /* ViewControllerAddHorse.swift */,
 				3F9CE9AB23C16CFD007AA0A5 /* Main.storyboard */,
 				3F858CB6239A5BF700C69B2B /* AppDelegate.swift */,
 				3FA3F0FF239A979B00BD70CC /* Register.swift */,
@@ -314,6 +317,7 @@
 				3F200A6023D1ADAE007EF6AB /* ViewControllerPostComments.swift in Sources */,
 				3FAD2B5F23B98B110095F8F1 /* HamburgerMenu.swift in Sources */,
 				3F6F1AD223A23911004904DA /* InteractionUser.swift in Sources */,
+				3F9F39E223D948ED00FBD057 /* ViewControllerAddHorse.swift in Sources */,
 				3FBD456123D076EB00B8605F /* DateTimeRange.swift in Sources */,
 				3FFCC1A223C6ADE700DF395F /* HorsesViewController.swift in Sources */,
 				3FAD2B6F23BD28110095F8F1 /* ProfileViewController.swift in Sources */,

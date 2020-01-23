@@ -25,12 +25,31 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var tableReservations: UITableView!
     @IBOutlet weak var tableNotifications: UITableView!
     
+    var notifications = [Post] ()
+    var backend = BackendHelper()
     
     let transiton = SlideInTransition()
     var topView: UIView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        backend.getJSONPosts(completion:{ arrayPosts in
+              print("Horses before assign: \(self.notifications.count)")
+        for p in arrayPosts{
+            if (p.type==PostType.ADMIN_NOTICE) {
+                self.notifications.append(p)
+            }
+        }
+              //self.notifications = arrayPosts
+              self.tableNotifications.reloadData()
+              print("arrayPosts: \(arrayPosts.count)")
+              print("Notifications After Assign: \(self.notifications.count)")
+              for h in self.notifications {
+                print(h.description as Any)
+              
+              }
+           })
+              print("Posts Outside Assign: \(self.notifications.count)")
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -79,9 +98,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         CellDataReservation(date: "Tuesday 12.09.2050", location: "Outdoor Track"),
         ]
     
-    var notifications = [
-        CellDataNotification(title: "Dont forget to feed your horses, folks", description: "So they wont die", date: "17.08.2019"),
-        ]
+//    var notifications = [
+//        CellDataNotification(title: "Dont forget to feed your horses, folks", description: "So they wont die", date: "17.08.2019"),
+//        ]
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if(tableView == tableReservations){
@@ -106,9 +125,12 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             let cell = tableView.dequeueReusableCell(withIdentifier: "LabelCellNotifications", for: indexPath) as! CustomCellNotifications
 
             let notif = notifications[indexPath.row]
-            cell.titleLabelNotification?.text = notif.title
+            cell.titleLabelNotification?.text = notif.type.map { $0.rawValue }
             cell.descriptionLabelNotification?.text = notif.description
-            cell.dateLabelNotification?.text = notif.date
+            let formatter = DateFormatter()
+            formatter.dateFormat = "dd-MM-yyy"
+            let date = formatter.string(from: notif.dateTime!)
+            cell.dateLabelNotification?.text = date
 
             return cell
         }

@@ -23,7 +23,7 @@ class ViewControllerNewPost: UIViewController {
     @IBAction func publishPost(_ sender: Any) {
         var description : String
         description = lbDescription.text
-        backEnd.postJSONPost(description: description,image: "horse", completion: {status in print("post posted")})
+        backEnd.postJSONPost(type: "POST",description: description,image: "horse", completion: {status in print("post posted")})
         dismiss(animated: true, completion: nil)
         
     }

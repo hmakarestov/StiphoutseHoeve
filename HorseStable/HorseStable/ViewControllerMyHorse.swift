@@ -10,6 +10,8 @@ import UIKit
 
 class ViewControllerMyHorse: UIViewController {
 
+    var backend = BackendHelper()
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()

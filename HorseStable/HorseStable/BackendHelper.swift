@@ -236,23 +236,23 @@ public class BackendHelper {
            task.resume()
        }
     //HOW SHOULD THIS WORK?
-    func putJSONAddHorseToUser (completion: @escaping (Message<Horse>)->()) {
+    func putJSONAddHorseToUser (query:String,name:String, race : String, lifeNum : String, chipNumber : String, birthDate: String, gender: String, completion: @escaping (Error?)->()) {
            
         // prepare json data
-           let json: [String: Any] = ["id": 4,
-                                      "name" : "Horse",
-                                      "race" : "White",
-                                      "lifeNumber": "lifeNum",
-                                      "chipNumber": "chipNum",
-                                      "birthDate": "2012-04-21T18:25:43-05:00",
-                                      "gender": "MALE",
+           let json: [String: Any] = [//"id": 4,
+                                      "name" : name,// "Horse",
+                                      "race" : race, //"White",
+                                      "lifeNumber": lifeNum,//"lifeNum",
+                                      "chipNumber": chipNumber,//"chipNum",
+                                      "birthDate": birthDate,//"2012-04-21T18:25:43-05:00",
+                                      "gender": gender,//"MALE",
                                       "medicalReports":[],
                                       "owners":[]]
 
            let jsonData = try? JSONSerialization.data(withJSONObject: json)
            
            // create post request
-           let url = URL(string: "http://localhost:8083/horse/addHorseToUser/2")!
+           let url = URL(string: "http://localhost:8083/horse/addHorseToUser/\(query)")!
            var request = URLRequest(url: url)
            request.httpMethod = "PUT"
 
@@ -275,8 +275,8 @@ public class BackendHelper {
            task.resume()
        }
      //HOW SHOULD THIS WORK?
-    func getJSONAssignedHorseToUser (completion: @escaping (Message<Horse>)->()) {
-            let url = "http://localhost:8083/horse/getAssignedToUser/3"
+    func getJSONAssignedHorseToUser (query: String, completion: @escaping([Horse]) -> Void){
+            let url = "http://localhost:8083/horse/getAssignedToUser/\(query)"
         if let url = URL(string: url)
         {
             let task = session.dataTask(with: url) { data, response, error in
@@ -290,16 +290,21 @@ public class BackendHelper {
                       do {
                        print("nothing")
                         
-                        let json = try JSONDecoder().decode(Message<Horse>.self, from: data!)
+                        let json = try JSONDecoder().decode(Message<[Horse]>.self, from: data!)
                         
-                        print(json.model?.name as Any)
+                        print(json.model?.count as Any)
                        // print(json.model as Horse)
                       //  print(json.self.model)
                       //  print(json.model)
                       
                         print(json.model as Any)
                         print("something")
-                        
+                        guard  let results = json.model else { return  }
+                        print("Results: \(results.count)")
+                        DispatchQueue.main.async {
+                            completion(results)
+                        }
+
                        
                        
                       } catch {
@@ -426,12 +431,12 @@ public class BackendHelper {
     }
     //POSTS
     
-    func postJSONPost ( description: String, image: String,completion: @escaping (Error?)->()) {
+    func postJSONPost ( type: String, description: String, image: String,completion: @escaping (Error?)->()) {
         
      // prepare json data
         
         let json: [String: Any] = [//"id": 4,
-                                   "type" : "ADMIN_NOTICE",
+                                   "type" : type,//"ADMIN_NOTICE",
                                    "imageUrl" : image, //"",
                                    "description": description as String,//"first post",
                                    "dateTime": "2012-04-21T18:25:43-05:00",
@@ -463,8 +468,8 @@ public class BackendHelper {
         task.resume()
     }
     
-    func getJSONPost (completion: @escaping (Message<Post>)->()) {
-            let url = "http://localhost:8083/post/12"
+    func getJSONPost (query:String,completion: @escaping ([Post])->()) {
+            let url = "http://localhost:8083/post/\(query)"
         if let url = URL(string: url)
         {
             let task = session.dataTask(with: url) { data, response, error in
@@ -479,9 +484,9 @@ public class BackendHelper {
                        let decoder = JSONDecoder()
                        print("nothing")
                         
-                        let json = try JSONDecoder().decode(Message<Post>.self, from: data!)
+                        let json = try JSONDecoder().decode(Message<[Post]>.self, from: data!)
                         
-                        print(json.model?.description)
+                        print(json.model?.description as Any)
                        // print(json.model as Horse)
                       //  print(json.self.model)
                       //  print(json.model)

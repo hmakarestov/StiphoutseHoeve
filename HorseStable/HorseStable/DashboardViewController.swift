@@ -38,7 +38,7 @@ class DashboardViewController: UIViewController, UITextViewDelegate {
         btnPush.layer.cornerRadius = 13
         btnPush.clipsToBounds = true
         //push notification to all users...ask Ramon to get implement code to get all notificationss in the dashboard of users
-        backendHelper.postJSONPost(description: textViewNotification.text, image: "",completion: {(err) in
+        backendHelper.postJSONPost(type:"ADMIN_NOTICE",description: textViewNotification.text, image: "",completion: {(err) in
             if let err = err {
                 print("Failed to delete",err)
                 return
