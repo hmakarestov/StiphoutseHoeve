@@ -40,7 +40,7 @@ class DashboardViewController: UIViewController, UITextViewDelegate {
         //push notification to all users...ask Ramon to get implement code to get all notificationss in the dashboard of users
         backendHelper.postJSONPost(type:"ADMIN_NOTICE",description: textViewNotification.text, image: "",completion: {(err) in
             if let err = err {
-                print("Failed to delete",err)
+                print("Failed to post",err)
                 return
             }
             print("Successfully deleted user")

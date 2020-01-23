@@ -12,8 +12,9 @@ public class BackendHelper {
     let session = URLSession.shared
     var horses : [Horse] = []
     let url = URL(string: "http://localhost:8083/horse/1")!
-    
-    
+    var model : String = ""
+    var feedback : String = ""
+    var type : String = ""
     
     init() {
         // Do any additional setup after loading the view.
@@ -45,52 +46,64 @@ public class BackendHelper {
     }
     
     //AUTHENTICATION
+//    let dd =  userInfo["extraData"] as! String
+//    let con = try JSONSerialization.jsonObject(with: dd.data(using: .utf8)!, options: []) as! [String:Any]
+//    print(con["message_id"])
     
-    
-    func authenticate (username: String, passowrd: String, completion: @escaping (Message<String>)->()) {
-           
+    func authenticate (email: String, passowrd: String, completion: @escaping (String?,String?,String?)-> ()){
             //this should be different
-           let json: [String: Any] = ["id": 4,
-                                      "username" : username,
+           let json: [String: Any] = [//"id": 0,
+                                      "email" : email,
                                       "password" : passowrd]
 
-           let jsonData = try? JSONSerialization.data(withJSONObject: json)
-           let yourAuthorizationToken = "JWTSECRET"
+        let jsonData = try? JSONSerialization.data(withJSONObject: json)
+        
+        print(jsonData as Any)
+         //  let yourAuthorizationToken = "JWTSECRET"
            // create post request
-           let url = URL(string: "http://localhost:8083/authenticate")!
+        guard  let url = URL(string: "http://localhost:8083/authenticate") else {return}
            var request = URLRequest(url: url)
            request.httpMethod = "POST"
-
+            
            // insert json data to the request
            request.httpBody = jsonData
            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+           request.addValue("application/json", forHTTPHeaderField: "Accept")
+            
            let task = URLSession.shared.dataTask(with: request) { data, response, error in
                guard let data = data, error == nil else {
                    print(error ?? "No data")
+                
                    return
                }
-               let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
+            
+               let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [] )
                if let responseJSON = responseJSON as? [String: Any] {
                    print(responseJSON)
-                   
+                   print("Backend Success")
+               // if let result = data. as? [String:String] {
+                
+                self.model = responseJSON["model"] as? String ?? ""
+                self.feedback = responseJSON["feedback"] as? String ?? ""
+                self.type = responseJSON["type"] as? String ?? ""
+                completion(self.model ,self.feedback , self.type)
+                
                }
+            
+            else {print("EROORRR")}
+            
+           
+            
+            
            }
 
            task.resume()
        }
        
-       func verifyToken (completion: @escaping (Message<Int>)->()) {
+    func verifyToken (to:String, completion: @escaping (Message<Int>)->()) {
            
        // this should be different
-           let json: [String: Any] = ["id": 4,
-                                      "name" : "Horse",
-                                      "race" : "White",
-                                      "lifeNumber": "lifeNum",
-                                      "chipNumber": "chipNum",
-                                      "birthDate": "2012-04-21T18:25:43-05:00",
-                                      "gender": "MALE",
-                                      "medicalReports":[],
-                                      "owners":[]]
+           let json: [String: Any] = ["token":to]
 
            let jsonData = try? JSONSerialization.data(withJSONObject: json)
            
