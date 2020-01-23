@@ -86,7 +86,6 @@ class HorsesTableViewController: UITableViewController {
         cell.textLabel?.text =  "Name: \(self.horses[indexPath.row].name!) "
          //Name:  \(self.horses[indexPath.row].name), \(self.horses[indexPath.row].name)"
         cell.detailTextLabel?.text = String(self.horses[indexPath.row].medicalReports![0].description )
-        
         cell.imageView?.image = UIImage(named: "horse")
         
        

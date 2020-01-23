@@ -19,6 +19,15 @@ import UIKit
 class ViewControllerHorseList: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var horses = [Horse] ()
     var backend = BackendHelper()
+    
+    var selectedName: String?
+    var selectedImage = UIImage(named: "horse")
+    var selectedGender: Gender?
+    var selectedLifeNumber: String?
+    var selectedChipNumber: String?
+    var selectedDecontaminationDate: String?
+    var selectedFluShotDate: String?
+    
     @IBOutlet weak var tableViewHorseList: UITableView!
     
 //    var horseInfo = [
@@ -63,16 +72,58 @@ class ViewControllerHorseList: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LabelCell", for: indexPath) as! CustomCell
 
-        let horse = horses[indexPath.row]
-        cell.horseNameLabel?.text = horse.name
-        cell.decontaminationDateLabel?.text = "Date"
-        cell.fluShotDateLabel?.text = "Date"
+        //let horse = self.horses[indexPath.row]
+        cell.horseNameLabel?.text = self.horses[indexPath.row].name
+        cell.decontaminationDateLabel?.text = "No record"
+        cell.fluShotDateLabel?.text = "No record"
         cell.horseImage?.image = UIImage(named: "horse")
-
+        
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+             //pass data to next view s
+        selectedName = self.horses[indexPath.row].name
+        selectedGender = self.horses[indexPath.row].gender
+        selectedLifeNumber = self.horses[indexPath.row].lifeNumber
+        selectedChipNumber = self.horses[indexPath.row].chipNumber
+      
+      self.performSegue(withIdentifier: "ShowHorse", sender: self)
+      }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+           if segue.identifier == "ShowHorse" {
+                   let destinationViewController = segue.destination as!  ViewControllerMyHorse
+                    destinationViewController.name = selectedName!
+                    destinationViewController.gender = selectedGender!
+                    destinationViewController.lifenumber = selectedLifeNumber!
+                    destinationViewController.chipnumber = selectedChipNumber!
+                    destinationViewController.imageHorse = selectedImage!
+                  // print(selectedDescription!)
+                       //pass image
+                   //destinationViewController.newImage = selectedImage!
+            
+            if selectedFluShotDate != nil {
+                print("Contains a value!")
+                destinationViewController.flushot = selectedFluShotDate!
+                    }
+            else {
+                print("Doesn’t contain a value.")
+                destinationViewController.flushot = "No record"
+                    }
         
+            if selectedDecontaminationDate != nil {
+                print("Contains a value!")
+                destinationViewController.decontamination = selectedDecontaminationDate!
+                    }
+            else {
+                print("Doesn’t contain a value.")
+                destinationViewController.decontamination = "No record"
+                    }
+            }
+       }
 }
+
 
 class CustomCell : UITableViewCell{
     @IBOutlet weak var horseNameLabel: UILabel!
