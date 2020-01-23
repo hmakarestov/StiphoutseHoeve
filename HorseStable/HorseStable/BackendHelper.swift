@@ -19,29 +19,29 @@ public class BackendHelper {
         // Do any additional setup after loading the view.
                
 
-               let task = session.dataTask(with: url) { data, response, error in
-
-                   if error != nil || data == nil {
-                       print("Client error!")
-                       return
-                   }
-
-                    print("rotrrrr")
-                   do {
-                    let decoder = JSONDecoder()
-                    
-                     let json = try decoder.decode(Message<Horse>.self, from: data!)
-                    print(json.type ?? "Is nil")
-                    print(json.model?.name as Any)
-                    print("cacaoooooo")
-                    
-                   } catch {
-                       print("JSON error: \(error)")
-                   }
-               }
-
-               task.resume()
-         print("finished first connection")
+//               let task = session.dataTask(with: url) { data, response, error in
+//
+//                   if error != nil || data == nil {
+//                       print("Client error!")
+//                       return
+//                   }
+//
+//                    print("rotrrrr")
+//                   do {
+//                    let decoder = JSONDecoder()
+//                    
+//                     let json = try decoder.decode(Message<Horse>.self, from: data!)
+//                    print(json.type ?? "Is nil")
+//                    print(json.model?.name as Any)
+//                    print("cacaoooooo")
+//                    
+//                   } catch {
+//                       print("JSON error: \(error)")
+//                   }
+//               }
+//
+//               task.resume()
+//         print("finished first connection")
     }
     
     //AUTHENTICATION
@@ -356,6 +356,42 @@ public class BackendHelper {
             print("finished")
         }
     }
+    func getJSONHorses(completion: @escaping([Horse]) -> Void){ //Message<[Horse]>
+        let url = "http://localhost:8083/horses"
+
+        if let url = URL(string: url)
+          {
+            let task = session.dataTask(with: url) { data, response, error in
+                
+                if error != nil || data == nil {
+                    print("Client error!")
+                    return
+                    }
+                let str = String(decoding: data!, as: UTF8.self)
+                print(str)
+                do {
+                    print("nothing")
+                    let json = try JSONDecoder().decode(Message<[Horse]>.self, from: data!)
+                        print(json.model?.count as Any)
+                        print(json.model as Any)
+                        print("something")
+                        
+                    let results = json.model!
+                    print("Results: \(results.count)")
+                    DispatchQueue.main.async {
+                        completion(results)
+                    }
+                        } catch {
+                            print("JSON error: \(error)")
+                            print("erroooorrrrrr")
+                        }
+                    }
+
+                    task.resume()
+              print("finished")
+            
+          }
+      }
     
     func deleteJSON () { //completion: @escaping (Message<Horse>)->()
         let url = "http://localhost:8083/horse/1"
@@ -390,16 +426,16 @@ public class BackendHelper {
     }
     //POSTS
     
-    func postJSONPost ( description: String, image: String,completion: @escaping (Int)-> ()) {
+    func postJSONPost ( description: String, image: String,completion: @escaping (Error?)->()) {
         
      // prepare json data
         
         let json: [String: Any] = [//"id": 4,
-                                   "type" : "POST",
+                                   "type" : "ADMIN_NOTICE",
                                    "imageUrl" : image, //"",
                                    "description": description as String,//"first post",
                                    "dateTime": "2012-04-21T18:25:43-05:00",
-                                  // "user": "",
+                                  // "user": user,
                                    "comments":[]]
 
         let jsonData = try? JSONSerialization.data(withJSONObject: json)
@@ -501,6 +537,48 @@ public class BackendHelper {
 
         task.resume()
     }
+    func getJSONPosts (completion: @escaping([Post]) -> Void){
+              let url = "http://localhost:8083/posts"
+          if let url = URL(string: url)
+          {
+              let task = session.dataTask(with: url) { data, response, error in
+
+                        if error != nil || data == nil {
+                            print("Client error!")
+                            return
+                        }
+                  let str = String(decoding: data!, as: UTF8.self)
+                  print(str)
+                        do {
+                         print("nothing")
+                          
+                          let json = try JSONDecoder().decode(Message<[Post]>.self, from: data!)
+                          
+                            print(json.model?.count as Any)
+                         // print(json.model as Horse)
+                        //  print(json.self.model)
+                        //  print(json.model)
+                        
+                          print(json.model as Any)
+                          print("something")
+                          
+                        let results = json.model!
+                        print("Results: \(results.count)")
+                        DispatchQueue.main.async {
+                            completion(results)
+                        }
+                         
+                        } catch {
+                            print("JSON error: \(error)")
+                          print("erroooorrrrrr")
+                        }
+                    }
+
+                    task.resume()
+              print("finished")
+          }
+      }
+    
     
     func deleteJSONPost () { //completion: @escaping (Message<Horse>)->()
             let url = "http://localhost:8083/post/12"
@@ -535,6 +613,51 @@ public class BackendHelper {
         }
     
     //USERS
+    func getJSONUsers(completion: @escaping([User]) -> Void){ //Message<[Horse]>
+                 let url = "http://localhost:8083/users"
+           
+          // let returnedResults = [User]()
+             if let url = URL(string: url)
+             {
+                 let task = session.dataTask(with: url) { data, response, error in
+
+                           if error != nil || data == nil {
+                               print("Client error!")
+                               return
+                           }
+                     let str = String(decoding: data!, as: UTF8.self)
+                     print(str)
+                           do {
+                            print("nothing")
+                             
+                             let json = try JSONDecoder().decode(Message<[User]>.self, from: data!)
+                            let results = json.model!
+                            print("Results: \(results.count)")
+                              DispatchQueue.main.async {
+                                        completion(results)
+                                    }
+                               print(json.model?.count as Any)
+                            // print(json.model as Horse)
+                           //  print(json.self.model)
+                           //  print(json.model)
+                           
+                             print(json.model as Any)
+                             print("something")
+                           //completion(json.model!)
+                            //completion(returnedResults)
+                            
+                           } catch {
+                               print("JSON error: \(error)")
+                             print("erroooorrrrrr")
+                           }
+                       }
+
+                       task.resume()
+                 print("finished")
+               
+             }
+         }
+       
     func postJSONUser ( description: String, image: String,completion: @escaping (Int)-> ()) {
         
      // prepare json data
@@ -648,9 +771,8 @@ public class BackendHelper {
         task.resume()
     }
     
-    func deleteJSONUser () { //completion: @escaping (Message<Horse>)->()
-            let url = "http://localhost:8083/post/0"
-            
+    func deleteJSONUser (query: String,completion: @escaping (Error?)->()) { //completion: @escaping (Message<Horse>)->()
+            let url = "http://localhost:8083/user/\(query)"
             guard let connUrl = URL(string:url) else {
                 print("Error creating URL")
                 return
@@ -781,6 +903,43 @@ public class BackendHelper {
 
         task.resume()
     }
+    func getJSONStalls (completion: @escaping (Message<Stall>)->()) {
+              let url = "http://localhost:8083/stalls"
+          if let url = URL(string: url)
+          {
+              let task = session.dataTask(with: url) { data, response, error in
+
+                        if error != nil || data == nil {
+                            print("Client error!")
+                            return
+                        }
+                  let str = String(decoding: data!, as: UTF8.self)
+                  print(str)
+                        do {
+                         print("nothing")
+                          
+                          let json = try JSONDecoder().decode(Message<Stall>.self, from: data!)
+                          
+                            print(json.model?.id as Any)
+                         // print(json.model as Horse)
+                        //  print(json.self.model)
+                        //  print(json.model)
+                        
+                          print(json.model as Any)
+                          print("something")
+                          
+                         
+                         
+                        } catch {
+                            print("JSON error: \(error)")
+                          print("erroooorrrrrr")
+                        }
+                    }
+
+                    task.resume()
+              print("finished")
+          }
+      }
     
     func deleteJSONStall () { //completion: @escaping (Message<Horse>)->()
             let url = "http://localhost:8083/stall/0"
@@ -814,6 +973,43 @@ public class BackendHelper {
     
     
     //FACILITIES
+    func getJSONFacilities (completion: @escaping (Message<Facility>)->()) {
+              let url = "http://localhost:8083/facilities"
+          if let url = URL(string: url)
+          {
+              let task = session.dataTask(with: url) { data, response, error in
+
+                        if error != nil || data == nil {
+                            print("Client error!")
+                            return
+                        }
+                  let str = String(decoding: data!, as: UTF8.self)
+                  print(str)
+                        do {
+                         print("nothing")
+                          
+                          let json = try JSONDecoder().decode(Message<Facility>.self, from: data!)
+                          
+                            print(json.model?.name as Any)
+                         // print(json.model as Horse)
+                        //  print(json.self.model)
+                        //  print(json.model)
+                        
+                          print(json.model as Any)
+                          print("something")
+                          
+                         
+                         
+                        } catch {
+                            print("JSON error: \(error)")
+                          print("erroooorrrrrr")
+                        }
+                    }
+
+                    task.resume()
+              print("finished")
+          }
+      }
     
     func postJSONFacility ( horse: Horse,completion: @escaping (Message<Facility>)-> ()) {
         

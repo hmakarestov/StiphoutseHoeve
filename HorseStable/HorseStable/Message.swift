@@ -16,12 +16,14 @@ enum MessageType : String,Decodable {
           case GET_HORSES_ASSIGNED_TO_USER
           case REMOVE_HORSE_FROM_USER
           case ADD_HORSE_TO_USER
+          case GET_ALL_HORSES
 
           /* USERS */
           case CREATE_USER
           case GET_USER
           case UPDATE_USER
           case DELETE_USER
+          case GET_ALL_USERS
 
           /* FACILITIES */
           case CREATE_FACILITY
@@ -43,6 +45,7 @@ enum MessageType : String,Decodable {
           case GET_POST
           case UPDATE_POST
           case DELETE_POST
+          case GET_ALL_POSTS
 
           /* NOTICES */
           case CREATE_NOTICE

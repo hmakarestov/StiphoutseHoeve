@@ -10,14 +10,14 @@ import Foundation
 
 class Credentials : Decodable{
     // properties
-    var userId: Int
-    var username: String
+    var id: Int
+    var email: String
     var password: String
 
     //constructor
-    init(username: String, password: String, userId: Int){
-        self.username = username
+    init(email: String, password: String, id: Int){
+        self.email = email
         self.password = password
-        self.userId = userId
+        self.id = id
     }
 }

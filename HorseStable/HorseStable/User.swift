@@ -16,26 +16,26 @@ enum Role : String, Decodable {
 
 class User : Decodable{
     // properties
-    var id: Int
+    var id: Int?
     //var username: String
-    var firstName: String
-    var middleName: String
-    var lastName: String
-    var email: String
+    var firstName: String?
+    var middleName: String?
+    var lastName: String?
+    var username: String?
    // var password: String
-    var role: Role
-    var gender: Gender
-    var birthdate: Date
+    var role: Role?
+    var gender: Gender?
+    var birthdate: Date?
     //var image: String
 
     //constructor
-    init(id: Int, firstName: String, middleName: String, lastName: String, email: String, role: Role, gender: Gender, birthdate: Date){
+    init(id: Int, firstName: String, middleName: String, lastName: String, username: String, role: Role, gender: Gender, birthdate: Date){
         self.id = id
       //  self.username = username
         self.firstName = firstName
         self.middleName = middleName
         self.lastName = lastName
-        self.email = email
+        self.username = username
     //    self.password = password
         self.role = role
         self.gender = gender

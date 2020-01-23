@@ -20,25 +20,6 @@ class DashboardViewController: UIViewController, UITextViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        backendHelper.getJSON { (result) in
-            print("miracle")
-            print(result.model?.chipNumber as Any)
-            self.title = result.model?.chipNumber
-        }
-        
-        backendHelper.postJSON { (status) in
-            print("miracle, horse is created")
-            print(status)
-            
-        }
-        
-        backendHelper.putJSON{ (status) in
-            print("miracle, horse is updated")
-            print(status)
-            
-        }
-        
-        backendHelper.deleteJSON()
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         view.addGestureRecognizer(tap)
         
@@ -46,7 +27,7 @@ class DashboardViewController: UIViewController, UITextViewDelegate {
         // it has something to do with this text here
         textViewNotification.text = "Leave a notification for all users."
         textViewNotification.textColor = UIColor.lightGray
-        pushButtonUpdate()
+        
         // Do any additional setup after loading the view.
             
         
@@ -57,14 +38,24 @@ class DashboardViewController: UIViewController, UITextViewDelegate {
         btnPush.layer.cornerRadius = 13
         btnPush.clipsToBounds = true
         //push notification to all users...ask Ramon to get implement code to get all notificationss in the dashboard of users
-        
-        //text of description is not updated!!!!check that
-        backendHelper.postJSONPost(description: textViewNotification.text, image: "", completion: {(result) in
-            print("success push notificaiton")
-            
+        backendHelper.postJSONPost(description: textViewNotification.text, image: "",completion: {(err) in
+            if let err = err {
+                print("Failed to delete",err)
+                return
+            }
+            print("Successfully deleted user")
+           
         })
+        //text of description is not updated!!!!check that
+//        backendHelper.postJSONPost(description: textViewNotification.text, image: "", completion: {(result) in
+//            print("success push notificaiton")
+//            
+//        })
     }
 
+    @IBAction func pushAdminNotification(_ sender: Any) {
+        pushButtonUpdate()
+    }
     func textViewDidBeginEditing(_ textView: UITextView) {
         if textViewNotification.textColor == UIColor.lightGray {
             textViewNotification.text = nil

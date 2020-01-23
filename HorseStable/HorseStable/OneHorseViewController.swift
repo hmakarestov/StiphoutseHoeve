@@ -14,21 +14,20 @@ class OneHorseViewController: UIViewController {
     var newImage: UIImage!
     @IBOutlet weak var labelDescription: UILabel!
     var name: String = ""
-    let medRep = MedicalReport(id: 1,description: "Flu: Vaccinated, Decontamination: Vaccinated",dateOfTreatment: Date())
+    var medDescription: String = ""
+    var horseDescription: String = ""
     
-    var medicalReports = [MedicalReport] ()
+    @IBOutlet weak var labelHorseDescription: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.title = name
         // Do any additional setup after loading the view.
-        //for medR in medicalReports {
-        medicalReports.append(medRep)
-        labelDescription.text = medRep.description
-        
+        labelDescription.text = medDescription
+        labelHorseDescription.text = horseDescription
         horseAvatar.image = newImage
-    //    }
     
     }
     

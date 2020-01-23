@@ -10,12 +10,12 @@ import Foundation
 
 class Notification : Decodable{
     // properties
-    var id: Int
-    var title: String
-    var description: String
-    var date: Date
-    var facility: Facility
-    var user: User
+    var id: Int?
+    var title: String?
+    var description: String?
+    var date: Date?
+    var facility: Facility?
+    var user: User?
     
     // constructor
     init(id: Int, title: String, description: String, date: Date, facility: Facility, user: User){

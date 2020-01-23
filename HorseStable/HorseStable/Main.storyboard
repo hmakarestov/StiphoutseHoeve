@@ -375,6 +375,7 @@
                     <connections>
                         <outlet property="horseAvatar" destination="p7r-Dz-O7n" id="9fi-k9-9Pf"/>
                         <outlet property="labelDescription" destination="Tnm-rP-t9f" id="g5A-xH-cvv"/>
+                        <outlet property="labelHorseDescription" destination="c11-c4-Lg0" id="cfJ-DU-GBo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v1L-C5-hNV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -406,6 +407,9 @@
                                 <state key="normal" title="Push Notification">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="pushAdminNotification:" destination="IEa-nl-1bV" eventType="touchUpInside" id="Wud-E0-4sw"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -621,6 +625,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="writerNotificationToUser:" destination="iDD-CO-JU9" eventType="touchUpInside" id="qFg-cB-iYv"/>
                                     <segue destination="IYT-GS-agS" kind="presentation" identifier="WriteNotificationForUser" id="1T2-bT-Q8n"/>
                                 </connections>
                             </button>
@@ -646,10 +651,21 @@
                                     <constraint firstAttribute="height" constant="150" id="pRa-dR-phR"/>
                                 </constraints>
                             </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Send notification to user!" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="7Yf-rM-V6H">
+                                <rect key="frame" x="40" y="227" width="240" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="7Yf-rM-V6H" firstAttribute="leading" secondItem="Cim-hz-EhR" secondAttribute="leading" constant="40" id="2gc-5r-2sS"/>
+                            <constraint firstItem="7Yf-rM-V6H" firstAttribute="top" secondItem="l5a-nN-b23" secondAttribute="bottom" constant="8" id="A7O-dX-mw7"/>
+                            <constraint firstItem="7Yf-rM-V6H" firstAttribute="centerX" secondItem="DAN-Dp-TL1" secondAttribute="centerX" id="HhI-wN-Ahi"/>
                             <constraint firstItem="l5a-nN-b23" firstAttribute="centerX" secondItem="Cim-hz-EhR" secondAttribute="centerX" id="ID6-WX-PRN"/>
+                            <constraint firstItem="DAN-Dp-TL1" firstAttribute="top" secondItem="7Yf-rM-V6H" secondAttribute="bottom" constant="14" id="Mjj-IG-QCQ"/>
                             <constraint firstItem="l5a-nN-b23" firstAttribute="top" secondItem="Cim-hz-EhR" secondAttribute="top" constant="25" id="O2Q-O5-T8w"/>
                             <constraint firstItem="Pb7-rl-mrh" firstAttribute="top" secondItem="DAN-Dp-TL1" secondAttribute="bottom" constant="50" id="cbK-B9-uQa"/>
                             <constraint firstItem="DAN-Dp-TL1" firstAttribute="centerX" secondItem="l5a-nN-b23" secondAttribute="centerX" id="hgX-eh-1M3"/>
@@ -663,6 +679,7 @@
                         <outlet property="buttonDeleteUser" destination="Pb7-rl-mrh" id="ehg-IG-8yZ"/>
                         <outlet property="buttonWriteNotification" destination="DAN-Dp-TL1" id="JRA-oV-Mq2"/>
                         <outlet property="imageviewUser" destination="l5a-nN-b23" id="4C0-7W-ufP"/>
+                        <outlet property="labelPushNotification" destination="7Yf-rM-V6H" id="m51-ET-mCw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lf2-6J-kbW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2620,6 +2637,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="apH-XJ-Os3"/>
         <segue reference="8Of-jt-MVR"/>
-        <segue reference="21i-ge-QNp"/>
+        <segue reference="Yqe-u4-wH7"/>
     </inferredMetricsTieBreakers>
 </document>

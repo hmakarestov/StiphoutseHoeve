@@ -16,7 +16,8 @@ class Notifications: UIViewController, UITableViewDelegate, UITableViewDataSourc
     let unselectedCellHeight: CGFloat = 88.0
     
     var notification : Notification?
-    var notifications = [Notification] ()
+    var notifications = [Post] ()
+    var backEnd = BackendHelper ()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,30 +26,46 @@ class Notifications: UIViewController, UITableViewDelegate, UITableViewDataSourc
         notificationsTableView.delegate = self
         notificationsTableView.dataSource = self
         
-        let today = Date()
+       // let today = Date()
+        backEnd.getJSONPosts(completion:{ arrayPosts in
+                  print("Horses before assign: \(self.notifications.count)")
+            for p in arrayPosts{
+                if (p.type==PostType.ADMIN_NOTICE) {
+                    self.notifications.append(p)
+                }
+            }
+                  //self.notifications = arrayPosts
+                  self.notificationsTableView.reloadData()
+                  print("arrayPosts: \(arrayPosts.count)")
+                  print("Notifications After Assign: \(self.notifications.count)")
+                  for h in self.notifications {
+                    print(h.description as Any)
+                  
+                  }
+               })
+                  print("Posts Outside Assign: \(self.notifications.count)")
+//        //test user for notification constructor
+//        let user = User(id: 1,  firstName: "Stella", middleName: "", lastName: "van Sanden", username: "stellavs@gmail.com", role: Role.USER, gender: Gender.FEMALE, birthdate: today)
+//        //test facility for notification constructor
+//        let facility = Facility(id: 1, name: "Stable", reservable: false, reservations: [], unavailableTimeSlots: [])
         
-        //test user for notification constructor
-        let user = User(id: 1,  firstName: "Stella", middleName: "", lastName: "van Sanden", email: "stellavs@gmail.com", role: Role.USER, gender: Gender.FEMALE, birthdate: today)
-        //test facility for notification constructor
-        let facility = Facility(id: 1, name: "Stable", reservable: false, reservations: [], unavailableTimeSlots: [])
-        
-        
-        let numbers = 0...0
-        
-            for _ in numbers{
-                
-                let notification = Notification(id: 1, title: "New contest coming up!", description: "Sign up for this new contest and win cool prizes! Please sign up on the whiteboard at the stable to enter the contest.", date: today, facility: facility, user: user)
-                let notification2 = Notification(id: 2, title: "Vet is coming to Stiphoutse Hoeve", description: "Next week on the 5th of December we have scheduled a vetenerian from the Eindhoven vet hospital to come here at 5:00 p.m.", date: today, facility: facility, user: user)
-                let notification3 = Notification(id: 3, title: "Stiphoutse Hoeve closed!", description: "Stiphoutse Hoeve will be closed on the 25th and 26th of December because of Christmas. Please keep that in mind when you want to schedule a lesson.", date: today, facility: facility, user: user)
-                
-                notifications.append(notification);
-                notifications.append(notification2);
-                notifications.append(notification3);
-
-                notificationsTableView.reloadData()
-                
-        }
-        
+//
+//        let numbers = 0...0
+//
+//            for _ in numbers{
+//
+//                let notification = Notification(id: 1, title: "New contest coming up!", description: "Sign up for this new contest and win cool prizes! Please sign up on the whiteboard at the stable to enter the contest.", date: today, facility: facility, user: user)
+//                let notification2 = Notification(id: 2, title: "Vet is coming to Stiphoutse Hoeve", description: "Next week on the 5th of December we have scheduled a vetenerian from the Eindhoven vet hospital to come here at 5:00 p.m.", date: today, facility: facility, user: user)
+//                let notification3 = Notification(id: 3, title: "Stiphoutse Hoeve closed!", description: "Stiphoutse Hoeve will be closed on the 25th and 26th of December because of Christmas. Please keep that in mind when you want to schedule a lesson.", date: today, facility: facility, user: user)
+//
+//                notifications.append(notification);
+//                notifications.append(notification2);
+//                notifications.append(notification3);
+//
+//                notificationsTableView.reloadData()
+//
+//        }
+         notificationsTableView.reloadData()
     }
     
 
@@ -76,12 +93,12 @@ class Notifications: UIViewController, UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NotificationCell", for: indexPath) as! NotificationCell
         
-        cell.labelTitle?.text = notifications[indexPath.row].title
+        cell.labelTitle?.text = notifications[indexPath.row].type.map { $0.rawValue }
         cell.labelNotification?.text = notifications[indexPath.row].description
-            let today = notifications[indexPath.row].date
+       // let today = notifications[indexPath.row].dateTime
             let formatter = DateFormatter()
             formatter.dateFormat = "dd-MM-yyy"
-            let date = formatter.string(from: today as Date)
+        let date = formatter.string(from: Date())
         cell.labelDate.text = date
         cell.imageView?.image = UIImage(named: "notification icon")
 

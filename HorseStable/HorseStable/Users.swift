@@ -12,40 +12,35 @@ class Users: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var usersTableView: UITableView!
     
+    var userID: String = ""
     var user : User?
     var userName : String?
     var userImage : UIImage?
     var users = [User] ()
-    
+    var backEnd = BackendHelper ()
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+     backEnd.getJSONUsers(completion:{ arrayUsers in
+        print("Users before assign: \(self.users.count)")
+        self.users = arrayUsers
+        self.usersTableView.reloadData()
+        print("ArrayUsers: \(arrayUsers.count)")
+        print("Users After Assign: \(self.users.count)")
+        for u in self.users {
+            print(u.firstName as Any)
+        }
+     })
+        print("Users Outside Assign: \(self.users.count)")
         usersTableView.delegate = self
         usersTableView.dataSource = self
-        
-        let dob = Date()
-        let formatter = DateFormatter()
-        formatter.dateFormat = "dd-MM-yyy"
-        let date = formatter.string(for: 20-09-1997)
-        
-        let numbers = 0...0
-        
-            for _ in numbers{
-                
-                let user = User(id: 1,  firstName: "Stella", middleName: "", lastName: "van Sanden", email: "stellavs@gmail.com",role: Role.USER, gender: Gender.FEMALE, birthdate: dob)
-                let user2 = User(id: 2,  firstName: "Holland", middleName: "", lastName: "Kaaskop", email: "hollandk@gmail.com", role: Role.USER, gender: Gender.FEMALE, birthdate: dob)
-                let user3 = User(id: 3,  firstName: "Bulgaar", middleName: "", lastName: "Buitenlander", email: "bulgaarb@gmail.com",  role: Role.USER, gender: Gender.MALE, birthdate: dob)
-                
-                users.append(user);
-                users.append(user2);
-                users.append(user3);
+      
 
-                usersTableView.reloadData()
-                
-        }
     }
-    
+  override func viewWillAppear(_ animated: Bool){
+        
+        usersTableView.reloadData()
+    }
 
     /*
     // MARK: - Navigation
@@ -67,9 +62,9 @@ class Users: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UserCell", for: indexPath) as! UserCell
-        
-        cell.userName?.text =  users[indexPath.row].firstName
-        cell.imageView?.image = UIImage(named: "default profile image")
+       // cell.textLabel!.text = self.users[indexPath.row].firstName
+        cell.userName?.text =  ("\(self.users[indexPath.row].firstName!) " + " " +  "\(self.users[indexPath.row].lastName!)")
+       cell.imageView?.image = UIImage(named: "default profile image")
         return cell
     }
     
@@ -79,17 +74,19 @@ class Users: UIViewController, UITableViewDelegate, UITableViewDataSource {
         //pass data to next view s
         userName = cell.userName.text
         userImage = cell.imageView?.image
+        userID = String(self.users[indexPath.row].id!)
         self.performSegue(withIdentifier: "oneUser", sender: self)
         
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    
+            
          if segue.identifier == "oneUser" {
              let destinationViewController = segue.destination as!   InteractionUser
             destinationViewController.nameUser = userName!
             destinationViewController.imageUser = userImage!
-            
+            destinationViewController.userID = userID
+            destinationViewController.instanceOfVCA = self
             if userName != nil  || userImage != nil{
                 print("Contains a value!")
                 // destinationViewController.labelDescription.text = selectedDescription

@@ -19,7 +19,8 @@ class HorsesTableViewController: UITableViewController {
     var backEnd = BackendHelper () // backend API
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print("Startttt")
+      //  backEnd.getJSONHorses(completion: {horses in print(horses.model?.name as Any)})
         //create a button or any UIView and add to subview
         let button=UIButton.init(type: .system)
         button.setTitle("NEXT", for: .normal)
@@ -82,7 +83,7 @@ class HorsesTableViewController: UITableViewController {
          let cell = tableView.dequeueReusableCell(withIdentifier: "horseCell", for: indexPath)
        // let buttonCell = tableView.dequeueReusableCell(withIdentifier: "buttonCell", for: indexPath)
             
-        cell.textLabel?.text =  "Name: \(self.horses[indexPath.row].name) "
+        cell.textLabel?.text =  "Name: \(self.horses[indexPath.row].name!) "
          //Name:  \(self.horses[indexPath.row].name), \(self.horses[indexPath.row].name)"
         cell.detailTextLabel?.text = String(self.horses[indexPath.row].medicalReports![0].description )
         
@@ -121,10 +122,10 @@ class HorsesTableViewController: UITableViewController {
             }
            // destinationViewController.medicalReports[0].description = selectedDescription!
             print()
-            for medR in destinationViewController.medicalReports {
-                medR.description = selectedDescription!
-                print(medR.description)
-            }
+//            for medR in destinationViewController.medicalReports {
+//                medR.description = selectedDescription!
+//                print(medR.description)
+//            }
             //destinationViewController.medicalReports[].description = selectedLabel!
             
            // destinationViewController.medicalReports[0].description = selectedLabel!
