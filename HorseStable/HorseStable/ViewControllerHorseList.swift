@@ -8,12 +8,12 @@
 
 import UIKit
 
-//struct CellDataDemo{
-//    let horseImage : String
-//    let horseName : String
-//    let fluShot : Date
-//    let decontamination : Date
-//}
+struct CellDataDemo{
+    let horseImage : String
+    let horseName : String
+    let fluShot : Date
+    let decontamination : Date
+}
 
 
 class ViewControllerHorseList: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -30,14 +30,14 @@ class ViewControllerHorseList: UIViewController, UITableViewDelegate, UITableVie
     var token = MyVariables.token
     @IBOutlet weak var tableViewHorseList: UITableView!
     
-//    var horseInfo = [
-//        CellDataDemo(horseImage: "horseImg", horseName: "Horsy", fluShot: Date(), decontamination: Date()),
-//        CellDataDemo(horseImage: "horseImg", horseName: "Horsy", fluShot: Date(), decontamination: Date()),
-//        CellDataDemo(horseImage: "horseImg", horseName: "Horsy", fluShot: Date(), decontamination: Date()),
-//        CellDataDemo(horseImage: "horseImg", horseName: "Horsy", fluShot: Date(), decontamination: Date()),
-//        CellDataDemo(horseImage: "horseImg", horseName: "Horsy", fluShot: Date(), decontamination: Date()),
-//        CellDataDemo(horseImage: "horseImg", horseName: "Horsy", fluShot: Date(), decontamination: Date()),
-//        ]
+    var horseInfo = [
+        CellDataDemo(horseImage: "horseImg", horseName: "Horsy", fluShot: Date(), decontamination: Date()),
+        CellDataDemo(horseImage: "horseImg", horseName: "Horsy", fluShot: Date(), decontamination: Date()),
+        CellDataDemo(horseImage: "horseImg", horseName: "Horsy", fluShot: Date(), decontamination: Date()),
+        CellDataDemo(horseImage: "horseImg", horseName: "Horsy", fluShot: Date(), decontamination: Date()),
+        CellDataDemo(horseImage: "horseImg", horseName: "Horsy", fluShot: Date(), decontamination: Date()),
+        CellDataDemo(horseImage: "horseImg", horseName: "Horsy", fluShot: Date(), decontamination: Date()),
+        ]
     
     override func viewDidLoad()
     {
@@ -45,7 +45,8 @@ class ViewControllerHorseList: UIViewController, UITableViewDelegate, UITableVie
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTapAddItemButton))
         //put user id in query
-        
+        var horse = Horse(id: 5, name: "Joro", race: "twoRace", lifeNumber: "123", chipNumber: "123", birthDate: Date(), gender: Gender.FEMALE, medicalReports: [], owners: [])
+        horses.append(horse)
         
         self.backend.verifyToken(to: self.token,completion: {
                 (expDate,sub) in
@@ -96,17 +97,18 @@ class ViewControllerHorseList: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return horses.count
+        //return horses.count
+        return horseInfo.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LabelCell", for: indexPath) as! CustomCell
 
         //let horse = self.horses[indexPath.row]
-        cell.horseNameLabel?.text = self.horses[indexPath.row].name
-        cell.decontaminationDateLabel?.text = "No record"
-        cell.fluShotDateLabel?.text = "No record"
-        cell.horseImage?.image = UIImage(named: "horse")
+        cell.horseNameLabel?.text = self.horseInfo[indexPath.row].horseName//self.horses[indexPath.row].name
+        cell.decontaminationDateLabel?.text = "\(self.horseInfo[indexPath.row].decontamination)"   //"No record"
+        cell.fluShotDateLabel?.text = "\(self.horseInfo[indexPath.row].fluShot)" //"No record"
+        cell.horseImage?.image =  UIImage(named: "horse") //UIImage(contentsOfFile: self.horseInfo[indexPath.row].horseImage) //
         
         return cell
     }

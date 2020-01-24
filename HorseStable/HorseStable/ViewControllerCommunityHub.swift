@@ -19,6 +19,8 @@ class ViewControllerCommunityHub: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var tableViewUserPosts: UITableView!
     var userPosts = [Post] ()
     var backEnd = BackendHelper()
+    var token = MyVariables.token
+    var username : String = ""
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -26,6 +28,36 @@ class ViewControllerCommunityHub: UIViewController, UITableViewDelegate, UITable
         tableViewUserPosts.delegate = self
         tableViewUserPosts.dataSource = self
         
+               self.backEnd.verifyToken(to: self.token,completion: {
+                        (expDate,sub) in
+                        let currentDateTime = Date()
+                        if (expDate!>currentDateTime) {
+                            print("expired")
+                        }
+                        if (sub == nil || sub == "-1") {
+                            print("Token not verified",sub as Any)
+                            // redirect back to log in
+                        }
+                        else {
+                            print("Success")
+                            print(sub as Any)
+                            
+                            self.backEnd.getJSONUser(query: sub!, completion:{ (user) in
+                               // print(user)
+                                print(user.lastName! as Any)
+                                self.username = user.username!
+                                print("USERNAME IS:", self.username)
+                            })
+                            
+            
+                            
+                        }
+                        
+                    })
+                    print("Successful log in")
+                    //how to get the TOKEN and store it? then verify it????
+                    //return result.model!
+                
         backEnd.getJSONPosts(completion:{ arrayPosts in
                 print("Posts before assign: \(self.userPosts.count)")
                 for p in arrayPosts{
@@ -64,8 +96,9 @@ class ViewControllerCommunityHub: UIViewController, UITableViewDelegate, UITable
         let cell = tableView.dequeueReusableCell(withIdentifier: "LabelCellPosts", for: indexPath) as! CustomCellUserPosts
 
         let post = userPosts[indexPath.row]
-        cell.userName?.text = post.user?.username
-        //cell.userImg?.image = UIImage(named: post.user!.firstName!)//should be avatar of user
+        
+        cell.userName?.text = "NAME"//self.username// post.user?.username
+        cell.userImg?.image = UIImage(named: "profile")//should be avatar of user
         cell.postImage?.image = UIImage(named: post.imageUrl!)
         cell.postDescription?.text = post.description
 

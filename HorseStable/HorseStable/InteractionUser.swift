@@ -66,6 +66,7 @@ class InteractionUser: UIViewController {
             // self.performSegue(withIdentifier: "LogoutID", sender: nil)
             print("User ID\(self.userID)")
             self.backEnd.deleteJSONUser(query: self.userID,completion: {(err) in
+                print("DELETING.......")
                 if let err = err {
                     print("Failed to delete",err)
                     return

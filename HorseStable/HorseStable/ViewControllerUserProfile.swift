@@ -19,13 +19,15 @@ class ViewControllerUserProfile: UIViewController, UITableViewDelegate, UITableV
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "New Post", style: .plain, target: self, action: #selector(didTapAddItemButton))
         print("POST is being posted")
-        backendHelper.getJSONPost( query:"1", completion: { (result) in
+        backendHelper.getJSONPosts(  completion: { (result) in
             print("miracle")
             print(result.count as Any )
                   // self.title = result.model?.chipNumber
-            for p in result{
-                self.posts.append(p)
-            }
+//            for p in result{
+//                self.posts.append(p)
+//            }
+            self.posts = result
+            print("HOW MANY POSTS:", self.posts)
            // self.posts.append(result)
             print("Post is posted")
                })
@@ -52,12 +54,12 @@ class ViewControllerUserProfile: UIViewController, UITableViewDelegate, UITableV
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCellUserProfiles", for: indexPath) as! CustomCellUser
 
-       let post = posts[indexPath.row]// userPosts[indexPath.row]
-        cell.textLabel?.text = String(self.posts[indexPath.row].id!)
+        let post = "\(posts[indexPath.row].id)"// userPosts[indexPath.row]
+        cell.textLabel?.text = post// self.posts[indexPath.row].id
         cell.detailTextLabel!.text = self.posts[indexPath.row].description
     
         cell.imageView?.image = UIImage(named: self.posts[indexPath.row].imageUrl!)//UIImage(named: "horse")
-        userName?.text = post.user?.firstName
+        userName?.text = "Kaasman"
      //   userImage?.image = UIImage(named: "profile")
       //  cell.postImage?.image = UIImage(named: post.imageUrl!)
       //  cell.postDescription?.text = post.description

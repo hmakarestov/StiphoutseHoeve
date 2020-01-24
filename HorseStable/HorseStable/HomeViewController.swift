@@ -190,6 +190,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         if selectedCellIndexPath != nil && selectedCellIndexPath == indexPath {
             selectedCellIndexPath = nil
+            print("Not nil")
         }
         else{
             selectedCellIndexPath = indexPath

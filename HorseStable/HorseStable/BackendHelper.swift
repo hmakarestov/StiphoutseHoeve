@@ -103,7 +103,10 @@ public class BackendHelper {
         
     }
     func verifyToken (to:String, completion: @escaping (Date?,String?)->()) {
-        var payload64 = to.components(separatedBy: ".")[1]
+        // make sure to not crash if nil or wrong credentials
+        var str : String = ""
+        str = to
+        var payload64 = str.components(separatedBy: ".")[1]
         
         // need to pad the string with = to make it divisible by 4,
         // otherwise Data won't be able to decode it
@@ -449,7 +452,7 @@ public class BackendHelper {
                                    "imageUrl" : image, //"",
                                    "description": description as String,//"first post",
                                    "dateTime": "2012-04-21T18:25:43-05:00",
-                                  // "user": user,
+                                   //"user": (),
                                    "comments":[]]
 
         let jsonData = try? JSONSerialization.data(withJSONObject: json)
@@ -490,7 +493,7 @@ public class BackendHelper {
                 let str = String(decoding: data!, as: UTF8.self)
                 print(str)
                       do {
-                       let decoder = JSONDecoder()
+                      // let decoder = JSONDecoder()
                        print("nothing")
                         
                         let json = try JSONDecoder().decode(Message<[Post]>.self, from: data!)
@@ -502,7 +505,7 @@ public class BackendHelper {
                       
                         print(json.model as Any)
                         print("something")
-                        
+                        completion(json.model!)
                        
                        
                       } catch {

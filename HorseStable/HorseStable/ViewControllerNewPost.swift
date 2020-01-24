@@ -22,6 +22,7 @@ class ViewControllerNewPost: UIViewController, UITextViewDelegate {
         lbDescription.delegate = self
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         view.addGestureRecognizer(tap)
+        
     }
     
 
