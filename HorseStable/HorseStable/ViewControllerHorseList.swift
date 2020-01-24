@@ -19,7 +19,7 @@ import UIKit
 class ViewControllerHorseList: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var horses = [Horse] ()
     var backend = BackendHelper()
-    
+    var userID : String? = ""
     var selectedName: String?
     var selectedImage = UIImage(named: "horse")
     var selectedGender: Gender?
@@ -27,7 +27,7 @@ class ViewControllerHorseList: UIViewController, UITableViewDelegate, UITableVie
     var selectedChipNumber: String?
     var selectedDecontaminationDate: String?
     var selectedFluShotDate: String?
-    
+    var token = MyVariables.token
     @IBOutlet weak var tableViewHorseList: UITableView!
     
 //    var horseInfo = [
@@ -42,21 +42,51 @@ class ViewControllerHorseList: UIViewController, UITableViewDelegate, UITableVie
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTapAddItemButton))
         //put user id in query
-        backend.getJSONAssignedHorseToUser(query:"0",completion:{ arrayHorses in
-            print("Horses before assign: \(self.horses.count)")
-            self.horses = arrayHorses
-            self.tableViewHorseList.reloadData()
-            print("ArrayHorses: \(arrayHorses.count)")
-            print("Horses After Assign: \(self.horses.count)")
-            for h in self.horses {
-                print(h.name as Any)
-                print(h.medicalReports!.description as Any)
+        
+        
+        self.backend.verifyToken(to: self.token,completion: {
+                (expDate,sub) in
+                let currentDateTime = Date()
+                if (expDate!>currentDateTime) {
+                    print("expired")
                 }
-            })
-                print("Horses Outside Assign: \(self.horses.count)")
-               
+                    if (sub == nil || sub == "-1") {
+                    print("Token not verified",sub as Any)
+                    // redirect back to log in
+                    }
+                    else {
+                    print("Success")
+                    print(sub as Any)
+                                   
+                    self.backend.getJSONUser(query: sub!, completion:{ (user) in
+                        // print(user)
+                        print(user.lastName! as Any)
+                        self.userID = sub!
+                        self.backend.getJSONAssignedHorseToUser(query:sub!,completion:{ arrayHorses in
+                        print("Horses before assign: \(self.horses.count)")
+                        self.horses = arrayHorses
+                        self.tableViewHorseList.reloadData()
+                        print("ArrayHorses: \(arrayHorses.count)")
+                        print("Horses After Assign: \(self.horses.count)")
+                        for h in self.horses {
+                            print(h.name as Any)
+                            print(h.medicalReports!.description as Any)
+                            }
+                        })
+                            print("Horses Outside Assign: \(self.horses.count)")
+                                       
+                                   })
+
+                                   
+                               }
+                               
+                           })
+                           print("Successful log in")
+                           //how to get the TOKEN and store it? then verify it????
+                           //return result.model!
     }
     
     @objc func didTapAddItemButton(_ sender: UIBarButtonItem)
@@ -99,6 +129,7 @@ class ViewControllerHorseList: UIViewController, UITableViewDelegate, UITableVie
                     destinationViewController.lifenumber = selectedLifeNumber!
                     destinationViewController.chipnumber = selectedChipNumber!
                     destinationViewController.imageHorse = selectedImage!
+           
                   // print(selectedDescription!)
                        //pass image
                    //destinationViewController.newImage = selectedImage!
@@ -121,6 +152,12 @@ class ViewControllerHorseList: UIViewController, UITableViewDelegate, UITableVie
                 destinationViewController.decontamination = "No record"
                     }
             }
+        
+        if(segue.identifier == "addHorseSegue") {
+           let destinationViewController = segue.destination as! ViewControllerAddHorse
+            
+            //destinationViewController.userId = self.userID!
+        }
        }
 }
 

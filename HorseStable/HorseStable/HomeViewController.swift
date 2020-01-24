@@ -28,7 +28,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     var selectedCellIndexPath: IndexPath?
     let selectedCellHeight: CGFloat = 150.0
     let unselectedCellHeight: CGFloat = 88.0
-    
+    let token = MyVariables.token
+   // let token : String = ""
     var notifications = [Post] ()
     var backend = BackendHelper()
     
@@ -55,6 +56,41 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
            })
               print("Posts Outside Assign: \(self.notifications.count)")
         // Do any additional setup after loading the view, typically from a nib.
+        
+        self.backend.verifyToken(to: self.token,completion: {
+                        (expDate,sub) in
+                        let currentDateTime = Date()
+                        if (expDate!>currentDateTime) {
+                            print("expired")
+                        }
+                        if (sub == nil || sub == "-1") {
+                            print("Token not verified",sub as Any)
+                            // redirect back to log in
+                        }
+                        else {
+                            print("Success")
+                            print(sub as Any)
+                            
+                            self.backend.getJSONUser(query: sub!, completion:{ (user) in
+                               // print(user)
+                                print(user.lastName! as Any)
+                                
+                            })
+                            
+                           // print(authority as Any)
+        //                    if(authority == "USER") {
+        //
+        //                    }
+                           
+                            
+                        }
+                        
+                    })
+                    print("Successful log in")
+                    //how to get the TOKEN and store it? then verify it????
+                    //return result.model!
+            
+            
     }
 
     @IBAction func didTapMenu(_ sender: UIBarButtonItem) {

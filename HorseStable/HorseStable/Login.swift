@@ -8,11 +8,14 @@
 
 import UIKit
 
+struct MyVariables {
+    static var token : String = ""//TOKEN
+}
 class Login: UIViewController {
     var backend = BackendHelper ()
     var username : String = ""
     var password : String = ""
-    var token : String = ""
+     var token : String = "" //TOKEN
     @IBOutlet weak var labelRegister: UILabel!
     @IBOutlet weak var passwordField: UITextField!
     
@@ -51,6 +54,7 @@ class Login: UIViewController {
             else {
                 print(feedback as Any)
                 self.token = model!
+                MyVariables.token = self.token
                 print("Model: ", model as Any)
                 print("Successful log in")
                 
@@ -68,14 +72,34 @@ class Login: UIViewController {
             
             //on every view this should be called so it verifies if the user is still loged in
             self.backend.verifyToken(to: self.token,completion: {
-                (tok) in
-                if (tok == nil) {
-                    print("Token not verified",tok as Any)
+                (expDate,sub) in
+                let currentDateTime = Date()
+                if (expDate!>currentDateTime) {
+                    print("expired")
+                }
+                if (sub == nil || sub == "-1") {
+                    print("Token not verified",sub as Any)
                     // redirect back to log in
                 }
                 else {
                     print("Success")
-                    print(tok as Any)
+                    print(sub as Any)
+                    
+                    self.backend.getJSONUser(query: sub!, completion:{ (user) in
+                       // print(user)
+                        print(user.lastName! as Any)
+                         DispatchQueue.main.async {
+                        if(user.role == Role.USER) {
+                            print(user.role as Any)
+                            self.performSegue(withIdentifier: "userSegue", sender: self)
+                        }
+                        else {
+                            print(user.role as Any)
+                             self.performSegue(withIdentifier: "adminSegue", sender: self)
+                            }
+                        }
+                    })
+                    
                    // print(authority as Any)
 //                    if(authority == "USER") {
 //

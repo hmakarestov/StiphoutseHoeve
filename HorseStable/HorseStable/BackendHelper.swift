@@ -99,14 +99,12 @@ public class BackendHelper {
 
            task.resume()
        }
-       
-    func verifyToken (to:String, completion: @escaping (Int?)->()) {
-           
+    func verify(token:String) {
         
-
-        // get the payload part of it
+    }
+    func verifyToken (to:String, completion: @escaping (Date?,String?)->()) {
         var payload64 = to.components(separatedBy: ".")[1]
-
+        
         // need to pad the string with = to make it divisible by 4,
         // otherwise Data won't be able to decode it
         while payload64.count % 4 != 0 {
@@ -119,27 +117,27 @@ public class BackendHelper {
         let payload = String(data: payloadData, encoding: .utf8)!
         print(payload)
         
-        let json = try! JSONSerialization.jsonObject(with: payloadData, options: []) as! [String:Any]
         
+        let json = try! JSONSerialization.jsonObject(with: payloadData, options: []) as! [String:Any]
         let exp = json["exp"] as! Int
-        let authority = json["authorities"]
+        let sub = json["sub"] as! String
         let expDate = Date(timeIntervalSince1970: TimeInterval(exp))
-        completion(exp)
-    }
+        completion(expDate,sub)
+       }
        
     
     //HORSES
     
-    func postJSON (completion: @escaping (Message<Horse>)->()) {
+    func postJSON (id: String,name:String, lifeNum : String,chipNum:String,date : Date,gender: String,completion: @escaping (Error?)->()) {
         
      // prepare json data
-        let json: [String: Any] = ["id": 4,
-                                   "name" : "Horse",
+        let json: [String: Any] = ["id": id,
+                                   "name" : name, //"Horse",
                                    "race" : "White",
-                                   "lifeNumber": "lifeNum",
-                                   "chipNumber": "chipNum",
-                                   "birthDate": "2012-04-21T18:25:43-05:00",
-                                   "gender": "MALE",
+                                   "lifeNumber": lifeNum,// "lifeNum",
+                                   "chipNumber": chipNum,//"chipNum",
+                                   "birthDate":"2012-04-21T18:25:43-05:00",
+                                   "gender":  gender,//"MALE",
                                    "medicalReports":[],
                                    "owners":[]]
 
@@ -162,6 +160,7 @@ public class BackendHelper {
             if let responseJSON = responseJSON as? [String: Any] {
                 print(responseJSON)
                 
+                completion(error)
             }
         }
 
@@ -249,7 +248,7 @@ public class BackendHelper {
     func putJSONAddHorseToUser (query:String,name:String, race : String, lifeNum : String, chipNumber : String, birthDate: String, gender: String, completion: @escaping (Error?)->()) {
            
         // prepare json data
-           let json: [String: Any] = [//"id": 4,
+           let json: [String: Any] = ["id": query ,// 4,
                                       "name" : name,// "Horse",
                                       "race" : race, //"White",
                                       "lifeNumber": lifeNum,//"lifeNum",
@@ -277,7 +276,7 @@ public class BackendHelper {
                let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
                if let responseJSON = responseJSON as? [String: Any] {
                    print(responseJSON)
-                   
+                   completion(error)
                }
                
            }
@@ -711,8 +710,8 @@ public class BackendHelper {
         task.resume()
     }
     
-    func getJSONUser (completion: @escaping (Message<User>)->()) {
-            let url = "http://localhost:8083/user/1"
+    func getJSONUser (query:String,completion: @escaping (User)->()) {
+            let url = "http://localhost:8083/user/\(query)"
         if let url = URL(string: url)
         {
             let task = session.dataTask(with: url) { data, response, error in
@@ -735,7 +734,8 @@ public class BackendHelper {
                       
                         print(json.model as Any)
                         print("something")
-                        
+                        let user  = json.model!
+                        completion(user)
                        
                        
                       } catch {
