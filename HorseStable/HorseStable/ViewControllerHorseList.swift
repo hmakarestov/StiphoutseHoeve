@@ -115,10 +115,10 @@ class ViewControllerHorseList: UIViewController, UITableViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
              //pass data to next view s
-        selectedName = self.horses[indexPath.row].name
-        selectedGender = self.horses[indexPath.row].gender
-        selectedLifeNumber = self.horses[indexPath.row].lifeNumber
-        selectedChipNumber = self.horses[indexPath.row].chipNumber
+        selectedName = self.horseInfo[indexPath.row].horseName
+        selectedGender = Gender.MALE
+        selectedLifeNumber = "\(self.horseInfo[indexPath.row].fluShot)"// self.horses[indexPath.row].lifeNumber
+        selectedChipNumber =  "GRTYT"
       
       self.performSegue(withIdentifier: "ShowHorse", sender: self)
       }
